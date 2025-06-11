@@ -1,0 +1,263 @@
+.Note_Icon,
+#Note_Container {
+    /* == Windows Setting == */
+    /* Icon Position */
+    --icon-position-top: 25%;
+    --icon-position-left: 1%;
+
+    /* Windows Position */
+    --window-position-top: 10%;
+    --window-position-left: 6%;
+
+    /* Windows Size */
+    --window-size-width: 58vw;
+    --window-size-height: 61vh;
+    --window-aspect-ratio: 4/1;
+
+    /* Window Background */
+    --application-background-color: rgba(0, 0, 0, 0.8);
+    --application-background-blur: blur(4px);
+
+    /* == Note Content Setting == */
+    /* Font Family */
+    --font-family: "consolas", sans-serif;
+    --font-family-Stretch_Pro: "Stretch Pro", sans-serif;
+}
+
+/* Note Icon */
+.Note_Icon {
+    top: var(--icon-position-top);
+    left: var(--icon-position-left);
+}
+
+/* Note Windows */
+#Note {
+    flex: 1;
+    position: absolute;
+
+    /* Custom Width and Height for the app */
+    width: var(--window-size-width);
+    min-height: var(--window-size-height);
+    /* aspect-ratio: var(--window-aspect-ratio); */
+    color: var(--font-color);
+
+    /* Custom Position for the app on the desktop  */
+    top: var(--window-position-top);
+    left: var(--window-position-left);
+
+    /* This will break the screen limit of the desktop but this will stay here for... idk development purpose :) */
+    /* transform: translate(-50%, -50%); */
+
+    box-shadow: 0 0 20px rgb(0, 0, 0, 1);
+
+    /* Custom Header if you want to style it */
+    .Note_header {
+        margin: 0;
+        padding: 0 5px;
+    }
+
+    /* This is where you're edit your style inside the content */
+    .Note_main {
+        position: relative;
+        padding: 0.5em;
+
+        #sidebar_btn_container {
+            display: flex;
+            flex-direction: row;
+            gap: 6px;
+
+            position: absolute;
+            left: 6px;
+            top: 6px;
+
+            z-index: 5;
+
+            cursor: pointer;
+
+            [id] {
+                padding: 6px;
+
+                width: 36px;
+                height: 36px;
+
+                transform: translate(0%, 0%);
+                overflow: hidden;
+
+                border: 2px solid var(--border-color);
+            }
+
+            #toggle_btn {
+                background-color: rgb(0, 0, 0);
+            }
+
+            #previous_btn {
+                background-color: darkred;
+            }
+
+            #next_btn {
+                background-color: darkgreen;
+            }
+        }
+
+        .container_grid {
+            /* Setting up display grid */
+            display: grid;
+            grid-template-columns: 0.9fr 3.1fr;
+            grid-template-areas: "noteTitle notePage";
+            column-gap: 12px;
+
+            /* Set width and height content */
+            height: var(--window-size-height);
+
+            .noteTitle,
+            .notePage {
+                word-wrap: break-word;
+                overflow-y: scroll;
+                overflow-x: hidden;
+            }
+
+            .noteTitle {
+                grid-area: noteTitle;
+                gap: 8px;
+
+                /* This look good on animation */
+                text-wrap: nowrap;
+                user-select: none;
+
+                display: flex;
+                flex-direction: column;
+
+                padding: 48px 8px 0 0;
+
+                /* Note Title Element */
+                [id^="noteId_"] {
+                    user-select: none;
+                    cursor: pointer;
+
+                    background-color: rgba(50, 146, 225, 0.1);
+
+                    font-size: var(--font-size-x-small);
+
+                    display: flex;
+                    flex-direction: column;
+
+                    color: white;
+                    padding: 5px 5px 12px 5px;
+
+                    word-break: keep-all;
+                    /* margin-bottom: 10px; */
+
+                    p {
+                        margin: 0;
+                        padding: 6px 0 10px 0;
+                    }
+                }
+
+                [id^="noteId_"]:hover {
+                    background-color: rgba(50, 146, 225, 0.2);
+                    transition: background-color 0.2s ease 0s;
+                }
+
+                .noteTitleSelected {
+                    background-color: rgba(50, 146, 225, 0.5);
+                    border: 2px solid var(--border-color);
+                }
+            }
+
+
+            /* Overlay when page load */
+            .notePage::after {
+                content: "";
+                position: fixed;
+                overflow: hidden;
+
+                text-align: center;
+                text-wrap: nowrap;
+                overflow: hidden;
+
+                /* Initial state */
+                width: var(--width, 100%);
+                height: var(--height, 100%);
+
+                top: 0;
+                left: 0;
+
+                background: linear-gradient(180deg,
+                        rgb(20, 100, 225),
+                        rgb(0, 0, 0));
+
+                background-size: cover;
+
+                /* Change transition property */
+                transition: width 0.2s ease 0s, height 0.2s ease 0s;
+                z-index: 10;
+
+                user-select: none;
+            }
+
+            .notePage {
+                --width: 100%;
+                --height: 100%;
+
+                grid-area: notePage;
+                position: relative;
+
+                font-family: var(--font-family);
+                font-size: var(--font-size-small);
+
+                [id^="noteContentId_"] {
+                    font-family: var(--font-family);
+                    font-size: var(--font-size-small);
+
+                    padding: 3em;
+
+                    .noteContent {
+                        font-size: var(--font-size-medium);
+
+                        .title {
+                            font-family: var(--font-family-Stretch_Pro);
+                            font-size: var(--font-size-medium);
+                        }
+
+                        .imageWindows {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+
+                            max-height: 250px;
+                            overflow: hidden;
+
+                            outline: 0 solid var(--border-color);
+
+                            cursor: pointer;
+
+                            transition: max-height 0.4s ease 0s,
+                            outline 0.1s ease 0s;
+
+                            img {
+                                transition: object-position 0.4s ease 0s,
+                                opacity 0.6s ease 0s;
+
+                                object-fit: contain;
+                                object-position: 0 100px;
+                                width: 100%;
+                            }
+
+                            /* Hover */
+                            &:hover {
+                                max-height: 400px;
+                                outline: 4px solid var(--border-color);
+
+                                img {
+                                    opacity: 0.7;
+                                    object-position: 0 50px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

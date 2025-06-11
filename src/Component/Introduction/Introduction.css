@@ -1,0 +1,109 @@
+#Introduction_Setting {
+    /* == Dynamic Setting == */
+    /* Background */
+    /* --application-background-blur: var(--application-background-default-blur)*/
+    --application-background-blur: blur(10px);
+
+    /* --application-background-blur: var(--application-background-default-color)*/
+    --application-background-color: rgba(0, 0, 0, 0.5);
+
+    /* Border */
+    /* --application-background-blur: var(--application-border-default-color)*/
+    --application-border-color: rgb(37, 174, 190);
+
+    /* == Absolute Setting == */
+    /* Display */
+    position: absolute;
+    top: 25%;
+    left: 25%;
+
+    /* Size */
+    width: 720px;
+    height: auto;
+
+    /* Font */
+    color: white;
+    font-family: var(--font-family-Consolas), sans-serif;
+
+    /* Border */
+    border: 4px solid;
+    border-color: var(--application-border-color) ;
+    backdrop-filter: var(--application-background-blur);
+
+    /* Background */
+    background-color: var(--application-background-color);
+}
+
+.Introduction_Icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    color: white;
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.Introduction_Container {
+    display: flex;
+    flex-direction: column;
+}
+
+.Introduction_Title {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--application-border-color);
+
+    /*User Drag*/
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    user-select: none;
+
+
+    .Introduction_Title_Name {
+
+    }
+
+    .Introduction_Title_Action {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 20px;
+        }
+    }
+}
+
+.Introduction_Display {
+    /* Padding */
+    padding: 1em;
+
+    .container_pfp {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 1em;
+
+        img {
+            width: 150px;
+            border-radius: 4px;
+        }
+
+        h2 {
+            font-family: var(--font-family-Stretch_Pro), sans-serif;
+        }
+    }
+
+    .container_paragraph {
+        p {
+            margin-bottom: 1em;
+        }
+
+    }
+}

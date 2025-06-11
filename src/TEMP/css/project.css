@@ -1,0 +1,120 @@
+.Project_Icon,
+#Project_Container {
+    /* == Windows Setting == */
+    /* Icon Position */
+    --icon-position-top: 40%;
+    --icon-position-left: 1%;
+
+    /* Windows Position */
+    --window-position-top: 7%;
+    --window-position-left: 74%;
+
+    /* Windows Size */
+    --window-size-width: 450px;
+    --window-size-height: 540px;
+    --window-aspect-ratio: 4/1;
+
+    /* Window Background */
+    --application-background-color: rgba(0, 0, 0, 0.8);
+    --application-background-blur: blur(4px);
+
+    /* == Introduction Content Setting == */
+    /* Font Family */
+    --font-family: "consolas", sans-serif;
+    --font-family-Stretch_Pro: "Stretch Pro", sans-serif;
+}
+
+.Project_Icon {
+    top: var(--icon-position-top);
+    left: var(--icon-position-left);
+}
+
+/* Introduction Windows */
+#Project {
+    flex: 1;
+    /* Custom Width and Height for the app */
+    width: var(--window-size-width);
+    min-height: var(--window-size-height);
+    /* aspect-ratio: var(--window-aspect-ratio); */
+    color: var(--font-color);
+
+    /* Custom Position for the app on the desktop  */
+    position: absolute;
+    top: var(--window-position-top);
+    left: var(--window-position-left);
+
+    /* This will break the screen limit of the desktop but this will stay here for... idk development purpose :) */
+    /* transform: translate(-50%, -50%); */
+
+    box-shadow: 0px 0px 20px rgb(0, 0, 0, 1);
+
+    /* Custom Header if you want to style it */
+    .Project_header {
+        margin: 0;
+        padding: 0 5px;
+
+        * {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    }
+
+    /* This is where you're edit your style inside the content */
+    .Project_main {
+        padding: 0.5em;
+
+        .content {
+            position: relative;
+            padding: 0.3em;
+            overflow: scroll;
+            min-height: var(--window-size-height);
+            max-height: calc(var(--window-size-height) + 150px);
+
+            h2 {
+                margin-bottom: 6px;
+            }
+
+            h3 {
+                margin-top: 18px;
+                margin-bottom: 6px;
+            }
+
+            li {
+                margin-bottom: 12px;
+                list-style: square;
+
+                p {
+                    margin-top: 0;
+                    margin-bottom: 4px;
+                }
+            }
+
+            hr {
+                margin: 24px 0 12px 0;
+            }
+
+            ul {
+                padding-left: 30px;
+            }
+
+            /* Project Commits Section */
+            ul#commitLog>li {
+                margin-bottom: 24px;
+                padding: 12px;
+
+                cursor: pointer;
+
+                transition: background-color 0.2s ease 0s, outline 0.1s ease 0s;
+                background-color: rgba(50, 146, 225, 0.1);
+                outline: rgba(50, 146, 255, 0) 2px solid;
+
+                &:hover { /* Add a colon here */
+                    background-color: rgba(50, 146, 225, 0.4);
+                    outline: rgb(50, 146, 255) 2px solid;
+                }
+            }
+        }
+    }
+}

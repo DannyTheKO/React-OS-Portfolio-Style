@@ -1,0 +1,102 @@
+/* Setting */
+#Taskbar-Setting {
+    /* == Dynamic Setting == */
+    /* Size */
+    --topbar-containerSize-width: 100vw;
+    --topbar-containerSize-height: 2.75em;
+
+    /* Border */
+    --topbar-border-color: rgb(37, 174, 190);
+
+    /* == Absolute Setting == */
+    /* Display */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+
+
+    /* Position Type */
+    position: absolute;
+    bottom: 0;
+
+    /* Text */
+    color: white;
+    /*font-family: bold;*/
+
+    /* Background */
+    background-color: rgb(0, 0, 0, 0.2);
+    backdrop-filter: blur(2em);
+
+    /*User Drag*/
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Container */
+.Taskbar-Container {
+    /* Overflow */
+    overflow: hidden;
+
+    /* Size */
+    width: var(--topbar-containerSize-width);
+    height: var(--topbar-containerSize-height);
+
+    /* Border */
+    border-top: 1px solid var(--topbar-border-color);
+    box-shadow: 0 0 10px 0 var(--topbar-border-color);
+}
+
+/* Logo */
+.Taskbar-Logo-Container {
+    /* Display */
+    display: flex;
+    cursor: pointer;
+    overflow: hidden;
+
+    padding: 0 0.5em 0 0.5em;
+
+    .Taskbar-Logo-Display {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 0.25em;
+        overflow: hidden;
+
+        height: var(--topbar-containerSize-height);
+        width: 10em;
+
+        img {
+            width: 4em;
+            scale: 3.5;
+
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-family: var(--font-family-Stretch_Pro), sans-serif;
+        font-size: var(--font-size-medium);
+    }
+}
+
+/* Date and Time */
+.Taskbar-DateTime-Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+
+    cursor: pointer;
+
+    padding: 0 1em 0 1em;
+
+    font-family: var(--font-family-Consolas), sans-serif;
+    font-size: var(--font-size-small);
+}

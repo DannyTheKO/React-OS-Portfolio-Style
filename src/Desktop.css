@@ -1,0 +1,28 @@
+.IconImage {
+    display: flex;
+
+    width: 48px;
+    height: 48px;
+
+    overflow: hidden;
+
+    border: 1px solid white;
+    border-radius: 16px;
+}
+
+.Window {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+.Desktop-Container {
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+    background-color: black;
+    background-image: url(Assets/Image/Backgrounds/ARC_1080P.png);
+    background-size: cover;
+}

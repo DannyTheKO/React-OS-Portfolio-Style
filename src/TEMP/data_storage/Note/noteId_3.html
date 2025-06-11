@@ -1,0 +1,29 @@
+<!-- We gonna do style and script here -->
+<style>
+</style>
+
+<div class="noteContent noteSetting" contenteditable="false;">
+    <div class="title">
+        <h1>${title}</h1>
+        <h2>${date}</h2>
+        <hr>
+    </div>
+
+    <div class="imageWindows popupTrigger" data-popup-title="building.jpg">
+        <img src="../img/background/building.jpg" alt="Image">
+    </div>
+
+</div>
+
+<script async type="module">
+    import { windowElement, dragElement, popupElement } from "../../js/desktop.js";
+    // console.log("noteId: 3 script execute");
+    // console.log("=================================");
+    scriptsLoadOrder();
+
+    async function scriptsLoadOrder() {
+        let content = document.querySelector(".noteContent");
+        await popupElement(content)
+    };
+
+</script>
