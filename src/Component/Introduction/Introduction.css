@@ -9,7 +9,7 @@
 
     /* Border */
     /* --application-background-blur: var(--application-border-default-color)*/
-    --application-border-color: rgb(37, 174, 190);
+    --application-border-color: rgb(37, 80, 190);
 
     /* == Absolute Setting == */
     /* Display */
@@ -27,7 +27,7 @@
 
     /* Border */
     border: 4px solid;
-    border-color: var(--application-border-color) ;
+    border-color: var(--application-border-color);
     backdrop-filter: var(--application-background-blur);
 
     /* Background */
@@ -51,11 +51,27 @@
 .Introduction_Container {
     display: flex;
     flex-direction: column;
+
+    opacity: 0;
+    transition: opacity 0.1s ease, transform 0.1s ease;
+    pointer-events: none;
+
+    /*Transition From Open And Close Action*/
+    &.SHOW {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    &.HIDE {
+        opacity: 0;
+        pointer-events: none;
+    }
 }
 
 .Introduction_Title {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: var(--application-border-color);
 
     /*User Drag*/
@@ -63,6 +79,8 @@
     -webkit-user-select: none;
     user-select: none;
 
+    height: 20px;
+    padding-bottom: 2px;
 
     .Introduction_Title_Name {
 
@@ -71,10 +89,7 @@
     .Introduction_Title_Action {
         display: flex;
         align-items: center;
-
-        img {
-            width: 20px;
-        }
+        justify-content: center;
     }
 }
 
@@ -104,6 +119,35 @@
         p {
             margin-bottom: 1em;
         }
+    }
 
+    .container_links {
+        display: flex;
+        justify-content: center;
+
+        overflow: hidden;
+
+        font-size: var(--font-size-small);
+
+        padding: 8px 0 8px 0;
+
+        a {
+            transition: background-color 0.2s ease 0s,
+            scale 0.2s ease 0s,
+            color 0.2s ease 0s;
+
+            padding: 0.5em;
+            border: 2px solid var(--border-color);
+        }
+
+        a:hover {
+            color: black;
+            scale: 1.5;
+            background-color: var(--border-color)
+        }
+
+        a:visited {
+            color: blue;
+        }
     }
 }

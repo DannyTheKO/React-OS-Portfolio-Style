@@ -1,16 +1,19 @@
 import React from 'react'
 import './Desktop.css'
-import {Taskbar} from './Component/Taskbar/Taskbar.jsx';
-import {Introduction} from "./Component/Introduction/Introduction.jsx";
+import Taskbar from './Component/Taskbar/Taskbar.jsx';
+import Introduction_Wrapper from "./Component/Introduction/Introduction_Wrapper.jsx";
 
 const Desktop = () => {
+    // TODO: Make "OS Bootup Simulation"
+
+    // TODO: Make Draggable Element
 
 
     return (
         <div className="Desktop-Container">
-            {/*Load this first*/}
             <Taskbar/>
-            <Introduction/>
+
+            <Introduction_Wrapper />
         </div>
     )
 }

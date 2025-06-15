@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import DannyOS_SVG from "../../Assets/SVG/OS_Icon.svg"
 import './Taskbar.css'
 
-export function Taskbar () {
+const Taskbar = () => {
     const [dateTime, setDateTime] = useState(new Date());
 
     useEffect(() => {
@@ -48,3 +48,5 @@ export function Taskbar () {
         </div>
     )
 }
+
+export default Taskbar;
