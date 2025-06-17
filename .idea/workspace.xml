@@ -4,24 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Open and Close action now has animation">
-      <change afterPath="$PROJECT_DIR$/src/Hook/useDraggableResize.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Hook/useResizableComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="App now had Resizable and Draggable component...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Introduction/Introduction.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Introduction/Introduction.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Introduction/Introduction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Introduction/Introduction_App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Introduction/Introduction_Wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Introduction/Introduction_Wrapper.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Font/Angora.otf" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Font/Angora.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Font/StretchPro.otf" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Font/StretchPro.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Font/angora-font.zip" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Font/angora-font.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Font/stretch_pro.zip" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Font/stretch_pro.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Image/Backgrounds/ARC_1080P.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Image/Backgrounds/ARC_1080P.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Image/Backgrounds/building.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Image/Backgrounds/building.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Image/Backgrounds/desert.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Image/Backgrounds/desert.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Image/Backgrounds/ferret.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Image/Backgrounds/ferret.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Image/Backgrounds/xp.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Image/Backgrounds/xp.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Image/GIF/nature.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Image/GIF/nature.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Image/GIF/night.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Image/GIF/night.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Image/GIF/raccoon.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Image/GIF/raccoon.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Image/GIF/wasd-keyboard.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Image/GIF/wasd-keyboard.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Image/Icons/Hewwo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Image/Icons/Hewwo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Image/Icons/Introduction_Icon.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Image/Icons/Introduction_Icon.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Image/Icons/Mexicano.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Image/Icons/Mexicano.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Image/Icons/contact.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Image/Icons/contact.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Image/Icons/linktree.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Image/Icons/linktree.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Image/Icons/raccoon_light.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Image/Icons/raccoon_light.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Image/Note/me.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Image/Note/me.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/SVG/OS_Icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/SVG/OS_Icon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/SVG/close-btn.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/SVG/close-btn.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/SVG/collapse-btn.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/SVG/collapse-btn.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/SVG/email.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/SVG/email.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/SVG/enlarge-btn.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/SVG/enlarge-btn.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/SVG/left-arrow.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/SVG/left-arrow.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/SVG/right-arrow.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/SVG/right-arrow.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/SVG/snow_icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/SVG/snow_icon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/javascript.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/javascript.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/react.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/react.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Introduction/Introduction_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Introduction/Introduction_App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Taskbar/Taskbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Taskbar/Taskbar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Desktop.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Desktop.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Desktop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Desktop.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hook/useDraggableElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useDraggableComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hook/useVisibility.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useVisibility.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEMP/css/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEMP/css/contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/app/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEMP/app/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/app/introduction.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEMP/app/introduction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/app/note.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEMP/app/note.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/app/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEMP/app/project.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/app/topbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEMP/app/topbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TEMP/css/desktop.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEMP/css/desktop.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEMP/css/introduction.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEMP/css/introduction.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEMP/css/note.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEMP/css/note.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEMP/css/project.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEMP/css/project.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,6 +125,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\public" />
       <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src\Assets" />
       <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src\TEMP" />
     </key>
@@ -137,7 +161,7 @@
       <workItem from="1749661298118" duration="1855000" />
       <workItem from="1749918906445" duration="6552000" />
       <workItem from="1749968671245" duration="17664000" />
-      <workItem from="1750141016517" duration="27606000" />
+      <workItem from="1750141016517" duration="28793000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -163,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750004003958</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="App now had Resizable and Draggable component...">
+      <option name="closed" value="true" />
+      <created>1750186342476</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1750186342476</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +228,7 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Initial Commit with .gitignore" />
     <MESSAGE value="Open and Close action now has animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Open and Close action now has animation" />
+    <MESSAGE value="App now had Resizable and Draggable component..." />
+    <option name="LAST_COMMIT_MESSAGE" value="App now had Resizable and Draggable component..." />
   </component>
 </project>

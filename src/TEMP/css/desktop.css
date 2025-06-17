@@ -1,12 +1,12 @@
 /* Import font here */
 @font-face {
     font-family: "Stretch Pro";
-    src: url(../../Assets/Font/StretchPro.otf) format("opentype");
+    src: url(../../../public/Assets/Font/StretchPro.otf) format("opentype");
 }
 
 @font-face {
     font-family: "Angora";
-    src: url(../../Assets/Font/Angora-1G3BB.otf) format("opentype");
+    src: url(../../../public/Assets/Font/Angora-1G3BB.otf) format("opentype");
 }
 
 :root {

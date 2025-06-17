@@ -1,6 +1,6 @@
 import React from 'react'
 import {useEffect, useState} from "react";
-import DannyOS_SVG from "../../Assets/SVG/OS_Icon.svg"
+import DannyOS_SVG from "../../../public/Assets/SVG/OS_Icon.svg"
 import './Taskbar.css'
 
 const Taskbar = () => {

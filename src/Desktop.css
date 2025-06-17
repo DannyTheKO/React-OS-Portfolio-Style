@@ -30,7 +30,7 @@
     overflow: hidden;
 
     background-color: black;
-    background-image: url(Assets/Image/Backgrounds/ARC_1080P.png);
+    background-image: url(../public/Assets/Image/Backgrounds/ARC_1080P.png);
     background-size: cover;
 }
 

@@ -5,7 +5,7 @@ import {FiXSquare} from "react-icons/fi";
 import "./Introduction.css"
 
 export const Introduction_Icon = ({onClick_Open}) => {
-    const Introduction_Icon_Image = "../src/Assets/Image/Icons/Introduction_Icon.jpg"
+    const Introduction_Icon_Image = "./Assets/Image/Icons/Introduction_Icon.jpg"
 
     return (
         // Introduction Icon
@@ -22,7 +22,7 @@ export const Introduction_App = forwardRef(({
                                                 isVisible,
                                                 onClick_Close
                                             }, ref) => {
-    const ProfilePicture = "../src/Assets/Image/Icons/Hewwo.png"
+    const ProfilePicture = "./Assets/Image/Icons/Hewwo.png"
     const [visibleClass, setVisibleClass] = useState("")
     // console.log(typeof componentRef)
 
