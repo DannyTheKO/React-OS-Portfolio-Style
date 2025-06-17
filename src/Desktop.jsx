@@ -6,9 +6,6 @@ import Introduction_Wrapper from "./Component/Introduction/Introduction_Wrapper.
 const Desktop = () => {
     // TODO: Make "OS Bootup Simulation"
 
-    // TODO: Make Draggable Element
-
-
     return (
         <div className="Desktop-Container">
             <Taskbar/>

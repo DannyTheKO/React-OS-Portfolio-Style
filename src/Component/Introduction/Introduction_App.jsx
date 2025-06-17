@@ -1,4 +1,4 @@
-import React from "react";
+import React, {forwardRef} from "react";
 import {useState, useEffect} from 'react'
 
 import {FiXSquare} from "react-icons/fi";
@@ -9,8 +9,8 @@ export const Introduction_Icon = ({onClick_Open}) => {
 
     return (
         // Introduction Icon
-        <div className="Introduction_Icon" onClick={onClick_Open}>
-            <div className="IconImage">
+        <div id="Global_Icon_Setting" onClick={onClick_Open}>
+            <div className="Introduction_ImageIcon">
                 <img src={Introduction_Icon_Image} alt="introductionIcon"/>
             </div>
             <p>About Me</p>
@@ -18,9 +18,13 @@ export const Introduction_Icon = ({onClick_Open}) => {
     )
 }
 
-export const Introduction = ({isVisible, onClick_Close}) => {
+export const Introduction_App = forwardRef(({
+                                                isVisible,
+                                                onClick_Close
+                                            }, ref) => {
     const ProfilePicture = "../src/Assets/Image/Icons/Hewwo.png"
     const [visibleClass, setVisibleClass] = useState("")
+    // console.log(typeof componentRef)
 
     useEffect(() => {
         if (isVisible) {
@@ -33,15 +37,19 @@ export const Introduction = ({isVisible, onClick_Close}) => {
 
     return (
         // Introduction Container
-        <div id="Introduction_Setting" className={`Introduction_Container ${visibleClass}`}>
+        <div
+            id="Global_App_Setting"
+            className={`Introduction_App ${visibleClass}`}
+            ref={ref}
+        >
 
             {/* Title */}
             <div className="Introduction_Title">
                 <div className="Introduction_Title_Name">
-                    [ About Me ]
+                    <p>[ About Me ]</p>
                 </div>
                 <div className="Introduction_Title_Action">
-                    <FiXSquare className="Introduction_Btn_Close" onClick={onClick_Close} alt="Close"/>
+                    <FiXSquare onClick={onClick_Close} alt="Close"/>
                 </div>
             </div>
 
@@ -80,4 +88,4 @@ export const Introduction = ({isVisible, onClick_Close}) => {
             </div>
         </div>
     )
-}
+})

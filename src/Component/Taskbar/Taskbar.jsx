@@ -37,7 +37,7 @@ const Taskbar = () => {
 
             {/* TODO: Application Open Dynamic */}
             <div>
-
+                Something will show here...
             </div>
 
             {/*Date and Time*/}

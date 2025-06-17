@@ -39,7 +39,7 @@
     /* == Window Setting == */
     /* Window Background */
     --application-background-color: rgba(0, 0, 0, 0.8);
-    --application-background-blur: blur(4px);
+    --application-backdrop-blur: blur(4px);
 }
 
 * {
@@ -218,7 +218,7 @@ img {
         border: var(--border-size-around) var(--border-color) solid;
         border-top: none;
         background-color: var(--application-background-color);
-        backdrop-filter: var(--application-background-blur);
+        backdrop-filter: var(--application-backdrop-blur);
     }
 
     /* Popup: image element */
@@ -229,7 +229,7 @@ img {
         border: var(--border-size-around) var(--border-color) solid;
         border-top: none;
         background-color: var(--application-background-color);
-        backdrop-filter: var(--application-background-blur);
+        backdrop-filter: var(--application-backdrop-blur);
 
         max-width: 55vw;
 

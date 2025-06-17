@@ -16,7 +16,7 @@
 
     /* Window Background */
     --application-background-color: rgba(0, 0, 0, 0.8);
-    --application-background-blur: blur(4px);
+    --application-backdrop-blur: blur(4px);
 
     /* == Introduction Content Setting == */
     /* Font Family */

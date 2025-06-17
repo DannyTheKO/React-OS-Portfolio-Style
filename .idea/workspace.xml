@@ -4,21 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Initial Commit with .gitignore">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Component/Introduction/Introduction_Wrapper.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Hook/useDraggableElement.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Hook/useVisibility.js" afterDir="false" />
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Open and Close action now has animation">
+      <change afterPath="$PROJECT_DIR$/src/Hook/useDraggableResize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Hook/useResizableComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Introduction/Introduction.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Introduction/Introduction.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Introduction/Introduction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Introduction/Introduction.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Taskbar/Taskbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Taskbar/Taskbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Introduction/Introduction.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Introduction/Introduction_App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Introduction/Introduction_Wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Introduction/Introduction_Wrapper.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Taskbar/Taskbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Taskbar/Taskbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Desktop.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Desktop.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Desktop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Desktop.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hook/useDraggableElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useDraggableComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hook/useVisibility.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useVisibility.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/css/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEMP/css/contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/css/desktop.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEMP/css/desktop.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/css/introduction.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEMP/css/introduction.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/css/note.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEMP/css/note.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/css/project.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEMP/css/project.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +136,8 @@
       <workItem from="1749659223863" duration="2016000" />
       <workItem from="1749661298118" duration="1855000" />
       <workItem from="1749918906445" duration="6552000" />
-      <workItem from="1749968671245" duration="9148000" />
+      <workItem from="1749968671245" duration="17664000" />
+      <workItem from="1750141016517" duration="27606000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -150,7 +155,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749661781233</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Open and Close action now has animation">
+      <option name="closed" value="true" />
+      <created>1750004003958</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1750004003958</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,6 +195,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Initial Commit with .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit with .gitignore" />
+    <MESSAGE value="Open and Close action now has animation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Open and Close action now has animation" />
   </component>
 </project>
