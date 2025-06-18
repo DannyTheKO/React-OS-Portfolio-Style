@@ -12,6 +12,10 @@
     color: white;
     font-family: var(--font-family-Consolas), sans-serif;
 
+    /* Introduction App Size */
+    width: 720px; min-width: 400px;
+    height: 500px; min-height: 200px;
+
     /* Introduction App Position */
     &.Introduction_App {
         /* == Introduction Setting == */
@@ -19,14 +23,6 @@
         position: absolute;
         top: 10%;
         left: 25%;
-    }
-
-    /* Introduction App Size */
-    .Introduction_Display {
-        width: 720px;
-        min-width: 400px;
-        height: 500px;
-        min-height: 200px;
     }
 }
 

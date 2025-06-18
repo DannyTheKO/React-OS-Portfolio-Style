@@ -1,5 +1,7 @@
 @import "main.css";
 :root {
+    overflow: hidden;
+
     /* Font Global Variable */
     --font-family-Consolas: "Consolas";
     --font-family-Stretch_Pro: "Stretch Pro";
@@ -21,7 +23,8 @@
     --application-backdrop-blur: blur(12px);
     --application-background-color: rgba(0, 0, 0, 0.5);
 
-    overflow: hidden;
+    /* App Scrollbar */
+    --scrollbar-thumb-color: rgb(254, 221, 35);
 }
 
 .Desktop-Container {
@@ -93,8 +96,8 @@
     left: 25%;
 
     /* Size */
-    width: auto;
-    height: auto;
+    width: 720px; min-width: 320px;
+    height: 700px; min-height: 200px;
 
     /* Font */
     color: white;
@@ -115,6 +118,13 @@
         pointer-events: none;
     }
 
+    .resizer {
+        /*border-radius: 12px;*/
+        transform: translate(-50%, -50%);
+        /*DEBUG*/
+        /*background-color: red;*/
+    }
+
     /* == App Title == */
     [class$="_Title"] {
         display: flex;
@@ -129,7 +139,9 @@
         position: sticky;
         top: 0;
         height: 20px;
-        padding-bottom: 4px;
+        padding: 4px 2px;
+
+        cursor: grab;
 
         [class$="_Name"] {
             display: flex;
@@ -152,6 +164,8 @@
             justify-content: center;
             padding: 2px 4px;
 
+            cursor: pointer;
+
             &:hover {
                 border-radius: 4px;
                 background-color: rgba(19, 24, 26, 0.4);
@@ -164,17 +178,13 @@
     [class$="_Display"] {
         padding: 1em;
 
-        width: 720px;
-        min-width: 320px;
-        height: 700px;
-        min-height: 200px;
+        /*width: 720px; min-width: 320px;*/
+        /*height: 700px; min-height: 200px;*/
 
-        resize: both;
+        /*resize: both;*/
         overflow: scroll; overflow-x: hidden;
-        /*scrollbar-width: thin;*/
-        /*scrollbar-color: var(--application-border-color) transparent;*/
         &::-webkit-scrollbar {
-            width: 12px;
+            width: 24px;
             height: auto;
         }
 
@@ -182,16 +192,19 @@
         &::-webkit-scrollbar-track {
             /* Use transparent background with some padding */
             background: transparent;
-            margin: 4px 0;  /* Add vertical padding */
         }
 
         /* Ensure the thumb fills the entire width */
         &::-webkit-scrollbar-thumb {
-            background: #fdf900;
+            background: var(--scrollbar-thumb-color);
             border-radius: 12px;
             /* Create padding effect with smaller thumb */
-            border: 4px solid transparent;
+            border: 10px solid transparent;
             background-clip: content-box;
+        }
+
+        &::-webkit-scrollbar-corner {
+            display: none;
         }
     }
 }

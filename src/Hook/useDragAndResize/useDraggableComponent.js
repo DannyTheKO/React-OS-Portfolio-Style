@@ -1,16 +1,16 @@
 import React, {useEffect, useRef, useState} from "react";
 
-// TODO: Make Draggable Component
 export function useDraggableComponent(ref) {
     const [position, setPosition] = useState({x: 0, y: 0});
     const [isDraggable, setIsDraggable] = useState(false);
 
     useEffect(() => {
         if (!ref.current) {
-            console.log("Component not found")
+            // console.log("Component not found")
             return;
         }
 
+        // Initialize
         const element = ref.current;
         let startX, startY, startLeft, startTop;
         let dragging = false;
@@ -22,6 +22,7 @@ export function useDraggableComponent(ref) {
             e.preventDefault();
             dragging = true;
             setIsDraggable(true);
+            e.target.style.cursor = "grabbing";
 
             // TODO: Get user screen width and height, to limit the app position
 
@@ -53,16 +54,22 @@ export function useDraggableComponent(ref) {
             setPosition({x: newLeft, y: newTop});
 
             // Debug
-            const rect = element.getBoundingClientRect();
-            console.log("=== DRAGGABLE DETECTION ===");
-            console.log("Component Name: ");
-            console.log(`x: ${rect.x}, y: ${rect.y}`);
-            console.log(`width: ${rect.width}, height: ${rect.height}`)
+            // const rect = element.getBoundingClientRect();
+            // console.log("=== DRAGGABLE DETECTION ===");
+            // console.log("Component Name: ");
+            // console.log(`x: ${rect.x}, y: ${rect.y}`);
+            // console.log(`width: ${rect.width}, height: ${rect.height}`)
         }
 
-        const handleMouseUp = () => {
+        const handleMouseUp = (e) => {
             dragging = false;
             setIsDraggable(false);
+            e.target.style.cursor = "grab";
+
+            // Save the position of the app
+            const rect = element.getBoundingClientRect();
+            sessionStorage.setItem("Introduction_App", JSON.stringify(rect))
+
             document.removeEventListener("mousemove", handleMouseMove);
             document.removeEventListener("mouseup", handleMouseUp);
         };

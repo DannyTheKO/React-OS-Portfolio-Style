@@ -1,7 +1,8 @@
 import React from 'react'
 import {useEffect, useState} from "react";
-import DannyOS_SVG from "../../../public/Assets/SVG/OS_Icon.svg"
 import './Taskbar.css'
+
+const DannyOS_SVG = "./Assets/SVG/OS_Icon.svg"
 
 const Taskbar = () => {
     const [dateTime, setDateTime] = useState(new Date());
@@ -35,7 +36,7 @@ const Taskbar = () => {
                 <span>DANNY'S OS</span>
             </div>
 
-            {/* TODO: Application Open Dynamic */}
+            {/* TODO: Show up what app will open here */}
             <div>
                 Something will show here...
             </div>

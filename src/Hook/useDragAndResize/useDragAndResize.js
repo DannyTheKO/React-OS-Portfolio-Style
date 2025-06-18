@@ -2,7 +2,7 @@ import React, {useRef} from "react";
 import {useResizableComponent} from "./useResizableComponent.js";
 import {useDraggableComponent} from "./useDraggableComponent.js";
 
-export function useDraggableResize() {
+export function useDragAndResize() {
     const { elementRef, dimension } = useResizableComponent()
     const { position, isDraggable } = useDraggableComponent(elementRef);
 

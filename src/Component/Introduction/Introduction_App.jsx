@@ -4,8 +4,10 @@ import {useState, useEffect} from 'react'
 import {FiXSquare} from "react-icons/fi";
 import "./Introduction.css"
 
+const ProfilePicture = "./Assets/Image/Icons/Hewwo.png"
+const Introduction_Icon_Image = "./Assets/Image/Icons/Introduction_Icon.jpg"
+
 export const Introduction_Icon = ({onClick_Open}) => {
-    const Introduction_Icon_Image = "./Assets/Image/Icons/Introduction_Icon.jpg"
 
     return (
         // Introduction Icon
@@ -18,13 +20,8 @@ export const Introduction_Icon = ({onClick_Open}) => {
     )
 }
 
-export const Introduction_App = forwardRef(({
-                                                isVisible,
-                                                onClick_Close
-                                            }, ref) => {
-    const ProfilePicture = "./Assets/Image/Icons/Hewwo.png"
+export const Introduction_App = forwardRef(({isVisible, onClick_Close}, ref) => {
     const [visibleClass, setVisibleClass] = useState("")
-    // console.log(typeof componentRef)
 
     useEffect(() => {
         if (isVisible) {
@@ -64,20 +61,15 @@ export const Introduction_App = forwardRef(({
                 <div className="container_paragraph">
                     <p>Hi, my name is Danny.</p>
                     <p>I'm a software engineer, currently studied in Saigon University.</p>
-                    <p>After many attempt making my own landing page, but failed to do so because is either
-                        unmotivated,
-                        burnout halfway or feel like a mess doing project and got me to abandoned my past project,
-                        although i'm still determined to sit down and create another.</p>
-                    <p>Starting this project is a tough one for me, I find that is hard to start a new page with a
-                        blank
+                    <p>Starting this project is a tough one for me, I find that is hard to start a new page with a blank
                         project is really exhausting, the reason that I keep going is that the journey of learning
-                        along
-                        the way and I had learning a lot over few weeks.</p>
+                        along the way and I had learning a lot over few weeks.</p>
+                    <p>After many attempt making my own landing page, but failed to do so because is either
+                        unmotivated, burnout halfway or feel like a mess doing project and got me to abandoned my past project,
+                        although i'm still determined to sit down and create another.</p>
                     <p>Hope you like what i'm showing! and if you are then head over to my project repo and give it
-                        a
-                        star! so it motivate me to keep going ^^.</p>
-                    <p><i><strong>P/S:</strong> The repo of this project is public so if anyone want to learn, feel
-                        free
+                        a star! so it motivate me to keep going ^^.</p>
+                    <p><i><strong>P/S:</strong> The repo of this project is public so if anyone want to learn, feel free
                         to check it out!</i></p>
                 </div>
 
