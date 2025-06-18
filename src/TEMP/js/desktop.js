@@ -285,7 +285,7 @@ export function dragElement(element, header) {
 }
 
 
-// TODO: make this
+// make this
 function windowResize(element) {
 
 }

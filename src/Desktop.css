@@ -118,13 +118,6 @@
         pointer-events: none;
     }
 
-    .resizer {
-        /*border-radius: 12px;*/
-        transform: translate(-50%, -50%);
-        /*DEBUG*/
-        /*background-color: red;*/
-    }
-
     /* == App Title == */
     [class$="_Title"] {
         display: flex;

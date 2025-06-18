@@ -1,23 +1,27 @@
-import React, {useState, useEffect} from "react";
 
-export default function useDragAndResize(elementRef) {
+export default function createResizerDiv(elementRef) {
     const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
     const displayDiv = elementRef.current;
+
     if (!displayDiv) return;
 
+    const computedStyles = window.getComputedStyle(displayDiv);
+    const minWidth = parseFloat(computedStyles.minWidth) || 0;
+    const minHeight = parseFloat(computedStyles.minHeight) || 0;
+
+    // console.log(displayDiv);
     displayDiv.style.position = 'relative';
 
     // Clean up any existing resizer
     const existingResizer = displayDiv.querySelectorAll('.resizer');
     existingResizer.forEach(resizer => resizer.remove());
 
+    // Create Div base on directions arrays
     directions.forEach(dir => {
         const resizer = document.createElement("div");
         resizer.classList.add('resizer', `resizer-${dir}`);
         Object.assign(resizer.style, {
             position: 'absolute',
-            width: '10px',
-            height: '10px',
             zIndex: 10, // TODO: THIS HAS TO CHANGE
             cursor: getCursor(dir),
             ...getPositionStyle(dir, elementRef),
@@ -27,37 +31,64 @@ export default function useDragAndResize(elementRef) {
         displayDiv.appendChild(resizer);
     });
 
+    // Resize Logic
     function initResize(dir, element) {
         return function (e) {
             e.preventDefault();
 
             const startX = e.clientX;
             const startY = e.clientY;
+
             const startWidth = element.offsetWidth;
             const startHeight = element.offsetHeight;
-            const startTop = element.offsetTop;
+
             const startLeft = element.offsetLeft;
+            const startTop = element.offsetTop;
 
             function onMouseMove(e) {
                 const dx = e.clientX - startX;
                 const dy = e.clientY - startY;
 
+                // new values for limit width and height
+                let newWidth = startWidth;
+                let newHeight = startHeight;
+                let newLeft = startLeft;
+                let newTop = startTop;
+
                 if (dir.includes('E')) {
-                    element.style.width = `${startWidth + dx}px`;
+                    newWidth = Math.max(minWidth, startWidth + dx);
                 }
                 if (dir.includes('S')) {
-                    element.style.height = `${startHeight + dy}px`;
+                    newHeight = Math.max(minHeight, startHeight + dy);
                 }
                 if (dir.includes('W')) {
-                    element.style.width = `${startWidth - dx}px`;
-                    element.style.left = `${startLeft + dx}px`;
+                    const candidateWidth = startWidth - dx;
+                    if (candidateWidth >= minWidth) {
+                        newWidth = candidateWidth;
+                        newLeft = startLeft + dx;
+                    } else {
+                        newWidth = minWidth;
+                        newLeft = startLeft + (startWidth - minWidth); // lock position
+                    }
                 }
                 if (dir.includes('N')) {
-                    element.style.height = `${startHeight - dy}px`;
-                    element.style.top = `${startTop + dy}px`;
+                    const candidateHeight = startHeight - dy;
+                    if (candidateHeight >= minHeight) {
+                        newHeight = candidateHeight;
+                        newTop = startTop + dy;
+                    } else {
+                        newHeight = minHeight;
+                        newTop = startTop + (startHeight - minHeight);
+                    }
                 }
+
+                element.style.width = `${newWidth}px`;
+                element.style.height = `${newHeight}px`;
+                element.style.left = `${newLeft}px`;
+                element.style.top = `${newTop}px`;
             }
 
+            // In case user get drag stuck
             function onMouseUp() {
                 document.removeEventListener('mousemove', onMouseMove);
                 document.removeEventListener('mouseup', onMouseUp);
@@ -68,6 +99,7 @@ export default function useDragAndResize(elementRef) {
         };
     }
 
+    // Get cursor style base on user position
     function getCursor(dir) {
         switch (dir) {
             case 'N': return 'n-resize';
@@ -81,11 +113,13 @@ export default function useDragAndResize(elementRef) {
         }
     }
 
+    // Initialize resizer div placement
     function getPositionStyle(dir, elementRef) {
         const rect = elementRef.current.getBoundingClientRect();
         const style = {
             position: 'absolute',
-            transform: 'translate(-50%, -50%)'  // Center the resizer
+            transform: 'translate(-50%, -50%)',  // Center the resizer
+            backgroundColor: 'red', // DEBUG
         };
 
         switch (dir) {
