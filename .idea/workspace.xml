@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="App now had resizable">
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="update createResizerDiv.js, now fix the resizer bug now app do have min-width and min-height base on CSS variable">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Desktop.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Desktop.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Desktop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Desktop.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hook/useDragAndResize/createResizerDiv.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useDragAndResize/createResizerDiv.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEMP/js/desktop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEMP/js/desktop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Introduction/Introduction_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Introduction/Introduction_App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hook/useDragAndResize/useDragAndResize.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useDragAndResize/useDragAndResize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hook/useDragAndResize/useDraggableComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useDragAndResize/useDraggableComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hook/useDragAndResize/useResizableComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useDragAndResize/useResizableComponent.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +127,7 @@
       <workItem from="1749918906445" duration="6552000" />
       <workItem from="1749968671245" duration="17664000" />
       <workItem from="1750141016517" duration="29044000" />
-      <workItem from="1750224332539" duration="18062000" />
+      <workItem from="1750224332539" duration="19135000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -177,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750242237471</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update createResizerDiv.js, now fix the resizer bug now app do have min-width and min-height base on CSS variable">
+      <option name="closed" value="true" />
+      <created>1750262188966</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1750262188966</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,6 +221,7 @@
     <MESSAGE value="App now had Resizable and Draggable component..." />
     <MESSAGE value="move Assets into public folder" />
     <MESSAGE value="App now had resizable" />
-    <option name="LAST_COMMIT_MESSAGE" value="App now had resizable" />
+    <MESSAGE value="update createResizerDiv.js, now fix the resizer bug now app do have min-width and min-height base on CSS variable" />
+    <option name="LAST_COMMIT_MESSAGE" value="update createResizerDiv.js, now fix the resizer bug now app do have min-width and min-height base on CSS variable" />
   </component>
 </project>

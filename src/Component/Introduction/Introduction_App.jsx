@@ -20,7 +20,7 @@ export const Introduction_Icon = ({onClick_Open}) => {
     )
 }
 
-export const Introduction_App = forwardRef(({isVisible, onClick_Close}, ref) => {
+export const Introduction_App = forwardRef(({isVisible, onClick_Close}, componentRef) => {
     const [visibleClass, setVisibleClass] = useState("")
 
     useEffect(() => {
@@ -37,7 +37,7 @@ export const Introduction_App = forwardRef(({isVisible, onClick_Close}, ref) => 
         <div
             id="Global_App_Setting"
             className={`Introduction_App ${visibleClass}`}
-            ref={ref}
+            ref={componentRef}
         >
 
             {/* Title */}

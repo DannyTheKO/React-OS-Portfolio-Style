@@ -3,16 +3,16 @@ import createResizerDiv from './createResizerDiv.js'
 
 export function useResizableComponent() {
     const [dimensions, setDimensions] = useState({width: 0, height: 0})
-    const elementRef = useRef(null)
+    const componentRef = useRef(null)
 
     useEffect(() => {
-        if (!elementRef.current) {
+        if (!componentRef.current) {
             // console.error("Couldn't find the component");
             return;
         }
 
         const updateDimensions = () => {
-            const rect = elementRef.current.getBoundingClientRect();
+            const rect = componentRef.current.getBoundingClientRect();
             setDimensions({
                 width: rect.width,
                 height: rect.height,
@@ -21,7 +21,7 @@ export function useResizableComponent() {
 
         const saveDimensions = () => {
             // Save the updated dimensions
-            const rect = elementRef.current.getBoundingClientRect();
+            const rect = componentRef.current.getBoundingClientRect();
             sessionStorage.setItem("Introduction_App", JSON.stringify(rect))
         }
 
@@ -34,9 +34,9 @@ export function useResizableComponent() {
         // Create an observer to observe the resize change of the app
         const resizeObserver = new ResizeObserver(entries => {
             for (const entry of entries) {
-                if (entry.target === elementRef.current) {
+                if (entry.target === componentRef.current) {
                     updateDimensions();
-                    createResizerDiv(elementRef)
+                    createResizerDiv(componentRef)
 
                     saveDimensionsDebound();
 
@@ -52,20 +52,20 @@ export function useResizableComponent() {
 
 
         // Start Observe
-        resizeObserver.observe(elementRef.current);
+        resizeObserver.observe(componentRef.current);
 
         // Clean Up
         return () => {
             // When the App close, we check if the ref is still there, if yes than we unobserve
-            if (elementRef.current) {
-                resizeObserver.unobserve(elementRef.current);
+            if (componentRef.current) {
+                resizeObserver.unobserve(componentRef.current);
             }
 
             // Force disconnect observer
             resizeObserver.disconnect();
         }
 
-    }, [elementRef.current]);
+    }, [componentRef.current]);
 
     function debounce(callback, msDelay) {
         let timeout
@@ -75,5 +75,5 @@ export function useResizableComponent() {
         }
     }
 
-    return { elementRef, dimensions };
+    return { componentRef, dimensions };
 }

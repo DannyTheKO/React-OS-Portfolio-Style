@@ -3,8 +3,8 @@ import {useResizableComponent} from "./useResizableComponent.js";
 import {useDraggableComponent} from "./useDraggableComponent.js";
 
 export function useDragAndResize() {
-    const { elementRef, dimension } = useResizableComponent()
-    const { position, isDraggable } = useDraggableComponent(elementRef);
+    const { componentRef, dimension } = useResizableComponent()
+    const { position, isDraggable } = useDraggableComponent(componentRef);
 
     const componentState = {
         position,
@@ -12,5 +12,5 @@ export function useDragAndResize() {
         isDraggable
     }
 
-    return { componentRef: elementRef, componentState };
+    return { componentRef, componentState };
 }
