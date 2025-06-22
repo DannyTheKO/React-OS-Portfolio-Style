@@ -7,10 +7,10 @@ export function useVisibility(initial = false) {
     const [isFocus, setIsFocus] = useState()
     const componentRef = useRef(null)
 
-    useEffect(() => {
-        if (!componentRef.current) return;
-
-    }, [componentRef.current]);
+    // useEffect(() => {
+    //     if (!componentRef.current) return;
+    //
+    // }, [componentRef.current]);
 
 
     const onClick_Open = useCallback(() => {
@@ -26,5 +26,5 @@ export function useVisibility(initial = false) {
         setTimeout(() => setIsMounted(false), 300); // Match your CSS transition duration
     }, []);
 
-    return {componentRef, isVisible, isMounted, onClick_Open, onClick_Close};
+    return {isVisible, isMounted, onClick_Open, onClick_Close};
 }

@@ -1,9 +1,8 @@
-import React, {useState, useEffect, useRef} from 'react'
+import React, {useState, useEffect} from 'react'
 import createResizerDiv from './createResizerDiv.js'
 
-export function useResizableComponent() {
+export function useResizableComponent(componentRef) {
     const [dimensions, setDimensions] = useState({width: 0, height: 0})
-    const componentRef = useRef(null)
 
     useEffect(() => {
         if (!componentRef.current) {return;}
@@ -71,5 +70,5 @@ export function useResizableComponent() {
         }
     }
 
-    return { componentRef, dimensions };
+    return { dimensions };
 }

@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useEffect, useState} from "react";
 
 export function useDraggableComponent(componentRef) {
     const [position, setPosition] = useState({x: 0, y: 0});
@@ -68,13 +68,6 @@ export function useDraggableComponent(componentRef) {
 
             // Update state
             setPosition({x: newLeft, y: newTop});
-
-            // Debug
-            // const rect = component.getBoundingClientRect();
-            // console.log("=== DRAGGABLE DETECTION ===");
-            // console.log("Component Name: ");
-            // console.log(`x: ${rect.x}, y: ${rect.y}`);
-            // console.log(`width: ${rect.width}, height: ${rect.height}`)
         }
 
         const handleMouseUp = (e) => {

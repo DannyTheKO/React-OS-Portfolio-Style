@@ -10,7 +10,8 @@ export default function Introduction_Wrapper() {
     // DEBUG
     // useEffect(() => {
     //     console.log("Component State Update:", componentState);
-    // }, [componentState.position, componentState.dimensions]);
+    //
+    // }, [componentState.position, componentState.dimensions, componentState.componentName]);
 
     return (
         <>

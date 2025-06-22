@@ -1,12 +1,12 @@
 
-export default async function createResizerDiv(componentRef) {
+export default function createResizerDiv(componentRef) {
     const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
     const displayDiv = componentRef.current;
 
     if (!displayDiv) return;
 
     // Get min-width and min-height of the app
-    const computedStyles = await window.getComputedStyle(displayDiv);
+    const computedStyles = window.getComputedStyle(displayDiv);
     const minWidth = parseFloat(computedStyles.minWidth) || 0;
     const minHeight = parseFloat(computedStyles.minHeight) || 0;
 
@@ -14,11 +14,11 @@ export default async function createResizerDiv(componentRef) {
     displayDiv.style.position = 'relative';
 
     // Clean up any existing resizer
-    const existingResizer = await displayDiv.querySelectorAll('.resizer');
-    await existingResizer.forEach(resizer => resizer.remove());
+    const existingResizer = displayDiv.querySelectorAll('.resizer');
+    existingResizer.forEach(resizer => resizer.remove());
 
     // Create Div base on directions arrays
-    await directions.forEach(dir => {
+    directions.forEach(dir => {
         const resizer = document.createElement("div");
         resizer.classList.add('resizer', `resizer-${dir}`);
         Object.assign(resizer.style, {

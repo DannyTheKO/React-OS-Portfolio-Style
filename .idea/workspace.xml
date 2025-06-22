@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Drag component now has limit of the user screen">
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Save some work...">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Desktop.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Desktop.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Introduction/Introduction_Wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Introduction/Introduction_Wrapper.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Desktop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Desktop.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hook/useDragAndResize/createResizerDiv.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useDragAndResize/createResizerDiv.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hook/useDragAndResize/useDragAndResize.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useDragAndResize/useDragAndResize.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hook/useDragAndResize/useDraggableComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useDragAndResize/useDraggableComponent.js" afterDir="false" />
@@ -130,7 +132,7 @@
       <workItem from="1749968671245" duration="17664000" />
       <workItem from="1750141016517" duration="29044000" />
       <workItem from="1750224332539" duration="21901000" />
-      <workItem from="1750575959450" duration="5971000" />
+      <workItem from="1750575959450" duration="16542000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -196,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750263399558</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Save some work...">
+      <option name="closed" value="true" />
+      <created>1750582016891</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1750582016891</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +244,7 @@
     <MESSAGE value="App now had resizable" />
     <MESSAGE value="update createResizerDiv.js, now fix the resizer bug now app do have min-width and min-height base on CSS variable" />
     <MESSAGE value="Change variable from elementRef to componentRef, for better consistence" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change variable from elementRef to componentRef, for better consistence" />
+    <MESSAGE value="Save some work..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Save some work..." />
   </component>
 </project>
