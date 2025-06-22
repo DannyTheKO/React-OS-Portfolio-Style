@@ -1,11 +1,12 @@
 
-export default function createResizerDiv(elementRef) {
+export default async function createResizerDiv(componentRef) {
     const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
-    const displayDiv = elementRef.current;
+    const displayDiv = componentRef.current;
 
     if (!displayDiv) return;
 
-    const computedStyles = window.getComputedStyle(displayDiv);
+    // Get min-width and min-height of the app
+    const computedStyles = await window.getComputedStyle(displayDiv);
     const minWidth = parseFloat(computedStyles.minWidth) || 0;
     const minHeight = parseFloat(computedStyles.minHeight) || 0;
 
@@ -13,18 +14,18 @@ export default function createResizerDiv(elementRef) {
     displayDiv.style.position = 'relative';
 
     // Clean up any existing resizer
-    const existingResizer = displayDiv.querySelectorAll('.resizer');
-    existingResizer.forEach(resizer => resizer.remove());
+    const existingResizer = await displayDiv.querySelectorAll('.resizer');
+    await existingResizer.forEach(resizer => resizer.remove());
 
     // Create Div base on directions arrays
-    directions.forEach(dir => {
+    await directions.forEach(dir => {
         const resizer = document.createElement("div");
         resizer.classList.add('resizer', `resizer-${dir}`);
         Object.assign(resizer.style, {
             position: 'absolute',
-            zIndex: 10, // TODO: THIS HAS TO CHANGE
+            zIndex: 10, // TODO: THIS HAS TO CHANGE, maybe not ?
             cursor: getCursor(dir),
-            ...getPositionStyle(dir, elementRef),
+            ...getPositionStyle(dir, componentRef),
         });
 
         resizer.addEventListener('mousedown', initResize(dir, displayDiv));
@@ -32,18 +33,20 @@ export default function createResizerDiv(elementRef) {
     });
 
     // Resize Logic
-    function initResize(dir, element) {
+    function initResize(dir, component) {
         return function (e) {
             e.preventDefault();
+
+            const rectComponent = component.getBoundingClientRect();
 
             const startX = e.clientX;
             const startY = e.clientY;
 
-            const startWidth = element.offsetWidth;
-            const startHeight = element.offsetHeight;
+            const startWidth = rectComponent.width;
+            const startHeight = rectComponent.height;
 
-            const startLeft = element.offsetLeft;
-            const startTop = element.offsetTop;
+            const startLeft = rectComponent.left;
+            const startTop = rectComponent.top;
 
             function onMouseMove(e) {
                 const dx = e.clientX - startX;
@@ -78,14 +81,14 @@ export default function createResizerDiv(elementRef) {
                         newTop = startTop + dy;
                     } else {
                         newHeight = minHeight;
-                        newTop = startTop + (startHeight - minHeight);
+                        newTop = startTop + (startHeight - minHeight); // lock position
                     }
                 }
 
-                element.style.width = `${newWidth}px`;
-                element.style.height = `${newHeight}px`;
-                element.style.left = `${newLeft}px`;
-                element.style.top = `${newTop}px`;
+                component.style.width = `${newWidth}px`;
+                component.style.height = `${newHeight}px`;
+                component.style.left = `${newLeft}px`;
+                component.style.top = `${newTop}px`;
             }
 
             // In case user get drag stuck
@@ -113,55 +116,55 @@ export default function createResizerDiv(elementRef) {
         }
     }
 
-    // Initialize resizer div placement
-    function getPositionStyle(dir, elementRef) {
-        const rect = elementRef.current.getBoundingClientRect();
+    // Initialize resizer div style placement
+    function getPositionStyle(dir, componentRef) {
+        const rectComponent = componentRef.current.getBoundingClientRect();
         const style = {
             position: 'absolute',
             transform: 'translate(-50%, -50%)',  // Center the resizer
-            backgroundColor: 'red', // DEBUG
+            // background: 'red', // DEBUG
         };
 
         switch (dir) {
             case 'N':
-                style.left = `calc(${rect.width / 2}px - 2px)`;
+                style.left = `calc(${rectComponent.width / 2}px - 2px)`;
                 style.top = `-5px`;
                 style.width = `100%`;
                 style.height = `5px`
                 break;
             case 'NE':
-                style.left = `calc(${rect.width}px - 3px)`;
+                style.left = `calc(${rectComponent.width}px - 3px)`;
                 style.top = `-5px`;
                 style.width = `12px`
                 style.height = `12px`
                 break;
             case 'E':
-                style.left = `calc(${rect.width}px - 3px)`;
-                style.top = `calc(${rect.height / 2}px  - 3px)`;
+                style.left = `calc(${rectComponent.width}px - 3px)`;
+                style.top = `calc(${rectComponent.height / 2}px  - 3px)`;
                 style.height = `100%`;
                 style.width = `5px`;
                 break;
             case 'SE':
-                style.left = `calc(${rect.width}px - 3px)`;
-                style.top = `calc(${rect.height}px - 6px)`;
+                style.left = `calc(${rectComponent.width}px - 3px)`;
+                style.top = `calc(${rectComponent.height}px - 6px)`;
                 style.width = `12px`
                 style.height = `12px`
                 break;
             case 'S':
-                style.left = `${rect.width / 2}px`;
-                style.top = `calc(${rect.height}px - 6px)`;
+                style.left = `${rectComponent.width / 2}px`;
+                style.top = `calc(${rectComponent.height}px - 6px)`;
                 style.width = `100%`;
                 style.height = `5px`
                 break;
             case 'SW':
                 style.left = `0px`;
-                style.top = `calc(${rect.height}px - 6px)`;
+                style.top = `calc(${rectComponent.height}px - 6px)`;
                 style.width = `12px`
                 style.height = `12px`
                 break;
             case 'W':
                 style.left = `0px`;
-                style.top = `calc(${rect.height / 2}px - 6px)`;
+                style.top = `calc(${rectComponent.height / 2}px - 6px)`;
                 style.height = `100%`;
                 style.width = `5px`;
                 break;

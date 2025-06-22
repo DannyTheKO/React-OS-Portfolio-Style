@@ -1,10 +1,17 @@
-import React from "react";
-import {useState, useCallback, useEffect} from 'react';
+import React, {useState, useCallback, useEffect, useRef} from "react";
 
 // TODO: Open and Close Action Element
 export function useVisibility(initial = false) {
     const [isVisible, setIsVisible] = useState(initial);
     const [isMounted, setIsMounted] = useState(initial);
+    const [isFocus, setIsFocus] = useState()
+    const componentRef = useRef(null)
+
+    useEffect(() => {
+        if (!componentRef.current) return;
+
+    }, [componentRef.current]);
+
 
     const onClick_Open = useCallback(() => {
         setIsMounted(true);
@@ -19,5 +26,5 @@ export function useVisibility(initial = false) {
         setTimeout(() => setIsMounted(false), 300); // Match your CSS transition duration
     }, []);
 
-    return {isVisible, isMounted, onClick_Open, onClick_Close};
+    return {componentRef, isVisible, isMounted, onClick_Open, onClick_Close};
 }

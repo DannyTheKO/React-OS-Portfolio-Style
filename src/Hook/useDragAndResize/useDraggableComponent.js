@@ -11,9 +11,13 @@ export function useDraggableComponent(componentRef) {
         }
 
         // Initialize
-        const component = componentRef.current;
         let startX, startY, startLeft, startTop;
+        let viewportWidth, viewportHeight, maxTop, maxLeft;
         let dragging = false;
+
+        // Get Component App
+        const component = componentRef.current;
+        const componentTitle = component.querySelector(`[class$="_Title"]`)
 
         const handleMouseDown = (e) => {
             //Only start dragging from the title bar
@@ -24,16 +28,24 @@ export function useDraggableComponent(componentRef) {
             setIsDraggable(true);
             e.target.style.cursor = "grabbing";
 
-            // TODO: Get user screen width and height, to limit the app position
+            const rectComponent = component.getBoundingClientRect();
+            const rectComponentTitle = componentTitle.getBoundingClientRect();
+
+            // Get user screen width and height
+            viewportWidth = window.innerWidth;
+            viewportHeight = window.innerHeight;
+
+            // To set limit of the app position
+            maxTop = viewportHeight - rectComponentTitle.height;
+            maxLeft = viewportWidth - rectComponentTitle.width;
 
             // Get initial position
             startX = e.clientX;
             startY = e.clientY;
 
             // Get current component position
-            const rect = component.getBoundingClientRect();
-            startLeft = rect.left;
-            startTop = rect.top;
+            startLeft = rectComponent.left;
+            startTop = rectComponent.top;
 
             document.addEventListener("mousemove", handleMouseMove);
             document.addEventListener("mouseup", handleMouseUp);
@@ -43,8 +55,12 @@ export function useDraggableComponent(componentRef) {
             if (!dragging) return;
 
             // Calculate new position
-            const newLeft = startLeft + (e.clientX - startX);
-            const newTop = startTop + (e.clientY - startY);
+            let newTop = startTop + (e.clientY - startY);
+            let newLeft = startLeft + (e.clientX - startX);
+
+            // Calculate the limit of the app
+            newTop = Math.max(0, Math.min(newTop, maxTop));
+            newLeft = Math.max(0, Math.min(newLeft, maxLeft));
 
             // Update component position
             component.style.left = `${newLeft}px`;

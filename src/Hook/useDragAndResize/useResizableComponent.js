@@ -6,9 +6,12 @@ export function useResizableComponent() {
     const componentRef = useRef(null)
 
     useEffect(() => {
-        if (!componentRef.current) {
-            // console.error("Couldn't find the component");
-            return;
+        if (!componentRef.current) {return;}
+
+        const saveDimensions = () => {
+            // Save the updated dimensions
+            const rect = componentRef.current.getBoundingClientRect();
+            sessionStorage.setItem("Introduction_App", JSON.stringify(rect))
         }
 
         const updateDimensions = () => {
@@ -19,13 +22,7 @@ export function useResizableComponent() {
             });
         }
 
-        const saveDimensions = () => {
-            // Save the updated dimensions
-            const rect = componentRef.current.getBoundingClientRect();
-            sessionStorage.setItem("Introduction_App", JSON.stringify(rect))
-        }
-
-        const saveDimensionsDebound = debounce(saveDimensions, 100)
+        const saveDimensionsDebound = debounce(saveDimensions, 300)
 
         // Initialize the Dimensions
         updateDimensions();
@@ -37,7 +34,6 @@ export function useResizableComponent() {
                 if (entry.target === componentRef.current) {
                     updateDimensions();
                     createResizerDiv(componentRef)
-
                     saveDimensionsDebound();
 
                     // Debug

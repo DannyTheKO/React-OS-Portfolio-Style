@@ -24,7 +24,7 @@
     --application-background-color: rgba(0, 0, 0, 0.5);
 
     /* App Scrollbar */
-    --scrollbar-thumb-color: rgb(254, 221, 35);
+    --scrollbar-thumb-color: rgba(36, 80, 191, 1);
 }
 
 .Desktop-Container {
