@@ -85,7 +85,7 @@ export function useDraggableComponent(componentRef) {
 
         // Initialize position
         const rect = component.getBoundingClientRect();
-        setPosition({ x: rect.left, y: rect.top });
+        setPosition({x: rect.left, y: rect.top});
 
         // Attach listeners
         component.addEventListener('mousedown', handleMouseDown);
@@ -97,5 +97,5 @@ export function useDraggableComponent(componentRef) {
         };
     }, [componentRef.current]);
 
-    return { position, isDraggable };
+    return {position, isDraggable};
 }

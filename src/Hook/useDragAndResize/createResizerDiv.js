@@ -1,4 +1,3 @@
-
 export default function createResizerDiv(componentRef) {
     const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
     const displayDiv = componentRef.current;
@@ -23,7 +22,7 @@ export default function createResizerDiv(componentRef) {
         resizer.classList.add('resizer', `resizer-${dir}`);
         Object.assign(resizer.style, {
             position: 'absolute',
-            zIndex: 10, // TODO: THIS HAS TO CHANGE, maybe not ?
+            zIndex: 10,
             cursor: getCursor(dir),
             ...getPositionStyle(dir, componentRef),
         });
@@ -105,14 +104,22 @@ export default function createResizerDiv(componentRef) {
     // Get cursor style base on user position
     function getCursor(dir) {
         switch (dir) {
-            case 'N': return 'n-resize';
-            case 'NE': return 'ne-resize';
-            case 'E': return 'e-resize';
-            case 'SE': return 'se-resize';
-            case 'S': return 's-resize';
-            case 'SW': return 'sw-resize';
-            case 'W': return 'w-resize';
-            case 'NW': return 'nw-resize';
+            case 'N':
+                return 'n-resize';
+            case 'NE':
+                return 'ne-resize';
+            case 'E':
+                return 'e-resize';
+            case 'SE':
+                return 'se-resize';
+            case 'S':
+                return 's-resize';
+            case 'SW':
+                return 'sw-resize';
+            case 'W':
+                return 'w-resize';
+            case 'NW':
+                return 'nw-resize';
         }
     }
 

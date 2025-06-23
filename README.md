@@ -2,36 +2,58 @@
 Hi I'm Danny, welcome to the source code of my website. 
 If you like it, give me a **star** and feel free to copy my code.
 
+# Ideal List
+```markdown
+- Application: 
+    - Pokédex App, use PokeAPI
+    - Game, something easy like:
+        -> Snake
+        -> Tetris
+        -> Xs & Os / Tic-Tac-Toe
+      
+    -  An OS Menu Setting, change color or font
+        -> Learn how to use useContext theme
+
+```
 
 # Todo List
 ## OS Core Function
 ```markdown
-[X] - Draggable Application
-[ ] - Draggable Application Icon
-[X] - Resizable Application
+[X] - Draggable Function
+[ ] - Draggable Icon Function
+
+[X] - Resizable Function
+
 [X] - Open and Close Function
-[ ] - Simulate App Focus
+[ ] - Minimize Function 
+    -> i don't know how I'm going to do it...
+
+[ ] - Simulate App Focus, (using z-index)
+
+[ ] - Popup Component
+    -> Create new windows on user click, base on hardcode setting 
 ```
 ## OS Booting Simulation
 ```markdown
-- Use Async/Await
-    [ ] - Wait for all the image to load
-    [ ] - Wait for all the function to load
-  
-- Bootup Screen
-    [ ] - Boot up Animation
-    [ ] - Login Screen, use PIN to access
+- Boot up Animation, use Async/Await
+    [ ] - Wait for images to load
+    [ ] - Wait for functions to load (maybe this is redundant)
+    
+- Login Screen
+    [ ] - use PIN to access 
+    [ ] - On-screen sticky note contain PIN password
 ```
 
 ## Taskbar
 ```markdown
 - Left Side: The Start Menu
     [ ] - List out all the app in the "Start" menu 
-    [ ] - Open the app on the listed "Start" menu
+    [ ] - Open app from the listed "Start" menu
     [ ] - Focus the app if the application already opened
 
 - Middle: Taskbar Application
-    [ ] - Focus application when click on the taskbar app
+    [ ] - Show application already opened in the taskbar
+    [ ] - Focus application when click on the taskbar
   
 - Right Side: Date/Time and Calendar
     [ ] - Fetch weather API

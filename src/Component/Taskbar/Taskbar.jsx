@@ -36,7 +36,6 @@ const Taskbar = () => {
                 <span>DANNY'S OS</span>
             </div>
 
-            {/* TODO: Show up what app will open here */}
             <div>
                 Something will show here...
             </div>

@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {Introduction_App, Introduction_Icon} from './Introduction_App.jsx'
-import {useVisibility} from "../../Hook/useVisibility.js";
+import {useVisibility} from "../../Hook/useVisibility/useVisibility.js";
 import {useDragAndResize} from "../../Hook/useDragAndResize/useDragAndResize.js";
 
 export default function Introduction_Wrapper() {

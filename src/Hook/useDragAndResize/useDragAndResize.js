@@ -5,15 +5,15 @@ import {useDraggableComponent} from "./useDraggableComponent.js";
 export function useDragAndResize() {
     const componentRef = useRef(null)
     const [componentName, setComponentName] = useState([])
-    const { dimensions } = useResizableComponent(componentRef)
-    const { position, isDraggable } = useDraggableComponent(componentRef);
+    const {dimensions} = useResizableComponent(componentRef)
+    const {position, isDraggable} = useDraggableComponent(componentRef);
 
     useEffect(() => {
-        if (componentRef.current) {
-            const classList = Array.from(componentRef.current.classList);
-            const filteredClassList = classList.filter(cls => cls !== "SHOW" && cls !== "HIDE");
-            setComponentName(filteredClassList)
-        }
+        if (!componentRef.current) return;
+
+        const classList = Array.from(componentRef.current.classList);
+        const filteredClassList = classList.filter(cls => cls !== "SHOW" && cls !== "HIDE");
+        setComponentName(filteredClassList)
 
     }, [componentRef.current]);
 
@@ -24,5 +24,5 @@ export function useDragAndResize() {
         isDraggable
     }
 
-    return { componentRef, componentState };
+    return {componentRef, componentState};
 }

@@ -1,11 +1,12 @@
 import React, {useState, useCallback, useEffect, useRef} from "react";
 
-// TODO: Open and Close Action Element
 export function useVisibility(initial = false) {
     const [isVisible, setIsVisible] = useState(initial);
     const [isMounted, setIsMounted] = useState(initial);
     const [isFocus, setIsFocus] = useState()
     const componentRef = useRef(null)
+
+    // TODO: Focus Function, using z-index
 
     // useEffect(() => {
     //     if (!componentRef.current) return;
