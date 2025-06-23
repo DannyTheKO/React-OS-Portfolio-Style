@@ -1,32 +1,40 @@
 import React, {forwardRef} from "react";
 import {useState, useEffect} from 'react'
 
-import {FiXSquare} from "react-icons/fi";
+import {FiX} from "react-icons/fi";
+import {FaWindowMinimize} from "react-icons/fa6";
+import {MdFullscreen} from "react-icons/md";
 import "./Introduction.css"
 
 const ProfilePicture = "./Assets/Image/Icons/Hewwo.png"
 const Introduction_Icon_Image = "./Assets/Image/Icons/Introduction_Icon.jpg"
 
-export const Introduction_Icon = ({onClick_Open}) => {
+export const Introduction_Executable = forwardRef(({onClick_Open}, iconRef) => {
 
     return (
         // Introduction Icon
-        <div id="Global_Icon_Setting" onClick={onClick_Open}>
+        <div
+            id="Global_Executable_Setting"
+            className="Introduction_Icon"
+            ref={iconRef}
+            onClick={onClick_Open}
+        >
             <div className="Introduction_ImageIcon">
                 <img src={Introduction_Icon_Image} alt="introductionIcon"/>
             </div>
             <p>About Me</p>
         </div>
     )
-}
+});
 
-export const Introduction_App = forwardRef(({isVisible, onClick_Close}, componentRef) => {
+export const Introduction_App = forwardRef(({isVisible, onClick_Close, onClick_Minimize}, componentRef) => {
     const [visibleClass, setVisibleClass] = useState("")
 
     useEffect(() => {
         if (isVisible) {
             // Delay needed to trigger CSS transition
-            setTimeout(() => setVisibleClass("SHOW"), 10);
+            // setTimeout(() => setVisibleClass("SHOW"), 10);
+            setVisibleClass("SHOW")
         } else {
             setVisibleClass("HIDE");
         }
@@ -46,7 +54,9 @@ export const Introduction_App = forwardRef(({isVisible, onClick_Close}, componen
                     <p>[ About Me ]</p>
                 </div>
                 <div className="Introduction_Title_Action">
-                    <FiXSquare onClick={onClick_Close} alt="Close"/>
+                    <FaWindowMinimize className="action_minimize" onClick={onClick_Minimize} alt="Minimize"/>
+                    <MdFullscreen className="action_maximize" alt="Fullscreen"/>
+                    <FiX className="action_close" onClick={onClick_Close} alt="Close"/>
                 </div>
             </div>
 
@@ -65,7 +75,8 @@ export const Introduction_App = forwardRef(({isVisible, onClick_Close}, componen
                         project is really exhausting, the reason that I keep going is that the journey of learning
                         along the way and I had learning a lot over few weeks.</p>
                     <p>After many attempt making my own landing page, but failed to do so because is either
-                        unmotivated, burnout halfway or feel like a mess doing project and got me to abandoned my past project,
+                        unmotivated, burnout halfway or feel like a mess doing project and got me to abandoned my past
+                        project,
                         although i'm still determined to sit down and create another.</p>
                     <p>Hope you like what i'm showing! and if you are then head over to my project repo and give it
                         a star! so it motivate me to keep going ^^.</p>

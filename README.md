@@ -2,38 +2,54 @@
 Hi I'm Danny, welcome to the source code of my website. 
 If you like it, give me a **star** and feel free to copy my code.
 
-# Ideal List
-```markdown
-- Application: 
-    - Pokédex App, use PokeAPI
-    - Game, something easy like:
-        -> Snake
-        -> Tetris
-        -> Xs & Os / Tic-Tac-Toe
-      
-    -  An OS Menu Setting, change color or font
-        -> Learn how to use useContext theme
+## Priority
+- Move `visibleClass` useState out of the App
+- Limit user drag on resize component
 
+## Ideal List
+```markdown
+- Pokédex App, use PokeAPI
+- Game, something easy like:
+    -> Snake
+    -> Tetris
+    -> Xs & Os / Tic-Tac-Toe
+    
+-  An OS Menu Setting, change color or font 
+    -> Learn how to use useContext hook
 ```
 
-# Todo List
-## OS Core Function
+## Todo List
+### OS Core Function
 ```markdown
-[X] - Draggable Function
-[ ] - Draggable Icon Function
+- Draggable Function
+    [X] - Draggable Component
+    [ ] - Draggable Icon
 
-[X] - Resizable Function
+[X] - Resizable Component
 
-[X] - Open and Close Function
-[ ] - Minimize Function 
-    -> i don't know how I'm going to do it...
+[X] - Open and Close Application Function
 
-[ ] - Simulate App Focus, (using z-index)
+- Minimize Function
+    [X] - Hide the element
+    [ ] - Minimize Animation
 
-[ ] - Popup Component
-    -> Create new windows on user click, base on hardcode setting 
+- Maximize Function
+    [ ] - Remember the current width and height before maximize
+    [ ] - Set width and height using window.innerWidth and window.innerHeight
+
+- Simulate App Focus
+    [ ] - Create custom hook on using z-index component
+
+- Popup Component (this is hard...)
+    [ ] - Create new windows when user click on the image
+
+- Notification Toast
+    [ ] - Toast Success, on changing something?
+    [ ] - Toast Failed, maybe failed API fetch?
+    [ ] - Toast Warning, if something broke...
 ```
-## OS Booting Simulation
+
+### OS Booting Simulation
 ```markdown
 - Boot up Animation, use Async/Await
     [ ] - Wait for images to load
@@ -44,7 +60,7 @@ If you like it, give me a **star** and feel free to copy my code.
     [ ] - On-screen sticky note contain PIN password
 ```
 
-## Taskbar
+### Taskbar
 ```markdown
 - Left Side: The Start Menu
     [ ] - List out all the app in the "Start" menu 
@@ -60,20 +76,20 @@ If you like it, give me a **star** and feel free to copy my code.
     [ ] - Maybe show weather in the menu ?
 ```
 
-## Application
-### Introduction
+### Application
+#### Introduction
 ```markdown
 - Somewhat completed :)
 ```
 
-### Contact Me
+#### Contact Me
 ```markdown
 [ ] - GitHub Page
 [ ] - LinkedIn Page
 [ ] - Discord Username
 ```
 
-### Note
+#### Note
 ```markdown
 - Side Bar (Scale 1/4): List Note
     [ ] - Title, Time and Date
@@ -87,7 +103,7 @@ If you like it, give me a **star** and feel free to copy my code.
     [ ] - Able to upload picture base on location (i have to do more research of this)
 ```
 
-### Project Timeline/List
+#### Project Timeline/List
 ```markdown
 - Project Timeline Tab:
     [ ] - Show Ideal/Todo list

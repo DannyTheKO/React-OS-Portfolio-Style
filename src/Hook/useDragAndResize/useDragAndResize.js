@@ -1,19 +1,18 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useResizableComponent} from "./useResizableComponent.js";
 import {useDraggableComponent} from "./useDraggableComponent.js";
 
-export function useDragAndResize() {
-    const componentRef = useRef(null)
-    const [componentName, setComponentName] = useState([])
+export function useDragAndResize(componentRef) {
+    const [componentName, setComponentName] = useState("")
     const {dimensions} = useResizableComponent(componentRef)
-    const {position, isDraggable} = useDraggableComponent(componentRef);
+    const {position} = useDraggableComponent(componentRef);
 
     useEffect(() => {
         if (!componentRef.current) return;
 
         const classList = Array.from(componentRef.current.classList);
         const filteredClassList = classList.filter(cls => cls !== "SHOW" && cls !== "HIDE");
-        setComponentName(filteredClassList)
+        setComponentName(filteredClassList.toString())
 
     }, [componentRef.current]);
 
@@ -21,8 +20,18 @@ export function useDragAndResize() {
         componentName,
         position,
         dimensions,
-        isDraggable
     }
 
-    return {componentRef, componentState};
+    // DEBUG
+    // useEffect(() => {
+    //     if (componentState.componentName.length === 0) return;
+    //
+    //     // for more accurate log
+    //     const timeout = setTimeout(() => {
+    //         console.log("Component State Update:", componentState);
+    //     }, 100);
+    //
+    //     // Cleanup the timeout if the componentState changes quickly
+    //     return () => clearTimeout(timeout);
+    // }, [componentState]);
 }

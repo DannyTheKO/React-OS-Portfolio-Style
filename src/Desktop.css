@@ -37,7 +37,7 @@
     background-size: cover;
 }
 
-#Global_Icon_Setting {
+#Global_Executable_Setting {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -105,7 +105,7 @@
 
     /* == Transition From Open And Close Action == */
     opacity: 0;
-    transition: opacity 0.1s ease, transform 0.1s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease;
     pointer-events: none;
 
     &.SHOW {
@@ -131,16 +131,19 @@
 
         position: sticky;
         top: 0;
-        height: 20px;
+        height: 30px;
         padding: 4px 2px;
 
         cursor: grab;
+        z-index: 1;
 
         [class$="_Name"] {
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 2px 10px;
+
+            z-index: 2;
 
             font-family: var(--font-family-Stretch_Pro), sans-serif;
 
@@ -155,14 +158,29 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 2px 4px;
 
             cursor: pointer;
+            z-index: 2;
 
-            &:hover {
+            /* All the action button */
+            * {
+                padding: 4px 8px;
+
                 border-radius: 4px;
-                background-color: rgba(19, 24, 26, 0.4);
-                transition: background-color 0.2s ease;
+                background-color: transparent;
+                transition: background-color 0.2s ease, transform 0.2s ease;
+            }
+
+            .action_minimize:hover {
+                background-color: rgba(179, 149, 0, 0.9);
+            }
+
+            .action_maximize:hover {
+                background-color: rgba(59, 179, 0, 0.9);
+            }
+
+            .action_close:hover {
+                background-color: rgba(179, 0, 0, 0.9);
             }
         }
     }

@@ -5,6 +5,10 @@ import Introduction_Wrapper from "./Component/Introduction/Introduction_Wrapper.
 
 const Desktop = () => {
 
+    // new Promise((resolve, reject) => {
+    //
+    // })
+
     return (
         <div className="Desktop-Container">
             <Taskbar/>

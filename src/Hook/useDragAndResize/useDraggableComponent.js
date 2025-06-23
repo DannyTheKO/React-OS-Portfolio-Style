@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react";
 
 export function useDraggableComponent(componentRef) {
     const [position, setPosition] = useState({x: 0, y: 0});
-    const [isDraggable, setIsDraggable] = useState(false);
 
     useEffect(() => {
         if (!componentRef.current) {
@@ -10,14 +9,16 @@ export function useDraggableComponent(componentRef) {
             return;
         }
 
-        // Initialize
-        let startX, startY, startLeft, startTop;
-        let viewportWidth, viewportHeight, maxTop, maxLeft;
-        let dragging = false;
-
         // Get Component App
         const component = componentRef.current;
         const componentTitle = component.querySelector(`[class$="_Title"]`)
+        const computedStyles = window.getComputedStyle(component);
+
+        // Initialize
+        const borderWidth = Math.ceil(parseFloat(computedStyles.border) + 1) || 0;
+        let startX, startY, startLeft, startTop;
+        let viewportWidth, viewportHeight, maxTop, maxLeft;
+        let dragging = false;
 
         const handleMouseDown = (e) => {
             //Only start dragging from the title bar
@@ -25,7 +26,6 @@ export function useDraggableComponent(componentRef) {
 
             e.preventDefault();
             dragging = true;
-            setIsDraggable(true);
             e.target.style.cursor = "grabbing";
 
             const rectComponent = component.getBoundingClientRect();
@@ -34,10 +34,11 @@ export function useDraggableComponent(componentRef) {
             // Get user screen width and height
             viewportWidth = window.innerWidth;
             viewportHeight = window.innerHeight;
+            console.log(window.innerWidth)
 
             // To set limit of the app position
-            maxTop = viewportHeight - rectComponentTitle.height;
-            maxLeft = viewportWidth - rectComponentTitle.width;
+            maxTop = viewportHeight - (rectComponentTitle.height + borderWidth);
+            maxLeft = viewportWidth - (rectComponentTitle.width + borderWidth);
 
             // Get initial position
             startX = e.clientX;
@@ -72,7 +73,6 @@ export function useDraggableComponent(componentRef) {
 
         const handleMouseUp = (e) => {
             dragging = false;
-            setIsDraggable(false);
             e.target.style.cursor = "grab";
 
             // Save the position of the app
@@ -97,5 +97,5 @@ export function useDraggableComponent(componentRef) {
         };
     }, [componentRef.current]);
 
-    return {position, isDraggable};
+    return {position};
 }

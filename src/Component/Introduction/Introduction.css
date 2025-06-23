@@ -1,6 +1,6 @@
 @import "../../Desktop.css";
 /* == Custom Override Setting ==*/
-#Global_Icon_Setting {
+#Global_Executable_Setting {
     /* Introduction Icon Position */
     position: absolute;
     top: 25px;
@@ -67,13 +67,13 @@
         color 0.2s ease 0s;
 
         padding: 0.5em;
-        border: 2px solid var(--border-color);
+        border: 2px solid var(--application-border-color);
     }
 
     a:hover {
         color: black;
         scale: 1.5;
-        background-color: var(--border-color)
+        background-color: rgb(109, 204, 61);
     }
 
     a:visited {
