@@ -34,4 +34,6 @@ export function useDragAndResize(componentRef) {
     //     // Cleanup the timeout if the componentState changes quickly
     //     return () => clearTimeout(timeout);
     // }, [componentState]);
+
+    return {componentState}
 }

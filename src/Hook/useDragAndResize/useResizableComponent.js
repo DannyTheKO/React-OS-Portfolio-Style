@@ -4,7 +4,9 @@ export function useResizableComponent(componentRef) {
     const [dimensions, setDimensions] = useState({width: 0, height: 0})
 
     useEffect(() => {
-        if (!componentRef.current) {return;}
+        if (!componentRef.current) {
+            return;
+        }
 
         const saveDimensions = () => {
             // Save the updated dimensions
@@ -24,7 +26,6 @@ export function useResizableComponent(componentRef) {
 
         // Initialize the Dimensions
         updateDimensions();
-
 
         // Create an observer to observe the resize change of the app
         const resizeObserver = new ResizeObserver(entries => {
@@ -64,7 +65,7 @@ export function useResizableComponent(componentRef) {
         }
     }
 
-    // Create Resizer Logic
+    // Resizer Logic
     function createResizerDiv(componentRef) {
         const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
         const displayDiv = componentRef.current;
@@ -98,7 +99,7 @@ export function useResizableComponent(componentRef) {
             displayDiv.appendChild(resizer);
         });
 
-        // Resize Logic
+        // Create Resizer Logic
         function initResize(dir, component) {
             return function (e) {
                 e.preventDefault();
@@ -194,9 +195,8 @@ export function useResizableComponent(componentRef) {
         function getPositionStyle(dir, componentRef) {
             const rectComponent = componentRef.current.getBoundingClientRect();
             const style = {
-                position: 'absolute',
                 transform: 'translate(-50%, -50%)',  // Center the resizer
-                // background: 'red', // DEBUG
+                background: 'red', // DEBUG
             };
 
             switch (dir) {
@@ -204,7 +204,7 @@ export function useResizableComponent(componentRef) {
                     style.left = `calc(${rectComponent.width / 2}px - 2px)`;
                     style.top = `-5px`;
                     style.width = `100%`;
-                    style.height = `5px`
+                    style.height = `10px`
                     break;
                 case 'NE':
                     style.left = `calc(${rectComponent.width}px - 3px)`;
@@ -216,7 +216,7 @@ export function useResizableComponent(componentRef) {
                     style.left = `calc(${rectComponent.width}px - 3px)`;
                     style.top = `calc(${rectComponent.height / 2}px  - 3px)`;
                     style.height = `100%`;
-                    style.width = `5px`;
+                    style.width = `10px`;
                     break;
                 case 'SE':
                     style.left = `calc(${rectComponent.width}px - 3px)`;
@@ -228,7 +228,7 @@ export function useResizableComponent(componentRef) {
                     style.left = `${rectComponent.width / 2}px`;
                     style.top = `calc(${rectComponent.height}px - 6px)`;
                     style.width = `100%`;
-                    style.height = `5px`
+                    style.height = `10px`
                     break;
                 case 'SW':
                     style.left = `0px`;
@@ -240,7 +240,7 @@ export function useResizableComponent(componentRef) {
                     style.left = `0px`;
                     style.top = `calc(${rectComponent.height / 2}px - 6px)`;
                     style.height = `100%`;
-                    style.width = `5px`;
+                    style.width = `10px`;
                     break;
                 case 'NW':
                     style.left = `0px`;
@@ -255,5 +255,5 @@ export function useResizableComponent(componentRef) {
 
     }
 
-    return { dimensions };
+    return {dimensions};
 }

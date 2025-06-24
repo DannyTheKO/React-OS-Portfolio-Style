@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 
 export function useDraggableComponent(componentRef) {
     const [position, setPosition] = useState({x: 0, y: 0});
@@ -44,7 +44,6 @@ export function useDraggableComponent(componentRef) {
             // To set limit of the app position
             maxTop = viewportHeight - (rectComponentTitle.height + Taskbar_height + componentApp_borderWidth);
             maxLeft = viewportWidth - (rectComponentTitle.width + componentApp_borderWidth);
-            console.log(maxTop)
 
             // Get initial position
             startX = e.clientX;

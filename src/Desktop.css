@@ -57,7 +57,7 @@
     user-select: none;
 
     /* Hover Animation */
-    transition: 0.1s ease-out;
+    transition: 100ms ease-out;
     outline: var(--icon-outline-color) solid 0;
     &:hover {
         outline: var(--icon-outline-color) var(--icon-outline-size);
@@ -105,16 +105,27 @@
 
     /* == Transition From Open And Close Action == */
     opacity: 0;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-    pointer-events: none;
+    scale: initial;
+    transform: scale(1) translateX(0) translateY(50%);
 
-    &.SHOW {
+    &.OPEN {
         opacity: 1;
+        transform: scale(1) translateX(0) translateY(0);
+        transition: opacity 100ms ease, transform 100ms ease;
         pointer-events: auto;
     }
 
     &.HIDE {
         opacity: 0;
+        transform: scale(0.2) translateX(0%) translateY(500%);
+        transition: opacity 100ms ease, transform 200ms ease;
+        pointer-events: none;
+    }
+
+    &.CLOSE {
+        opacity: 0;
+        transform: scale(1) translateX(0) translateY(25%);
+        transition: opacity 100ms ease, transform 100ms ease;
         pointer-events: none;
     }
 
@@ -131,7 +142,7 @@
 
         position: sticky;
         top: 0;
-        height: 30px;
+        min-height: 30px;
         padding: 4px 2px;
 
         cursor: grab;
@@ -150,7 +161,7 @@
             &:hover {
                 border-radius: 4px;
                 background-color: rgba(19, 24, 26, 0.4);
-                transition: background-color 0.2s ease;
+                transition: background-color 200ms ease;
             }
         }
 
@@ -168,7 +179,7 @@
 
                 border-radius: 4px;
                 background-color: transparent;
-                transition: background-color 0.2s ease, transform 0.2s ease;
+                transition: background-color 200ms ease, transform 200ms ease;
             }
 
             .action_minimize:hover {

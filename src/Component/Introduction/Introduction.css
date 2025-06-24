@@ -13,7 +13,7 @@
     font-family: var(--font-family-Consolas), sans-serif;
 
     /* Introduction App Size */
-    width: 720px; min-width: 400px;
+    width: 720px; min-width: 420px;
     height: 500px; min-height: 200px;
 
     /* Introduction App Position */

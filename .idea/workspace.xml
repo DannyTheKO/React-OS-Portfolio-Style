@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="more clean up code, more note on README.md and save work before the disaster :)">
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="FIX: Draggable function now has limit to prevent user drag beyond the taskbar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Taskbar/Taskbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Taskbar/Taskbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Introduction/Introduction.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Introduction/Introduction.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Introduction/Introduction_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Introduction/Introduction_App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Introduction/Introduction_Wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Introduction/Introduction_Wrapper.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Taskbar/Taskbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Taskbar/Taskbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Desktop.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Desktop.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hook/useDragAndResize/useDragAndResize.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useDragAndResize/useDragAndResize.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hook/useDragAndResize/useDraggableComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useDragAndResize/useDraggableComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hook/useDragAndResize/useResizableComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useDragAndResize/useResizableComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hook/useVisibility/useVisibility.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useVisibility/useVisibility.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +138,7 @@
       <workItem from="1750575959450" duration="17208000" />
       <workItem from="1750669732317" duration="4107000" />
       <workItem from="1750688988541" duration="11682000" />
-      <workItem from="1750747003448" duration="1117000" />
+      <workItem from="1750747003448" duration="14556000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -228,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750699728861</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="FIX: Draggable function now has limit to prevent user drag beyond the taskbar">
+      <option name="closed" value="true" />
+      <created>1750748333573</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1750748333573</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +286,7 @@
     <MESSAGE value="Small update, add README.md" />
     <MESSAGE value="clean up code, updated README.md todo list and ideal list" />
     <MESSAGE value="more clean up code, more note on README.md and save work before the disaster :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="more clean up code, more note on README.md and save work before the disaster :)" />
+    <MESSAGE value="FIX: Draggable function now has limit to prevent user drag beyond the taskbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIX: Draggable function now has limit to prevent user drag beyond the taskbar" />
   </component>
 </project>
