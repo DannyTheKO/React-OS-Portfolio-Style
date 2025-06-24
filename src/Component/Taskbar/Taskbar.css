@@ -38,6 +38,7 @@
 .Taskbar-Container {
     /* Overflow */
     overflow: hidden;
+    z-index: 1;
 
     /* Size */
     width: var(--topbar-containerSize-width);

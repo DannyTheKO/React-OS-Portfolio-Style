@@ -10,12 +10,18 @@ export function useDraggableComponent(componentRef) {
         }
 
         // Get Component App
-        const component = componentRef.current;
-        const componentTitle = component.querySelector(`[class$="_Title"]`)
-        const computedStyles = window.getComputedStyle(component);
+        const componentApp = componentRef.current;
+        const componentApp_Title = componentApp.querySelector(`[class$="_Title"]`)
+
+        // Component Border
+        const componentApp_Styles = window.getComputedStyle(componentApp);
+        const componentApp_borderWidth = Math.ceil(parseFloat(componentApp_Styles.border) + 1) || 0;
+
+        // Taskbar Height
+        const Taskbar = document.querySelector(`.Taskbar-Container`)
+        const Taskbar_height = parseFloat(window.getComputedStyle(Taskbar).height) || 0
 
         // Initialize
-        const borderWidth = Math.ceil(parseFloat(computedStyles.border) + 1) || 0;
         let startX, startY, startLeft, startTop;
         let viewportWidth, viewportHeight, maxTop, maxLeft;
         let dragging = false;
@@ -28,23 +34,23 @@ export function useDraggableComponent(componentRef) {
             dragging = true;
             e.target.style.cursor = "grabbing";
 
-            const rectComponent = component.getBoundingClientRect();
-            const rectComponentTitle = componentTitle.getBoundingClientRect();
+            const rectComponent = componentApp.getBoundingClientRect();
+            const rectComponentTitle = componentApp_Title.getBoundingClientRect();
 
             // Get user screen width and height
             viewportWidth = window.innerWidth;
             viewportHeight = window.innerHeight;
-            console.log(window.innerWidth)
 
             // To set limit of the app position
-            maxTop = viewportHeight - (rectComponentTitle.height + borderWidth);
-            maxLeft = viewportWidth - (rectComponentTitle.width + borderWidth);
+            maxTop = viewportHeight - (rectComponentTitle.height + Taskbar_height + componentApp_borderWidth);
+            maxLeft = viewportWidth - (rectComponentTitle.width + componentApp_borderWidth);
+            console.log(maxTop)
 
             // Get initial position
             startX = e.clientX;
             startY = e.clientY;
 
-            // Get current component position
+            // Get current componentApp position
             startLeft = rectComponent.left;
             startTop = rectComponent.top;
 
@@ -63,9 +69,9 @@ export function useDraggableComponent(componentRef) {
             newTop = Math.max(0, Math.min(newTop, maxTop));
             newLeft = Math.max(0, Math.min(newLeft, maxLeft));
 
-            // Update component position
-            component.style.left = `${newLeft}px`;
-            component.style.top = `${newTop}px`;
+            // Update componentApp position
+            componentApp.style.left = `${newLeft}px`;
+            componentApp.style.top = `${newTop}px`;
 
             // Update state
             setPosition({x: newLeft, y: newTop});
@@ -76,7 +82,7 @@ export function useDraggableComponent(componentRef) {
             e.target.style.cursor = "grab";
 
             // Save the position of the app
-            const rect = component.getBoundingClientRect();
+            const rect = componentApp.getBoundingClientRect();
             sessionStorage.setItem("Introduction_App", JSON.stringify(rect))
 
             document.removeEventListener("mousemove", handleMouseMove);
@@ -84,14 +90,14 @@ export function useDraggableComponent(componentRef) {
         };
 
         // Initialize position
-        const rect = component.getBoundingClientRect();
+        const rect = componentApp.getBoundingClientRect();
         setPosition({x: rect.left, y: rect.top});
 
         // Attach listeners
-        component.addEventListener('mousedown', handleMouseDown);
+        componentApp.addEventListener('mousedown', handleMouseDown);
 
         return () => {
-            component.removeEventListener('mousedown', handleMouseDown);
+            componentApp.removeEventListener('mousedown', handleMouseDown);
             document.removeEventListener('mousemove', handleMouseMove);
             document.removeEventListener('mouseup', handleMouseUp);
         };

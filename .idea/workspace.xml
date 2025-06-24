@@ -4,26 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="clean up code, updated README.md todo list and ideal list">
-      <change afterPath="$PROJECT_DIR$/src/Hook/useFocus/useFocus.js" afterDir="false" />
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="more clean up code, more note on README.md and save work before the disaster :)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Introduction/Introduction.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Introduction/Introduction.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Introduction/Introduction_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Introduction/Introduction_App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Introduction/Introduction_Wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Introduction/Introduction_Wrapper.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Desktop.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Desktop.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Desktop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Desktop.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hook/useDragAndResize/createResizerDiv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hook/useDragAndResize/useDragAndResize.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useDragAndResize/useDragAndResize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Taskbar/Taskbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Taskbar/Taskbar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hook/useDragAndResize/useDraggableComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useDragAndResize/useDraggableComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hook/useDragAndResize/useResizableComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useDragAndResize/useResizableComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hook/useVisibility/useVisibility.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useVisibility/useVisibility.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEMP/css/contact.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEMP/css/desktop.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEMP/css/introduction.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEMP/css/note.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEMP/css/project.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEMP/css/topbar.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +129,8 @@
       <workItem from="1750224332539" duration="21901000" />
       <workItem from="1750575959450" duration="17208000" />
       <workItem from="1750669732317" duration="4107000" />
-      <workItem from="1750688988541" duration="10248000" />
+      <workItem from="1750688988541" duration="11682000" />
+      <workItem from="1750747003448" duration="1117000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -235,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750672316542</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="more clean up code, more note on README.md and save work before the disaster :)">
+      <option name="closed" value="true" />
+      <created>1750699728861</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1750699728861</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,6 +269,7 @@
     <MESSAGE value="Save some work..." />
     <MESSAGE value="Small update, add README.md" />
     <MESSAGE value="clean up code, updated README.md todo list and ideal list" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean up code, updated README.md todo list and ideal list" />
+    <MESSAGE value="more clean up code, more note on README.md and save work before the disaster :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="more clean up code, more note on README.md and save work before the disaster :)" />
   </component>
 </project>
