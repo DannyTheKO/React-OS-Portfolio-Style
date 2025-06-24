@@ -5,8 +5,8 @@ If you like it, give me a **star** and feel free to copy my code.
 
 ## Priority
 
-- [x] Move `visibleClass` useState out of the App
-- [ ] Limit user resize component
+- [X] Move `visibleClass` useState out of the App
+- [X] Limit user resize component, prevent overflow beyond the screen
 
 ## Ideal List
 

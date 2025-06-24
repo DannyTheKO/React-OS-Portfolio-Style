@@ -22,8 +22,6 @@ export function useResizableComponent(componentRef) {
             });
         }
 
-        const saveDimensionsDebound = debounce(saveDimensions, 300)
-
         // Initialize the Dimensions
         updateDimensions();
 
@@ -33,7 +31,7 @@ export function useResizableComponent(componentRef) {
                 if (entry.target === componentRef.current) {
                     updateDimensions();
                     createResizerDiv(componentRef)
-                    saveDimensionsDebound();
+                    debounce(saveDimensions, 300);
 
                     // Debug
                     // console.log("Resized Detected");
@@ -77,6 +75,14 @@ export function useResizableComponent(componentRef) {
         const minWidth = parseFloat(computedStyles.minWidth) || 0;
         const minHeight = parseFloat(computedStyles.minHeight) || 0;
 
+        // Get Taskbar Height
+        const Taskbar = document.querySelector(`.Taskbar-Container`)
+        const TaskbarHeight = parseFloat(window.getComputedStyle(Taskbar).height) || 0
+
+        // Get window.innerWidth and window.innerHeight limit
+        const maxWidth = window.innerWidth;
+        const maxHeight = window.innerHeight;
+
         // console.log(displayDiv);
         displayDiv.style.position = 'relative';
 
@@ -106,6 +112,7 @@ export function useResizableComponent(componentRef) {
 
                 const rectComponent = component.getBoundingClientRect();
 
+                // Initialize, (refresh const if resize already done)
                 const startX = e.clientX;
                 const startY = e.clientY;
 
@@ -126,16 +133,30 @@ export function useResizableComponent(componentRef) {
                     let newTop = startTop;
 
                     if (dir.includes('E')) {
-                        newWidth = Math.max(minWidth, startWidth + dx);
+                        newWidth = Math.min(
+                            // Limit right edge to window width
+                            Math.max(minWidth, startWidth + dx),
+                            maxWidth - startLeft
+                        );
                     }
                     if (dir.includes('S')) {
-                        newHeight = Math.max(minHeight, startHeight + dy);
+                        newHeight = Math.min(
+                            // Limit bottom edge to window height minus taskbar
+                            Math.max(minHeight, startHeight + dy),
+                            maxHeight - TaskbarHeight - startTop
+                        );
                     }
                     if (dir.includes('W')) {
                         const candidateWidth = startWidth - dx;
                         if (candidateWidth >= minWidth) {
                             newWidth = candidateWidth;
                             newLeft = startLeft + dx;
+
+                            // Make sure left edge doesn't go beyond left screen edge
+                            if (newLeft < 0) {
+                                newLeft = 0
+                                newWidth = startWidth + startLeft
+                            }
                         } else {
                             newWidth = minWidth;
                             newLeft = startLeft + (startWidth - minWidth); // lock position
@@ -146,6 +167,12 @@ export function useResizableComponent(componentRef) {
                         if (candidateHeight >= minHeight) {
                             newHeight = candidateHeight;
                             newTop = startTop + dy;
+
+                            // Make sure top edge doesn't go beyond top screen edge
+                            if (newTop < 0) {
+                                newTop = 0;
+                                newHeight = startHeight + startTop;
+                            }
                         } else {
                             newHeight = minHeight;
                             newTop = startTop + (startHeight - minHeight); // lock position
@@ -196,7 +223,7 @@ export function useResizableComponent(componentRef) {
             const rectComponent = componentRef.current.getBoundingClientRect();
             const style = {
                 transform: 'translate(-50%, -50%)',  // Center the resizer
-                background: 'red', // DEBUG
+                // background: 'red', // DEBUG
             };
 
             switch (dir) {

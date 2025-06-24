@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Move `visibleClass` useState out of the App, change CSS class name with animation, improve resize event area">
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="format README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Desktop.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Desktop.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hook/useDragAndResize/useResizableComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useDragAndResize/useResizableComponent.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +132,8 @@
       <workItem from="1750575959450" duration="17208000" />
       <workItem from="1750669732317" duration="4107000" />
       <workItem from="1750688988541" duration="11682000" />
-      <workItem from="1750747003448" duration="15224000" />
+      <workItem from="1750747003448" duration="16472000" />
+      <workItem from="1750773696794" duration="5821000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -243,7 +247,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750763957553</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="format README.md">
+      <option name="closed" value="true" />
+      <created>1750764546853</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1750764546853</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +299,7 @@
     <MESSAGE value="more clean up code, more note on README.md and save work before the disaster :)" />
     <MESSAGE value="FIX: Draggable function now has limit to prevent user drag beyond the taskbar" />
     <MESSAGE value="Move `visibleClass` useState out of the App, change CSS class name with animation, improve resize event area" />
-    <option name="LAST_COMMIT_MESSAGE" value="Move `visibleClass` useState out of the App, change CSS class name with animation, improve resize event area" />
+    <MESSAGE value="format README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="format README.md" />
   </component>
 </project>
