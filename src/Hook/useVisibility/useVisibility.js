@@ -1,8 +1,10 @@
 import React, {useState, useCallback, useEffect, useRef} from "react";
+import {useFocus} from "../useFocus/useFocus.js";
 
 export function useVisibility(componentRef, initialState = false) {
     const [isMounted, setIsMounted] = useState(initialState);
     const [visibleClass, setVisibleClass] = useState("")
+    const {onClick_Focus} = useFocus(componentRef);
 
     // TODO: Maximize Function
 
@@ -24,6 +26,7 @@ export function useVisibility(componentRef, initialState = false) {
             if (component.classList.contains("CLOSE") || component.classList.contains("HIDE") ||component.classList.length === 1) {
                 // Play animation after mounted component on screen
                 setVisibleClass("OPEN")
+                onClick_Focus();
             }
 
         }, 10); // <-- Set this to 10ms, to use the eventLoop callback queue

@@ -26,7 +26,7 @@ export const Contact_Executable = forwardRef(({onClick_Open}, iconRef) => {
     )
 });
 
-export const Contact_App = forwardRef(({visibleClass, onClick_Close, onClick_Minimize}, componentRef) => {
+export const Contact_App = forwardRef(({visibleClass, onClick_Focus, onClick_Close, onClick_Minimize}, componentRef) => {
 
     return (
         // Contact Container
@@ -34,6 +34,7 @@ export const Contact_App = forwardRef(({visibleClass, onClick_Close, onClick_Min
             id="Global_App_Setting"
             className={`Contact_App ${visibleClass}`}
             ref={componentRef}
+            onMouseDown={onClick_Focus}
         >
 
             {/* Title */}

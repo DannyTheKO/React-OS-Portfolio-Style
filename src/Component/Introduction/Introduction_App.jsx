@@ -26,7 +26,7 @@ export const Introduction_Executable = forwardRef(({onClick_Open}, iconRef) => {
     )
 });
 
-export const Introduction_App = forwardRef(({visibleClass, onClick_Close, onClick_Minimize}, componentRef) => {
+export const Introduction_App = forwardRef(({visibleClass, onClick_Focus, onClick_Close, onClick_Minimize}, componentRef) => {
 
     return (
         // Introduction Container
@@ -34,6 +34,7 @@ export const Introduction_App = forwardRef(({visibleClass, onClick_Close, onClic
             id="Global_App_Setting"
             className={`Introduction_App ${visibleClass}`}
             ref={componentRef}
+            onMouseDown={onClick_Focus}
         >
 
             {/* Title */}

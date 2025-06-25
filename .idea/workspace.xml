@@ -4,18 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="format README.md">
-      <change afterPath="$PROJECT_DIR$/src/Component/Contact/Contact.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Component/Contact/Contact_App.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Component/Contact/Contact_Wrapper.jsx" afterDir="false" />
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="FIX: Position is wrong when both app open">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Introduction/Introduction.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Introduction/Introduction.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Contact/Contact_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Contact/Contact_App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Contact/Contact_Wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Contact/Contact_Wrapper.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Introduction/Introduction_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Introduction/Introduction_App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Introduction/Introduction_Wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Introduction/Introduction_Wrapper.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Taskbar/Taskbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Taskbar/Taskbar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Desktop.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Desktop.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Desktop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Desktop.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hook/useDragAndResize/useDraggableComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useDragAndResize/useDraggableComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hook/useDragAndResize/useResizableComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useDragAndResize/useResizableComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hook/useFocus/useFocus.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useFocus/useFocus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hook/useVisibility/useVisibility.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useVisibility/useVisibility.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,7 +262,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750764546853</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="FIX: Position is wrong when both app open">
+      <option name="closed" value="true" />
+      <created>1750848268614</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1750848268614</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,6 +315,7 @@
     <MESSAGE value="FIX: Draggable function now has limit to prevent user drag beyond the taskbar" />
     <MESSAGE value="Move `visibleClass` useState out of the App, change CSS class name with animation, improve resize event area" />
     <MESSAGE value="format README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="format README.md" />
+    <MESSAGE value="FIX: Position is wrong when both app open" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIX: Position is wrong when both app open" />
   </component>
 </project>

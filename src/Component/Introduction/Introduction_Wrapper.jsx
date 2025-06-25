@@ -2,6 +2,7 @@ import React, {memo, useRef} from 'react'
 import {Introduction_App, Introduction_Executable} from './Introduction_App.jsx'
 import {useVisibility} from "../../Hook/useVisibility/useVisibility.js";
 import {useDragAndResize} from "../../Hook/useDragAndResize/useDragAndResize.js";
+import {useFocus} from "../../Hook/useFocus/useFocus.js";
 
 const MemorizedExecutable = memo(({onClick_Open}) => {
 
@@ -17,6 +18,7 @@ export default function Introduction_Wrapper() {
     const appRef = useRef(null)
     const {visibleClass, isMounted, onClick_Open, onClick_Close, onClick_Minimize} = useVisibility(appRef);
     const {componentState} = useDragAndResize(appRef);
+    const {onClick_Focus} = useFocus(appRef)
 
     // const iconRef = useRef(null)
     // useDraggableComponent(iconRef)
@@ -30,6 +32,7 @@ export default function Introduction_Wrapper() {
                 <Introduction_App
                     ref={appRef}
                     visibleClass={visibleClass}
+                    onClick_Focus={onClick_Focus}
                     onClick_Close={onClick_Close}
                     onClick_Minimize={onClick_Minimize}
                 />

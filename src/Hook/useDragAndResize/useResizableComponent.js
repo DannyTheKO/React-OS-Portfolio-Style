@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react'
+import {useFocus} from "../useFocus/useFocus.js";
 
 export function useResizableComponent(componentRef) {
     const [dimensions, setDimensions] = useState({width: 0, height: 0})
+    const {onClick_Focus} = useFocus(componentRef)
 
     useEffect(() => {
         if (!componentRef.current) {
@@ -24,6 +26,7 @@ export function useResizableComponent(componentRef) {
 
         // Initialize the Dimensions
         updateDimensions();
+        onClick_Focus();
 
         // Create an observer to observe the resize change of the app
         const resizeObserver = new ResizeObserver(entries => {
