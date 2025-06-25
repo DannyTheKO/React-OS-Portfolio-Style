@@ -7,6 +7,8 @@ If you like it, give me a **star** and feel free to copy my code.
 
 - [X] Move `visibleClass` useState out of the App
 - [X] Limit user resize component, prevent overflow beyond the screen
+- [X] Position is wrong when both app open,
+  - NO, IS THE FUCKING ONELINER JS CSS BULLSHIT `displayDiv.style.position = 'relative'` AND CHANGE IT TO `ABSOLUTE`
 
 ## Ideal List
 

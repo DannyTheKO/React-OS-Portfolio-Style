@@ -1,19 +1,19 @@
 import React, {memo, useRef} from 'react'
-import {Introduction_App, Introduction_Executable} from './Introduction_App.jsx'
+import {Contact_App, Contact_Executable} from './Contact_App.jsx'
 import {useVisibility} from "../../Hook/useVisibility/useVisibility.js";
 import {useDragAndResize} from "../../Hook/useDragAndResize/useDragAndResize.js";
 
 const MemorizedExecutable = memo(({onClick_Open}) => {
 
     return (
-        <Introduction_Executable
+        <Contact_Executable
             onClick_Open={onClick_Open}
         />
     )
 })
 
 
-export default function Introduction_Wrapper() {
+export default function Contact_Wrapper() {
     const appRef = useRef(null)
     const {visibleClass, isMounted, onClick_Open, onClick_Close, onClick_Minimize} = useVisibility(appRef);
     const {componentState} = useDragAndResize(appRef);
@@ -25,9 +25,9 @@ export default function Introduction_Wrapper() {
         <>
             <MemorizedExecutable onClick_Open={onClick_Open}/>
 
-            {/* If "isMounted" is true, it will render Introduction */}
+            {/* If "isMounted" is true, it will render Contact */}
             {isMounted &&
-                <Introduction_App
+                <Contact_App
                     ref={appRef}
                     visibleClass={visibleClass}
                     onClick_Close={onClick_Close}

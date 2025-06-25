@@ -1,0 +1,29 @@
+@import "../../Desktop.css";
+/* == Custom Override Setting ==*/
+#Global_Executable_Setting {
+
+    &.Contact_Icon {
+        /* Contact Icon Position */
+        position: absolute;
+        top: 150px;
+        left: 25px;
+    }
+}
+
+#Global_App_Setting {
+    /* Contact App Font */
+    color: white;
+    font-family: var(--font-family-Consolas), sans-serif;
+
+    /* Contact App Size */
+    width: 720px; min-width: 420px;
+    height: 500px; min-height: 200px;
+
+    &.Contact_App {
+        /* == Contact Setting == */
+        /* Contact App Display Position  */
+        position: absolute;
+        top: 10%;
+        left: 20%;
+    }
+}

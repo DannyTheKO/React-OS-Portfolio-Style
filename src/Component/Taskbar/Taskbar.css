@@ -15,10 +15,10 @@
     align-items: center;
     overflow: hidden;
 
-
     /* Position Type */
     position: absolute;
     bottom: 0;
+    z-index: 10;
 
     /* Text */
     color: white;
@@ -38,7 +38,6 @@
 .Taskbar-Container {
     /* Overflow */
     overflow: hidden;
-    z-index: 1;
 
     /* Size */
     width: var(--topbar-containerSize-width);

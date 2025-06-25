@@ -84,7 +84,25 @@ export function useResizableComponent(componentRef) {
         const maxHeight = window.innerHeight;
 
         // console.log(displayDiv);
-        displayDiv.style.position = 'relative';
+
+        // Oh look, the one-liner that dethrones your entire CSS cascade in a single keystroke:
+        displayDiv.style.position = 'absolute';
+        // Because who needs the stylesheet you spent hours writing when you can just yank the element into absolute
+        // monarchy right here, right now?
+        //
+        // “Relative?” “Static?” Pfft. Peasants. We rule from the top-left corner of the viewport now.
+        // Those carefully crafted .OPEN, .HIDE, .CLOSE selectors in your CSS?
+        // Irrelevant. This bad boy blows past them like a div with pointer-events: none.
+        //
+        // Inline style = 🔒 Immortal. Good luck overriding it without an !important exorcism or another JS line.
+        //
+        // Resizer handles? They were happily using their parent as their relative containing block.
+        // You just flung their coordinate system into the void. Enjoy debugging where the S-E handle teleports to.
+        //
+        // And when you later wonder why two windows refuse to stack and instead overlap like drunken Tetris
+        // pieces—remember this single, solitary line quietly whispering “it was me”
+        //
+        // In short: it works… the same way a chainsaw can slice bread. Technically correct, aesthetically catastrophic.
 
         // Clean up any existing resizer
         const existingResizer = displayDiv.querySelectorAll('.resizer');

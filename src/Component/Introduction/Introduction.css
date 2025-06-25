@@ -1,10 +1,13 @@
 @import "../../Desktop.css";
 /* == Custom Override Setting ==*/
 #Global_Executable_Setting {
-    /* Introduction Icon Position */
-    position: absolute;
-    top: 25px;
-    left: 25px;
+
+    &.Introduction_Icon {
+        /* Introduction Icon Position */
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
 }
 
 #Global_App_Setting {
@@ -21,8 +24,8 @@
         /* == Introduction Setting == */
         /* Introduction App Display Position  */
         position: absolute;
-        top: 10%;
-        left: 25%;
+        top: 25%;
+        left: 55%;
     }
 }
 
