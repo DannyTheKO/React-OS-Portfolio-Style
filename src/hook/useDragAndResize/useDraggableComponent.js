@@ -3,7 +3,7 @@ import {useFocus} from "../useFocus/useFocus.js";
 
 export function useDraggableComponent(componentRef) {
     const [position, setPosition] = useState({x: 0, y: 0});
-    const {onClick_Focus} = useFocus(componentRef)
+    const {onClick_Focus} = useFocus(componentRef);
 
     useEffect(() => {
         if (!componentRef.current) {
@@ -27,7 +27,7 @@ export function useDraggableComponent(componentRef) {
         let startX, startY, startLeft, startTop;
         let viewportWidth, viewportHeight, maxTop, maxLeft;
         let dragging = false;
-        onClick_Focus();
+
 
         const handleMouseDown = (e) => {
             //Only start dragging from the title bar
@@ -58,6 +58,7 @@ export function useDraggableComponent(componentRef) {
 
             document.addEventListener("mousemove", handleMouseMove);
             document.addEventListener("mouseup", handleMouseUp);
+            onClick_Focus();
         }
 
         const handleMouseMove = (e) => {

@@ -18,7 +18,7 @@
     /* Position Type */
     position: absolute;
     bottom: 0;
-    z-index: 10;
+    z-index: 3;
 
     /* Text */
     color: white;

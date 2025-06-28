@@ -1,8 +1,8 @@
 import React from 'react'
 import './Desktop.css'
-import Taskbar from './Component/Taskbar/Taskbar.jsx';
-import Introduction_Wrapper from "./Component/Introduction/Introduction_Wrapper.jsx";
-import Contact_Wrapper from "./Component/Contact/Contact_Wrapper.jsx";
+import Taskbar from './component/Taskbar/Taskbar.jsx';
+import Introduction_Wrapper from "./component/Introduction/Introduction_Wrapper.jsx";
+import Contact_Wrapper from "./component/Contact/Contact_Wrapper.jsx";
 
 const Desktop = () => {
 

@@ -4,7 +4,7 @@ import {FiX} from "react-icons/fi";
 import {FaWindowMinimize} from "react-icons/fa6";
 import {MdFullscreen} from "react-icons/md";
 import "./Contact.css"
-import {useDragAndResize} from "../../Hook/useDragAndResize/useDragAndResize.js";
+import {useDragAndResize} from "../../hook/useDragAndResize/useDragAndResize.js";
 
 const Contact_Icon_Image = "./Assets/Image/Icons/contact.jpeg"
 
@@ -26,7 +26,7 @@ export const Contact_Executable = forwardRef(({onClick_Open}, iconRef) => {
     )
 });
 
-export const Contact_App = forwardRef(({visibleClass, onClick_Focus, onClick_Close, onClick_Minimize}, componentRef) => {
+export const Contact_App = forwardRef(({visibleClass, onClick_Close, onClick_Minimize}, componentRef) => {
 
     return (
         // Contact Container
@@ -34,7 +34,6 @@ export const Contact_App = forwardRef(({visibleClass, onClick_Focus, onClick_Clo
             id="Global_App_Setting"
             className={`Contact_App ${visibleClass}`}
             ref={componentRef}
-            onMouseDown={onClick_Focus}
         >
 
             {/* Title */}

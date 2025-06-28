@@ -4,7 +4,7 @@ import {useFocus} from "../useFocus/useFocus.js";
 export function useVisibility(componentRef, initialState = false) {
     const [isMounted, setIsMounted] = useState(initialState);
     const [visibleClass, setVisibleClass] = useState("")
-    const {onClick_Focus} = useFocus(componentRef);
+    const {onClick_Focus} = useFocus(componentRef)
 
     // TODO: Maximize Function
 
@@ -22,12 +22,13 @@ export function useVisibility(componentRef, initialState = false) {
                 return; // Exit function
             }
 
-            // Check if component class contain "CLOSE" or class only has component class
-            if (component.classList.contains("CLOSE") || component.classList.contains("HIDE") ||component.classList.length === 1) {
+            // Check if component class contain "CLOSE", "HIDE" or class only has component class
+            if (component.classList.contains("CLOSE") || component.classList.contains("HIDE") || component.classList.length === 1) {
                 // Play animation after mounted component on screen
                 setVisibleClass("OPEN")
-                onClick_Focus();
             }
+
+            onClick_Focus()
 
         }, 10); // <-- Set this to 10ms, to use the eventLoop callback queue
     }, []);

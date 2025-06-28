@@ -6,13 +6,12 @@ export function useResizableComponent(componentRef) {
     const {onClick_Focus} = useFocus(componentRef)
 
     useEffect(() => {
-        if (!componentRef.current) {
-            return;
-        }
+        if (!componentRef.current) return;
 
         const saveDimensions = () => {
             // Save the updated dimensions
             const rect = componentRef.current.getBoundingClientRect();
+
             sessionStorage.setItem("Introduction_App", JSON.stringify(rect))
         }
 
@@ -26,18 +25,14 @@ export function useResizableComponent(componentRef) {
 
         // Initialize the Dimensions
         updateDimensions();
-        onClick_Focus();
 
         // Create an observer to observe the resize change of the app
         const resizeObserver = new ResizeObserver(entries => {
             for (const entry of entries) {
                 if (entry.target === componentRef.current) {
                     updateDimensions();
-                    createResizerDiv(componentRef)
+                    createResizerDiv(componentRef);
                     debounce(saveDimensions, 300);
-
-                    // Debug
-                    // console.log("Resized Detected");
                 }
             }
         });
@@ -69,12 +64,12 @@ export function useResizableComponent(componentRef) {
     // Resizer Logic
     function createResizerDiv(componentRef) {
         const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
-        const displayDiv = componentRef.current;
+        const component = componentRef.current;
 
-        if (!displayDiv) return;
+        if (!component) return;
 
         // Get min-width and min-height of the app
-        const computedStyles = window.getComputedStyle(displayDiv);
+        const computedStyles = window.getComputedStyle(component);
         const minWidth = parseFloat(computedStyles.minWidth) || 0;
         const minHeight = parseFloat(computedStyles.minHeight) || 0;
 
@@ -86,10 +81,10 @@ export function useResizableComponent(componentRef) {
         const maxWidth = window.innerWidth;
         const maxHeight = window.innerHeight;
 
-        // console.log(displayDiv);
+        // console.log(component);
 
         // Oh look, the one-liner that dethrones your entire CSS cascade in a single keystroke:
-        displayDiv.style.position = 'absolute';
+        component.style.position = 'absolute';
         // Because who needs the stylesheet you spent hours writing when you can just yank the element into absolute
         // monarchy right here, right now?
         //
@@ -108,7 +103,7 @@ export function useResizableComponent(componentRef) {
         // In short: it works… the same way a chainsaw can slice bread. Technically correct, aesthetically catastrophic.
 
         // Clean up any existing resizer
-        const existingResizer = displayDiv.querySelectorAll('.resizer');
+        const existingResizer = component.querySelectorAll('.resizer');
         existingResizer.forEach(resizer => resizer.remove());
 
         // Create Div base on directions arrays
@@ -122,14 +117,16 @@ export function useResizableComponent(componentRef) {
                 ...getPositionStyle(dir, componentRef),
             });
 
-            resizer.addEventListener('mousedown', initResize(dir, displayDiv));
-            displayDiv.appendChild(resizer);
+            resizer.addEventListener('mousedown', initResize(dir, component));
+            component.appendChild(resizer);
         });
 
         // Create Resizer Logic
         function initResize(dir, component) {
+            // onMouseDown
             return function (e) {
                 e.preventDefault();
+                onClick_Focus()
 
                 const rectComponent = component.getBoundingClientRect();
 
@@ -142,6 +139,8 @@ export function useResizableComponent(componentRef) {
 
                 const startLeft = rectComponent.left;
                 const startTop = rectComponent.top;
+
+
 
                 function onMouseMove(e) {
                     const dx = e.clientX - startX;

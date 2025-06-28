@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="FIX: Position is wrong when both app open">
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="implement useFocus.js but still buggy, will fix it later">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Contact/Contact_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Contact/Contact_App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Contact/Contact_Wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Contact/Contact_Wrapper.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Introduction/Introduction_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Introduction/Introduction_App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Introduction/Introduction_Wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Introduction/Introduction_Wrapper.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Taskbar/Taskbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Taskbar/Taskbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Desktop.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Desktop.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hook/useDragAndResize/useDraggableComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useDragAndResize/useDraggableComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hook/useDragAndResize/useResizableComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useDragAndResize/useResizableComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hook/useFocus/useFocus.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hook/useFocus/useFocus.js" afterDir="false" />
@@ -65,35 +66,35 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Danny/Desktop/Personal Project/Java/MC_Plugins/ActionHealth",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "npm.npm dev.executor": "Run",
-    "settings.editor.selected.configurable": "inlay.hints",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Danny/Desktop/Personal Project/Java/MC_Plugins/ActionHealth&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.npm dev.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;discord-application&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory",
-      "repository"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;repository&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src\Hook\useVisibility" />
@@ -118,7 +119,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-WS-251.26094.131" />
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-WS-251.26927.40" />
       </set>
     </attachedChunks>
   </component>
@@ -141,6 +142,17 @@
       <workItem from="1750688988541" duration="11682000" />
       <workItem from="1750747003448" duration="16472000" />
       <workItem from="1750773696794" duration="5821000" />
+      <workItem from="1750926545970" duration="1326000" />
+      <workItem from="1751000712883" duration="49000" />
+      <workItem from="1751000811118" duration="638000" />
+      <workItem from="1751012254897" duration="7000" />
+      <workItem from="1751017760682" duration="2480000" />
+      <workItem from="1751041892615" duration="5000" />
+      <workItem from="1751041982555" duration="337000" />
+      <workItem from="1751093874200" duration="120000" />
+      <workItem from="1751094006199" duration="5713000" />
+      <workItem from="1751099832362" duration="88000" />
+      <workItem from="1751099935666" duration="1672000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -270,7 +282,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750848268614</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="implement useFocus.js but still buggy, will fix it later">
+      <option name="closed" value="true" />
+      <created>1750850436034</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1750850436034</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,6 +336,7 @@
     <MESSAGE value="Move `visibleClass` useState out of the App, change CSS class name with animation, improve resize event area" />
     <MESSAGE value="format README.md" />
     <MESSAGE value="FIX: Position is wrong when both app open" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIX: Position is wrong when both app open" />
+    <MESSAGE value="implement useFocus.js but still buggy, will fix it later" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement useFocus.js but still buggy, will fix it later" />
   </component>
 </project>
