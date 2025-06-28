@@ -8,6 +8,8 @@ import "./Introduction.css"
 const ProfilePicture = "./Assets/Image/Icons/Hewwo.png"
 const Introduction_Icon_Image = "./Assets/Image/Icons/Introduction_Icon.jpg"
 
+const APPLICATION_NAME = "Introduction"
+
 export const Introduction_Executable = forwardRef(({onClick_Open}, iconRef) => {
 
     return (
@@ -21,7 +23,7 @@ export const Introduction_Executable = forwardRef(({onClick_Open}, iconRef) => {
             <div className="Introduction_ImageIcon">
                 <img src={Introduction_Icon_Image} alt="introductionIcon"/>
             </div>
-            <p>About Me</p>
+            <p>{APPLICATION_NAME}</p>
         </div>
     )
 });
@@ -39,7 +41,7 @@ export const Introduction_App = forwardRef(({visibleClass, onClick_Close, onClic
             {/* Title */}
             <div className="Introduction_Title">
                 <div className="Introduction_Title_Name">
-                    <p>[ About Me ]</p>
+                    <p>[ {APPLICATION_NAME} ]</p>
                 </div>
                 <div className="Introduction_Title_Action">
                     <FaWindowMinimize className="action_minimize" onClick={onClick_Minimize} alt="Minimize"/>

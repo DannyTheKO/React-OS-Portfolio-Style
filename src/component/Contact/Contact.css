@@ -16,8 +16,10 @@
     font-family: var(--font-family-Consolas), sans-serif;
 
     /* Contact App Size */
-    width: 720px; min-width: 420px;
-    height: 500px; min-height: 200px;
+    width: 720px;
+    min-width: 420px;
+    height: 500px;
+    min-height: 200px;
 
     &.Contact_App {
         /* == Contact Setting == */
@@ -25,5 +27,84 @@
         position: absolute;
         top: 10%;
         left: 20%;
+    }
+}
+
+/* == Contact Context Style == */
+.wrapperHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    margin-bottom: 16px;
+
+    .pfp {
+        border-radius: 100%;
+        aspect-ratio: 1;
+        width: 96px;
+        margin-bottom: 16px;
+    }
+}
+
+.wrapperIcon {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 12px;
+
+        padding: 0.2em;
+
+        transition: background-color 0.1s ease;
+
+        img {
+            aspect-ratio: 1/1;
+            height: 28px;
+        }
+
+        &:hover {
+
+            background-color: rgb(20, 100, 225, 0.7);
+        }
+    }
+
+}
+
+.wrapperLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    text-align: center;
+
+    .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 75%;
+        height: 45px;
+        padding: 0.5em;
+
+        cursor: pointer;
+        user-select: none;
+
+        background-color: var(--application-background-color);
+        transition: background-color 0.2s ease 0s;
+
+        &:hover {
+            outline: 4px solid var(--application-border-color);
+            background-color: rgba(0, 0, 0, 0.5);
+        }
     }
 }

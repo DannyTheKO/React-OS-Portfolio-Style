@@ -4,10 +4,7 @@ export function useDraggableComponent(componentRef) {
     const [position, setPosition] = useState({x: 0, y: 0});
 
     useEffect(() => {
-        if (!componentRef.current) {
-            // console.log("Component not found")
-            return;
-        }
+        if (!componentRef.current) return;
 
         // Get Component App
         const componentApp = componentRef.current;

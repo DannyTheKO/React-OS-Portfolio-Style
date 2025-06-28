@@ -10,6 +10,7 @@ export function useResizableComponent(componentRef) {
             // Save the updated dimensions
             const rect = componentRef.current.getBoundingClientRect();
 
+            // TODO: Dynamic App
             sessionStorage.setItem("Introduction_App", JSON.stringify(rect))
         }
 
@@ -105,19 +106,21 @@ export function useResizableComponent(componentRef) {
         existingResizer.forEach(resizer => resizer.remove());
 
         // Create Div base on directions arrays
-        directions.forEach(dir => {
-            const resizer = document.createElement("div");
-            resizer.classList.add('resizer', `resizer-${dir}`);
-            Object.assign(resizer.style, {
-                position: 'absolute',
-                zIndex: 10,
-                cursor: getCursor(dir),
-                ...getPositionStyle(dir, componentRef),
-            });
+        setTimeout(() => {
+            directions.forEach(dir => {
+                const resizer = document.createElement("div");
+                resizer.classList.add('resizer', `resizer-${dir}`);
+                Object.assign(resizer.style, {
+                    position: 'absolute',
+                    zIndex: 10,
+                    cursor: getCursor(dir),
+                    ...getPositionStyle(dir, componentRef),
+                });
 
-            resizer.addEventListener('mousedown', initResize(dir, component));
-            component.appendChild(resizer);
-        });
+                resizer.addEventListener('mousedown', initResize(dir, component));
+                component.appendChild(resizer);
+            });
+        }, 125)
 
         // Create Resizer Logic
         function initResize(dir, component) {
@@ -240,7 +243,7 @@ export function useResizableComponent(componentRef) {
             const rectComponent = componentRef.current.getBoundingClientRect();
             const style = {
                 transform: 'translate(-50%, -50%)',  // Center the resizer
-                // background: 'red', // DEBUG
+                background: 'red', // DEBUG
             };
 
             switch (dir) {

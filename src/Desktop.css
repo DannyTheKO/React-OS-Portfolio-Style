@@ -214,7 +214,7 @@
         overflow-x: hidden;
 
         &::-webkit-scrollbar {
-            width: 24px;
+            width: 12px;
             height: auto;
         }
 
@@ -229,7 +229,7 @@
             background: var(--scrollbar-thumb-color);
             border-radius: 12px;
             /* Create padding effect with smaller thumb */
-            border: 10px solid transparent;
+            border: 4px solid transparent;
             background-clip: content-box;
         }
 
