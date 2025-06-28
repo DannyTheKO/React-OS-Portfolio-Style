@@ -26,11 +26,11 @@ const Taskbar = () => {
 
 
     return (
-        <div id="Taskbar-Setting" className="Taskbar-Container">
+        <div id="Taskbar_Setting" className="Taskbar_Container">
 
             {/* Logo */}
-            <div className="Taskbar-Logo-Container">
-                <div className="Taskbar-Logo-Display">
+            <div className="Taskbar_Logo_Container">
+                <div className="Taskbar_Logo_Display">
                     <img src={DannyOS_SVG} alt="logo"/>
                 </div>
                 <span>DANNY'S OS</span>
@@ -41,7 +41,7 @@ const Taskbar = () => {
             </div>
 
             {/*Date and Time*/}
-            <div className="Taskbar-DateTime-Container">
+            <div className="Taskbar_DateTime_Container">
                 <div>{time}</div>
                 <div>{date}</div>
             </div>

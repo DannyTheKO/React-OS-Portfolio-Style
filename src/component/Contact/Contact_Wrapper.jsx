@@ -2,7 +2,6 @@ import React, {memo, useRef} from 'react'
 import {Contact_App, Contact_Executable} from './Contact_App.jsx'
 import {useVisibility} from "../../hook/useVisibility/useVisibility.js";
 import {useDragAndResize} from "../../hook/useDragAndResize/useDragAndResize.js";
-import {useFocus} from "../../hook/useFocus/useFocus.js";
 
 export default function Contact_Wrapper() {
     const appRef = useRef(null)

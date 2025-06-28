@@ -1,9 +1,7 @@
 import {useEffect, useState} from "react";
-import {useFocus} from "../useFocus/useFocus.js";
 
 export function useDraggableComponent(componentRef) {
     const [position, setPosition] = useState({x: 0, y: 0});
-    const {onClick_Focus} = useFocus(componentRef);
 
     useEffect(() => {
         if (!componentRef.current) {
@@ -20,7 +18,7 @@ export function useDraggableComponent(componentRef) {
         const componentApp_borderWidth = Math.ceil(parseFloat(componentApp_Styles.border) + 1) || 0;
 
         // Taskbar Height
-        const Taskbar = document.querySelector(`.Taskbar-Container`)
+        const Taskbar = document.querySelector(`.Taskbar_Container`)
         const Taskbar_height = parseFloat(window.getComputedStyle(Taskbar).height) || 0
 
         // Initialize
@@ -58,7 +56,6 @@ export function useDraggableComponent(componentRef) {
 
             document.addEventListener("mousemove", handleMouseMove);
             document.addEventListener("mouseup", handleMouseUp);
-            onClick_Focus();
         }
 
         const handleMouseMove = (e) => {

@@ -1,9 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import {useFocus} from "../useFocus/useFocus.js";
 
 export function useResizableComponent(componentRef) {
     const [dimensions, setDimensions] = useState({width: 0, height: 0})
-    const {onClick_Focus} = useFocus(componentRef)
 
     useEffect(() => {
         if (!componentRef.current) return;
@@ -74,7 +72,7 @@ export function useResizableComponent(componentRef) {
         const minHeight = parseFloat(computedStyles.minHeight) || 0;
 
         // Get Taskbar Height
-        const Taskbar = document.querySelector(`.Taskbar-Container`)
+        const Taskbar = document.querySelector(`.Taskbar_Container`)
         const TaskbarHeight = parseFloat(window.getComputedStyle(Taskbar).height) || 0
 
         // Get window.innerWidth and window.innerHeight limit
@@ -126,7 +124,6 @@ export function useResizableComponent(componentRef) {
             // onMouseDown
             return function (e) {
                 e.preventDefault();
-                onClick_Focus()
 
                 const rectComponent = component.getBoundingClientRect();
 

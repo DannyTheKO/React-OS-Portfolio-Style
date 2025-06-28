@@ -1,5 +1,5 @@
 /* Setting */
-#Taskbar-Setting {
+#Taskbar_Setting {
     /* == Dynamic Setting == */
     /* Size */
     --topbar-containerSize-width: 100vw;
@@ -35,7 +35,7 @@
 }
 
 /* Container */
-.Taskbar-Container {
+.Taskbar_Container {
     /* Overflow */
     overflow: hidden;
 
@@ -49,7 +49,7 @@
 }
 
 /* Logo */
-.Taskbar-Logo-Container {
+.Taskbar_Logo_Container {
     /* Display */
     display: flex;
     cursor: pointer;
@@ -57,7 +57,7 @@
 
     padding: 0 0.5em 0 0.5em;
 
-    .Taskbar-Logo-Display {
+    .Taskbar_Logo_Display {
         display: flex;
         justify-content: space-evenly;
         gap: 0.25em;
@@ -86,7 +86,7 @@
 }
 
 /* Date and Time */
-.Taskbar-DateTime-Container {
+.Taskbar_DateTime_Container {
     display: flex;
     flex-direction: column;
     justify-content: center;

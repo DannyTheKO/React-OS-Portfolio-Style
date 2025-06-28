@@ -7,9 +7,8 @@ If you like it, give me a **star** and feel free to copy my code.
 
 - [X] Move `visibleClass` useState out of the App
 - [X] Limit user resize component, prevent overflow beyond the screen
-- [X] Position is wrong when both app open,
-  - NO, IS THE FUCKING ONELINER JS CSS BULLSHIT `displayDiv.style.position = 'relative'` AND CHANGE IT TO `ABSOLUTE`
-- [ ] Fix the z-index component login
+- [X] Position is wrong when both app open
+- [X] logic calculation on z-index is wrong
 
 ## Ideal List
 
@@ -36,13 +35,12 @@ If you like it, give me a **star** and feel free to copy my code.
 - [x] Close Function
    - [x] Animation
 - [x] Minimize Function
-   - [x] Hide the element
-   - [x] Minimize Animation
+   - [x] Animation
+- [X] Focus Function
 - [ ] Maximize Function
    - [ ] Remember the current width and height before maximize
    - [ ] Set width and height using `window.innerWidth` and `window.innerHeight`
-- [ ] Simulate App Focus
-   - [ ] Create custom hook using `z-index`
+   - [ ] Animation
 - [ ] Popup Component (this is hard...)
    - [ ] Create new window when user clicks on the image
 

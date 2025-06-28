@@ -114,8 +114,7 @@
 
     /* == Transition From Open And Close Action == */
     opacity: 0;
-    scale: initial;
-    transform: scale(1) translateX(0) translateY(50%);
+    transform-origin: left;
 
     &.OPEN {
         opacity: 1;
@@ -126,14 +125,14 @@
 
     &.HIDE {
         opacity: 0;
-        transform: scale(0.2) translateX(0%) translateY(500%);
+        transform: scale(0.2) translateX(0%) translateY(100%);
         pointer-events: none;
         transition: opacity 100ms ease, transform 200ms ease;
     }
 
     &.CLOSE {
         opacity: 0;
-        transform: scale(1) translateX(0) translateY(25%);
+        transform: scale(0.2) translateX(0) translateY(100%);
         pointer-events: none;
         transition: opacity 100ms ease, transform 100ms ease;
     }

@@ -1,13 +1,44 @@
-import React, {useState, useCallback, useEffect, useRef} from "react";
-import {useFocus} from "../useFocus/useFocus.js";
+import React, {useState, useCallback} from "react";
 
-export function useVisibility(componentRef, initialState = false) {
-    const [isMounted, setIsMounted] = useState(initialState);
+// Focus Variable Function
+let zIndexCurrent = 0;      // Initialize Component (n)
+let zIndexThreshold = 3;    // Set current top focus zIndex (n + 1)
+let zIndexTaskbar = 0;      // Initialize Taskbar (n + zIndexThreshold + 1)
+
+export function useVisibility(componentRef) {
+    const [isMounted, setIsMounted] = useState(false);
     const [visibleClass, setVisibleClass] = useState("")
-    const {onClick_Focus} = useFocus(componentRef)
+
+    // Mounted on every component
+    const onClick_Focus = useCallback(() => {
+        const component = componentRef.current;
+        const Taskbar = document.querySelector(`.Taskbar_Container`)
+
+        if (!component || !Taskbar) return;
+
+        // Initialize
+        zIndexCurrent = parseInt(window.getComputedStyle(component).zIndex);
+        zIndexTaskbar = parseInt(window.getComputedStyle(Taskbar).zIndex);
+
+        // Logic
+        if (zIndexCurrent < zIndexThreshold) {
+            zIndexThreshold += 1;
+            component.style.zIndex = zIndexThreshold;
+
+            zIndexTaskbar = zIndexThreshold + 1;
+            Taskbar.style.zIndex = zIndexTaskbar;
+        }
+
+        // DEBUG
+        // console.log(`=============================================`)
+        // console.log(`Component Name: ${component.className}`)
+        // console.log(`Current Component: ${component.style.zIndex}`)
+        // console.log(`Threshold: ${zIndexThreshold}`)
+        // console.log(`Current Taskbar: ${zIndexTaskbar}`)
+
+    }, [componentRef]);
 
     // TODO: Maximize Function
-
     const onClick_Open = useCallback(() => {
         // Mount component on user screen BUT visible is still false
         setIsMounted(true)
@@ -22,12 +53,11 @@ export function useVisibility(componentRef, initialState = false) {
                 return; // Exit function
             }
 
-            // Check if component class contain "CLOSE", "HIDE" or class only has component class
             if (component.classList.contains("CLOSE") || component.classList.contains("HIDE") || component.classList.length === 1) {
-                // Play animation after mounted component on screen
                 setVisibleClass("OPEN")
             }
 
+            component.addEventListener("mousedown", onClick_Focus)
             onClick_Focus()
 
         }, 10); // <-- Set this to 10ms, to use the eventLoop callback queue
@@ -44,8 +74,10 @@ export function useVisibility(componentRef, initialState = false) {
             setVisibleClass("CLOSE")
 
             // Wait for animation to complete before unmounting
-            setTimeout(() => setIsMounted(false), 300); // Match your CSS transition duration
+            setTimeout(() => setIsMounted(false), 300); // Match CSS transition duration
         }
+
+        component.removeEventListener("mousedown", onClick_Focus)
     }, []);
 
 
@@ -59,6 +91,8 @@ export function useVisibility(componentRef, initialState = false) {
         if (component.classList.contains("OPEN") || component.classList.length === 1) {
             setVisibleClass("HIDE")
         }
+
+        component.removeEventListener("mousedown", onClick_Focus)
     }, [])
 
 
