@@ -30,7 +30,7 @@ export function useResizableComponent(componentRef) {
             for (const entry of entries) {
                 if (entry.target === componentRef.current) {
                     updateDimensions();
-                    createResizerDiv(componentRef);
+                    delayedResizerDiv(componentRef);
                     debounce(saveDimensions, 300);
                 }
             }
@@ -57,6 +57,31 @@ export function useResizableComponent(componentRef) {
         return (...args) => {
             clearTimeout(timeout)
             timeout = setTimeout(() => callback(...args), msDelay)
+        }
+    }
+
+    function delayedResizerDiv(componentRef) {
+        const component = componentRef.current;
+        if (!component) return;
+
+        // Check if component is currently animating
+        const isAnimating = component.classList.contains("OPEN") ||
+            component.classList.contains("CLOSE") ||
+            component.classList.contains("HIDE");
+
+        if (isAnimating) {
+            // Wait for animation to complete before adding resizers
+            const handleTransitionEnd = () => {
+                // Remove the event listener to prevent multiple calls
+                component.removeEventListener('transitionend', handleTransitionEnd);
+                // Create resizers after animation is complete
+                createResizerDiv(componentRef);
+            };
+
+            component.addEventListener('transitionend', handleTransitionEnd);
+        } else {
+            // No animation in progress, create resizers immediately
+            createResizerDiv(componentRef);
         }
     }
 
@@ -106,21 +131,20 @@ export function useResizableComponent(componentRef) {
         existingResizer.forEach(resizer => resizer.remove());
 
         // Create Div base on directions arrays
-        setTimeout(() => {
-            directions.forEach(dir => {
-                const resizer = document.createElement("div");
-                resizer.classList.add('resizer', `resizer-${dir}`);
-                Object.assign(resizer.style, {
-                    position: 'absolute',
-                    zIndex: 10,
-                    cursor: getCursor(dir),
-                    ...getPositionStyle(dir, componentRef),
-                });
-
-                resizer.addEventListener('mousedown', initResize(dir, component));
-                component.appendChild(resizer);
+        directions.forEach(dir => {
+            const resizer = document.createElement("div");
+            resizer.classList.add('resizer', `resizer_${dir}`);
+            Object.assign(resizer.style, {
+                position: 'absolute',
+                zIndex: 10,
+                cursor: getCursor(dir),
+                ...getPositionStyle(dir, componentRef),
             });
-        }, 125)
+
+            resizer.addEventListener('mousedown', initResize(dir, component));
+            component.appendChild(resizer);
+        });
+
 
         // Create Resizer Logic
         function initResize(dir, component) {
@@ -139,7 +163,6 @@ export function useResizableComponent(componentRef) {
 
                 const startLeft = rectComponent.left;
                 const startTop = rectComponent.top;
-
 
 
                 function onMouseMove(e) {

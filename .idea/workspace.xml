@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="FIX: Resize div are in wrong position when reopen the app, update README.md">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="update .gitignore">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/useResizableComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/useResizableComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useVisibility/useVisibility.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useVisibility/useVisibility.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +146,9 @@
       <workItem from="1751093874200" duration="120000" />
       <workItem from="1751094006199" duration="5713000" />
       <workItem from="1751099832362" duration="88000" />
-      <workItem from="1751099935666" duration="9061000" />
+      <workItem from="1751099935666" duration="9230000" />
+      <workItem from="1751179292352" duration="116000" />
+      <workItem from="1751182325522" duration="3961000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -304,7 +310,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751109917928</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="update .gitignore">
+      <option name="closed" value="true" />
+      <created>1751109967852</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1751109967852</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,6 +368,7 @@
     <MESSAGE value="format/rename folder file, save work" />
     <MESSAGE value="FIX: logic calculation on z-index is wrong and group useFocus hook into useVisibility, rename ID and Class on Taskbar.jsx and Taskbar.css, update on README.md" />
     <MESSAGE value="FIX: Resize div are in wrong position when reopen the app, update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIX: Resize div are in wrong position when reopen the app, update README.md" />
+    <MESSAGE value="update .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="update .gitignore" />
   </component>
 </project>

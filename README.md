@@ -5,14 +5,16 @@ If you like it, give me a **star** and feel free to copy my code.
 
 ## Priority
 
+- [ ] Font are oversize when user browser zoom-in
+- [ ] Style Contact Me App
+- [ ] Dynamic app on `sessionStorage`, get the class name or component name ?
+
+**Backlog**
 - [X] Move `visibleClass` useState out of the App
 - [X] Limit user resize component, prevent overflow beyond the screen
 - [X] Position is wrong when both app open
 - [X] logic calculation on z-index is wrong
 - [X] Resize div are in wrong position when reopen the app
-- [ ] Font are oversize when user browser zoom-in
-- [ ] Style Contact Me App
-- [ ] Dynamic app on `sessionStorage`, get the class name or component name ?
 
 ## Ideal List
 

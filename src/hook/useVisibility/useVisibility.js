@@ -61,7 +61,7 @@ export function useVisibility(componentRef) {
             onClick_Focus()
 
         }, 10); // <-- Set this to 10ms, to use the eventLoop callback queue
-    }, []);
+    }, [componentRef.current]);
 
     const onClick_Close = useCallback(() => {
         const component = componentRef.current;
@@ -78,7 +78,7 @@ export function useVisibility(componentRef) {
         }
 
         component.removeEventListener("mousedown", onClick_Focus)
-    }, []);
+    }, [componentRef.current]);
 
 
     const onClick_Minimize = useCallback(() => {
@@ -93,7 +93,7 @@ export function useVisibility(componentRef) {
         }
 
         component.removeEventListener("mousedown", onClick_Focus)
-    }, [])
+    }, [componentRef.current])
 
 
     return {visibleClass, isMounted, onClick_Open, onClick_Close, onClick_Minimize};
