@@ -4,10 +4,10 @@ Hi I'm Danny, welcome to the source code of my website.
 If you like it, give me a **star** and feel free to copy my code.
 
 ## Priority
-
 - [ ] Font are oversize when user browser zoom-in
 - [ ] Style Contact Me App
 - [ ] Dynamic app on `sessionStorage`, get the class name or component name ?
+- [ ] Executable padding it a little bit tight
 
 **Backlog**
 - [X] Move `visibleClass` useState out of the App

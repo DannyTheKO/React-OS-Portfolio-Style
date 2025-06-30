@@ -3,14 +3,18 @@
 :root {
     overflow: hidden;
 
+    /* Color Setting */
+    --color-accent: ;
+
     /* Font Global Variable */
     --font-family-Consolas: "Consolas";
     --font-family-Stretch_Pro: "Stretch Pro";
 
-    --font-size-large: 1.75em;
-    --font-size-medium: 1.5em;
-    --font-size-normal: 1.25em;
-    --font-size-small: 1em;
+    font-size: 16px;
+    --font-size-large: 1.75rem;
+    --font-size-medium: 1.5rem;
+    --font-size-normal: 1.25rem;
+    --font-size-small: 1rem;
 
     /* Icon Outline Global Variable */
     --icon-outline-size: 1px solid;
@@ -114,27 +118,58 @@
 
     /* == Transition From Open And Close Action == */
     opacity: 0;
-    transform-origin: left;
+    transform-origin: bottom left;
 
     &.OPEN {
         opacity: 1;
-        transform: scale(1) translateX(0) translateY(0);
+        scale: 1;
+        translate: 0 0;
         pointer-events: auto;
-        transition: opacity 100ms ease, transform 100ms ease;
+
+        transition:
+                opacity 100ms ease,
+                scale 100ms ease,
+                translate 100ms ease;
     }
 
     &.HIDE {
         opacity: 0;
-        transform: scale(0.2) translateX(0%) translateY(100%);
+        scale: 0.2;
+        translate: 0 100%;
         pointer-events: none;
-        transition: opacity 100ms ease, transform 200ms ease;
+
+        transition:
+                opacity 200ms ease,
+                scale 200ms ease,
+                translate 200ms ease ;
     }
 
     &.CLOSE {
         opacity: 0;
-        transform: scale(0.2) translateX(0) translateY(100%);
-        pointer-events: none;
-        transition: opacity 100ms ease, transform 100ms ease;
+        scale: 0.2;
+        translate: 0 0;
+        pointer-events: auto;
+
+        transition:
+                opacity 100ms ease,
+                scale 100ms ease,
+                translate 100ms ease;
+    }
+
+    /* Resizer Div */
+    .resizer {
+        border-radius: 16px;
+        transition: 100ms ease-in-out;
+    }
+
+    .resizer:hover {
+        background-color: var(--application-border-color);
+        transition: 200ms ease-in-out;
+    }
+
+    .resizer:active {
+        background-color: rgba(255, 0, 0, 0.8);
+        transition: 200ms ease-in-out;
     }
 
     /* == Default App Title == */
@@ -214,6 +249,7 @@
         overflow-x: hidden;
 
         &::-webkit-scrollbar {
+            position: absolute;
             width: 12px;
             height: auto;
         }
