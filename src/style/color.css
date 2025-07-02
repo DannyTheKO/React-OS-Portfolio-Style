@@ -1,0 +1,79 @@
+:root {
+    /* Color Setting */
+    --color-accent-red: rgba(187, 21, 39, 1);
+    --color-accent-yellow: rgba(182, 169, 25, 1);
+    --color-accent-green: rgba(34, 183, 74, 1);
+    --color-accent-blue: rgb(36, 80, 191, 1);
+
+    /* RED faded by brightness */
+    --color-red-1: hsl(355, 80%, 25%);
+    --color-red-2: hsl(355, 80%, 30%);
+    --color-red-3: hsl(355, 80%, 35%);
+    --color-red-4: hsl(355, 80%, 40%);
+    --color-red-5: hsl(355, 80%, 45%);
+    --color-red-6: hsl(355, 80%, 50%);
+    --color-red-7: hsl(355, 80%, 55%);
+    --color-red-8: hsl(355, 80%, 60%);
+    --color-red-9: hsl(355, 80%, 65%);
+    --color-red-10: hsl(355, 80%, 70%);
+
+    /* YELLOW faded by brightness */
+    --color-yellow-1: hsl(52, 80%, 25%);
+    --color-yellow-2: hsl(52, 80%, 30%);
+    --color-yellow-3: hsl(52, 80%, 35%);
+    --color-yellow-4: hsl(52, 80%, 40%);
+    --color-yellow-5: hsl(52, 80%, 45%);
+    --color-yellow-6: hsl(52, 80%, 50%);
+    --color-yellow-7: hsl(52, 80%, 55%);
+    --color-yellow-8: hsl(52, 80%, 60%);
+    --color-yellow-9: hsl(52, 80%, 65%);
+    --color-yellow-10: hsl(52, 80%, 70%);
+
+    /* GREEN faded by brightness */
+    --color-green-1: hsl(135, 70%, 25%);
+    --color-green-2: hsl(135, 70%, 30%);
+    --color-green-3: hsl(135, 70%, 35%);
+    --color-green-4: hsl(135, 70%, 40%);
+    --color-green-5: hsl(135, 70%, 45%);
+    --color-green-6: hsl(135, 70%, 50%);
+    --color-green-7: hsl(135, 70%, 55%);
+    --color-green-8: hsl(135, 70%, 60%);
+    --color-green-9: hsl(135, 70%, 65%);
+    --color-green-10: hsl(135, 70%, 70%);
+
+    /* BLUE faded by brightness */
+    --color-blue-1: hsl(225, 70%, 25%);
+    --color-blue-2: hsl(225, 70%, 30%);
+    --color-blue-3: hsl(225, 70%, 35%);
+    --color-blue-4: hsl(225, 70%, 40%);
+    --color-blue-5: hsl(225, 70%, 45%);
+    --color-blue-6: hsl(225, 70%, 50%);
+    --color-blue-7: hsl(225, 70%, 55%);
+    --color-blue-8: hsl(225, 70%, 60%);
+    --color-blue-9: hsl(225, 70%, 65%);
+    --color-blue-10: hsl(225, 70%, 70%);
+
+    /* BLACK faded by brightness */
+    --color-black-1: hsl(0, 0%, 0%);
+    --color-black-2: hsl(0, 0%, 10%);
+    --color-black-3: hsl(0, 0%, 15%);
+    --color-black-4: hsl(0, 0%, 20%);
+    --color-black-5: hsl(0, 0%, 25%);
+    --color-black-6: hsl(0, 0%, 30%);
+    --color-black-7: hsl(0, 0%, 35%);
+    --color-black-8: hsl(0, 0%, 40%);
+    --color-black-9: hsl(0, 0%, 45%);
+    --color-black-10: hsl(0, 0%, 50%);
+
+    /* WHITE faded by brightness */
+    --color-white-1: hsl(0, 0%, 60%);
+    --color-white-2: hsl(0, 0%, 64%);
+    --color-white-3: hsl(0, 0%, 68%);
+    --color-white-4: hsl(0, 0%, 72%);
+    --color-white-5: hsl(0, 0%, 76%);
+    --color-white-6: hsl(0, 0%, 80%);
+    --color-white-7: hsl(0, 0%, 84%);
+    --color-white-8: hsl(0, 0%, 88%);
+    --color-white-9: hsl(0, 0%, 92%);
+    --color-white-10: hsl(0, 0%, 96%);
+}

@@ -1,4 +1,4 @@
-@import "../../Desktop.css";
+@import "../../desktop.css";
 /* == Custom Override Setting ==*/
 #Global_Executable_Setting {
 
@@ -23,8 +23,10 @@
         left: 20%;
 
         /* Introduction App Size */
-        width: 720px; min-width: 420px;
-        height: 500px; min-height: 200px;
+        width: 720px;
+        min-width: 420px;
+        height: 500px;
+        min-height: 200px;
     }
 }
 
@@ -66,12 +68,11 @@
 
     a {
         padding: 0.5em;
-        border: 2px solid var(--application-border-color);
+        border: 2px solid var(--application-accent-color);
 
-        transition:
-                background-color 0.2s ease 0s,
-                scale 0.2s ease 0s,
-                color 0.2s ease 0s;
+        transition: background-color 0.2s ease 0s,
+        scale 0.2s ease 0s,
+        color 0.2s ease 0s;
     }
 
     a:hover {

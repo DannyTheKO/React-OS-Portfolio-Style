@@ -1,4 +1,4 @@
-import React, {useCallback} from "react";
+import {useCallback} from "react";
 
 export function useSaveRect() {
     // Set Rect of the component
@@ -7,7 +7,10 @@ export function useSaveRect() {
 
         const component = componentRef.current
         const rect = component.getBoundingClientRect();
-        const appName = [...component.classList].filter(className => className.endsWith("_App")).toString();
+        const appName = [...component.classList]
+            .filter(className => className.endsWith("_App"))
+            .toString()
+            .trim();
 
         sessionStorage.setItem(appName, JSON.stringify(rect))
     }, [])

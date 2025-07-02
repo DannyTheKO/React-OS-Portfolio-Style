@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "Stretch Pro";
+    src: url("../../public/Assets/Font/StretchPro.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Angora";
+    src: url("../../public/Assets/Font/Angora.otf") format("opentype");
+}
+
+:root {
+    /* Font Global Variable */
+    --font-family-Consolas: "Consolas";
+    --font-family-Stretch_Pro: "Stretch Pro";
+
+    --font-size-large: 1.75rem;
+    --font-size-medium: 1.5rem;
+    --font-size-normal: 1.25rem;
+    --font-size-small: 1rem;
+}

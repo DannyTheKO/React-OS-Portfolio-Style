@@ -1,0 +1,55 @@
+:root {
+    /* == Color Setting == */
+    /* Accent */
+    --icon-accent-color: var(--color-blue-5);
+}
+
+#Global_Executable_Setting {
+    /* Border */
+    --icon-outline-size: 1px solid;
+
+    /* Blur */
+    --icon-backdrop-blur: blur(10px);
+    --icon-background-color: hsla(0, 0%, 0%, 50%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    width: 78px;
+    height: 95px;
+    font-size: 14px;
+
+    /* Default App Icon Position */
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    color: white;
+    cursor: pointer;
+    user-select: none;
+
+    /* Hover Animation */
+    transition: 100ms ease-out;
+    outline: var(--icon-accent-color) solid 0;
+
+    &:hover {
+        outline: var(--icon-accent-color) var(--icon-outline-size);
+        background-color: var(--icon-background-color);
+        backdrop-filter: var(--icon-backdrop-blur);
+    }
+
+    /* Image Icon */
+    [class$="_ImageIcon"] {
+        display: flex;
+
+        width: 48px;
+        height: 48px;
+        overflow: hidden;
+
+        border-radius: 6px;
+    }
+}

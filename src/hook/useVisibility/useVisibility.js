@@ -1,4 +1,4 @@
-import React, {useState, useCallback} from "react";
+import {useState, useCallback} from "react";
 import {useSaveRect} from "../useSaveRect/useSaveRect.js";
 
 // Focus Variable Function
@@ -12,7 +12,6 @@ export function useVisibility(componentRef) {
     const {RectSetter, RectGetter} = useSaveRect()
 
     // TODO: Maximize Function
-    // TODO: Get Rect Windows
 
     // Mounted on every component
     const onClick_Focus = useCallback(() => {
@@ -33,36 +32,24 @@ export function useVisibility(componentRef) {
             zIndexTaskbar = zIndexThreshold + 1;
             Taskbar.style.zIndex = zIndexTaskbar;
         }
-
-        // DEBUG
-        // console.log(`=============================================`)
-        // console.log(`Component Name: ${component.className}`)
-        // console.log(`Current Component: ${component.style.zIndex}`)
-        // console.log(`Threshold: ${zIndexThreshold}`)
-        // console.log(`Current Taskbar: ${zIndexTaskbar}`)
-
     }, [componentRef]);
 
     const onClick_Open = useCallback(() => {
-        // Mount component on user screen BUT visible is still false
         setIsMounted(true)
 
-        // Small delay to allow DOM to update before animation starts
         setTimeout(() => {
             const component = componentRef.current
-
-            // Check NULL component
             if (!component) {
                 console.error("something fuck in the useVisibility -> onClick_Open()")
-                return; // Exit function
+                return;
             }
 
             if (component.classList.contains("CLOSE") || component.classList.contains("HIDE") || component.classList.length === 1) {
                 setVisibleClass("OPEN")
+                component.addEventListener("mousedown", onClick_Focus)
+                onClick_Focus()
             }
 
-            component.addEventListener("mousedown", onClick_Focus)
-            onClick_Focus()
         }, 10); // <-- Set this to 10ms, to use the eventLoop callback queue
     }, [componentRef.current]);
 
@@ -71,18 +58,16 @@ export function useVisibility(componentRef) {
         const component = componentRef.current;
         if (!component) {
             console.error("something fuck in the useVisibility -> onClick_Close()")
-            return; // Exit function
+            return;
         }
 
         if (component.classList.contains("OPEN") || component.classList.contains("HIDE") || component.classList.length === 1) {
             setVisibleClass("CLOSE")
+            component.removeEventListener("mousedown", onClick_Focus)
+            RectSetter(componentRef)
 
-            // Wait for animation to complete before unmounting
             setTimeout(() => setIsMounted(false), 300); // Match CSS transition duration
         }
-
-        component.removeEventListener("mousedown", onClick_Focus)
-        RectSetter(componentRef)
     }, [componentRef.current]);
 
 
@@ -90,15 +75,15 @@ export function useVisibility(componentRef) {
         const component = componentRef.current;
         if (!component) {
             console.error("something fuck in the useVisibility -> onClick_Minimize()")
-            return; // Exit function
+            return;
         }
 
         if (component.classList.contains("OPEN") || component.classList.length === 1) {
             setVisibleClass("HIDE")
+            component.removeEventListener("mousedown", onClick_Focus)
+            RectSetter(componentRef)
         }
 
-        component.removeEventListener("mousedown", onClick_Focus)
-        RectSetter(componentRef)
     }, [componentRef.current])
 
 

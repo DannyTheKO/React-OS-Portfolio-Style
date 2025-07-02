@@ -3,23 +3,8 @@
 Hi I'm Danny, welcome to the source code of my website.  
 If you like it, give me a **star** and feel free to copy my code.
 
-## 🐛 Swatting Bug/Chores ^^
-1. [ ] Reformat the CSS variable
-2. [ ] Font are oversize when user browser zoom-in
-3. [ ] Dragging application make cursor sometime stuck at grab icon
-
-**Backlog**
-- [X] Move `visibleClass` useState out of the App
-- [X] Limit user resize component, prevent overflow beyond the screen
-- [X] Position is wrong when both app open
-- [X] logic calculation on z-index is wrong
-- [X] Resize div are in wrong position when reopen the app
-- [X] Style Contact Me App
-- [X] Executable padding it a little bit tight
-- [X] Dynamic app on `sessionStorage`
-
 ## 💡 Ideal
-- Pokédex App, use PokeAPI
+- Pokédex Search App, use PokeAPI
 - Game, something easy like:
    - Snake
    - Tetris
@@ -47,7 +32,7 @@ If you like it, give me a **star** and feel free to copy my code.
 - [ ] Maximize Function
    - [ ] Remember the current width and height before maximize
    - [ ] Set width and height using `window.innerWidth` and `window.innerHeight`
-   - [ ] Animation
+   - [ ] Maximize Animation
 - [ ] Popup Component (this is hard...)
    - [ ] Create new window when user clicks on the image
 
@@ -99,13 +84,12 @@ If you like it, give me a **star** and feel free to copy my code.
 - [ ] Edit content note
 - [ ] Upload picture based on location (needs more research)
 
-#### Project Timeline/List
-
-**Project Timeline Tab**
-- [ ] Show Ideal/Todo list
-- [ ] Fetch GitHub API
+#### This Project Timeline
+- [ ] Show Ideal/Todo list (Get README.md from this project)
+- [ ] Fetch GitHub commit API
 - [ ] Show commit time and message
-- [ ] Limit to 10 commit history
+- [ ] Limit to 10 commit history per page
 
+#### Project List/Skill
 **Project List Tab**
-- [ ] List GitHub work here using URL  
+- [ ] List GitHub work here using URL

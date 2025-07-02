@@ -1,14 +1,9 @@
-/* Setting */
+:root {
+    /* == Color Setting == */
+    --taskbar-accent-color: var(--color-yellow-5);
+}
+
 #Taskbar_Setting {
-    /* == Dynamic Setting == */
-    /* Size */
-    --topbar-containerSize-width: 100vw;
-    --topbar-containerSize-height: 2.75em;
-
-    /* Border */
-    --topbar-border-color: rgb(37, 80, 190);
-
-    /* == Absolute Setting == */
     /* Display */
     display: flex;
     justify-content: space-between;
@@ -17,8 +12,10 @@
     gap: 16px;
 
     /* Size */
-    width: var(--topbar-containerSize-width);
-    height: var(--topbar-containerSize-height);
+    --taskbar-width: 100vw;
+    --taskbar-height: 2.75em;
+    width: var(--taskbar-width);
+    height: var(--taskbar-height);
 
     /* Position Type */
     position: absolute;
@@ -27,20 +24,19 @@
 
     /* Text */
     color: white;
-    /*font-family: bold;*/
 
     /* Background */
     background-color: rgb(0, 0, 0, 0.2);
     backdrop-filter: blur(2em);
 
-    /*User Drag*/
+    /* User Drag */
     -webkit-user-drag: none;
     -webkit-user-select: none;
     user-select: none;
 
     /* Border */
-    /*border-top: 1px solid var(--topbar-border-color);*/
-    /*box-shadow: 0 0 10px 0 var(--topbar-border-color);*/
+    border-top: 1px solid var(--taskbar-accent-color);
+    box-shadow: 0 0 10px 0 var(--taskbar-accent-color);
 }
 
 /* Logo */
@@ -58,7 +54,7 @@
         overflow: hidden;
         text-wrap: nowrap;
 
-        height: var(--topbar-containerSize-height);
+        height: var(--taskbar-height);
         width: 10em;
 
         img {

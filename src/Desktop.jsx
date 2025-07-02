@@ -4,7 +4,7 @@ import Taskbar from './component/Taskbar/Taskbar.jsx';
 import Introduction_Wrapper from "./component/Introduction/Introduction_Wrapper.jsx";
 import Contact_Wrapper from "./component/Contact/Contact_Wrapper.jsx";
 
-const Desktop = () => {
+export default function Desktop() {
 
     // new Promise((resolve, reject) => {
     //
@@ -19,5 +19,3 @@ const Desktop = () => {
         </div>
     )
 }
-
-export default Desktop;

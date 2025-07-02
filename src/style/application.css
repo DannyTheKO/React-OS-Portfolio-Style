@@ -1,0 +1,191 @@
+:root {
+    /* == Color Setting == */
+    /* Accent */
+    --application-accent-color: var(--color-blue-5);
+    --application-accent-scrollbar-color: var(--color-blue-5);
+    --application-accent-hover-color: var(--color-blue-1);
+}
+
+#Global_App_Setting {
+    /* Border */
+    --application-border-size: 4px solid;
+    border: var(--application-border-size);
+    border-color: var(--application-accent-color);
+
+    /* Blur */
+    --application-backdrop-blur: blur(12px);
+    --application-background-color: hsla(0, 0%, 0%, 70%);
+    background-color: var(--application-background-color);
+    backdrop-filter: var(--application-backdrop-blur);
+
+
+    /* Default App Display Position  */
+    position: absolute;
+    z-index: 2;
+    top: 10%;
+    left: 25%;
+
+    /* Default Size */
+    width: 500px; min-width: 300px;
+    height: 500px; min-height: 300px;
+
+    /* Default Font */
+    color: white;
+    font-family: var(--font-family-Consolas), sans-serif;
+
+    /* Default Container */
+    display: flex;
+    flex-direction: column;
+
+    /* == Transition From Open And Close Action == */
+    opacity: 0;
+    transform-origin: bottom left;
+
+    &.OPEN {
+        opacity: 1;
+        scale: 1;
+        translate: 0 0;
+        pointer-events: auto;
+
+        transition:
+                opacity 100ms ease,
+                scale 100ms ease,
+                translate 100ms ease;
+    }
+
+    &.HIDE {
+        opacity: 0;
+        scale: 0.2;
+        translate: 0 100%;
+        pointer-events: none;
+
+        transition:
+                opacity 200ms ease,
+                scale 200ms ease,
+                translate 200ms ease ;
+    }
+
+    &.CLOSE {
+        opacity: 0;
+        scale: 0.2;
+        translate: 0 0;
+        pointer-events: auto;
+
+        transition:
+                opacity 100ms ease,
+                scale 100ms ease,
+                translate 100ms ease;
+    }
+
+    /* == Resizer == */
+    .resizer {
+        border-radius: 16px;
+        transition: 100ms ease-in-out;
+    }
+
+    .resizer:hover {
+        /*background-color: var(--application-border-color);*/
+        /*transition: 200ms ease-in-out;*/
+    }
+
+    .resizer:active {
+        /*background-color: rgba(255, 0, 0, 0.8);*/
+        /*transition: 200ms ease-in-out;*/
+    }
+
+    /* == Default App Title == */
+    [class$="_Title"] {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--application-accent-color);
+
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        user-select: none;
+
+        position: sticky;
+        z-index: 2;
+        top: 0;
+        min-height: 30px;
+        padding: 2px;
+
+        cursor: grab;
+
+        [class$="_Name"] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px 8px;
+
+            z-index: 1;
+
+            font-family: var(--font-family-Stretch_Pro), sans-serif;
+
+            &:hover {
+                border-radius: 4px;
+                background-color: var(--application-accent-hover-color);
+                transition: background-color 200ms ease;
+            }
+        }
+
+        [class$="_Action"] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            cursor: pointer;
+            z-index: 2;
+
+            /* All the action button */
+            * {
+                padding: 4px 8px;
+
+                background-color: transparent;
+                transition:
+                        background-color 200ms ease,
+                        transform 200ms ease;
+            }
+
+            .action_minimize:hover {
+                background-color: var(--color-yellow-3);
+            }
+
+            .action_maximize:hover {
+                background-color: var(--color-green-3);
+            }
+
+            .action_close:hover {
+                background-color: var(--color-red-3);
+            }
+        }
+    }
+
+    /* == Default App Display == */
+    [class$="_Display"] {
+        padding: 1em 0 1em 1em;
+        z-index: 0;
+
+        overflow: scroll;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+            width: 1em;
+        }
+
+        /* Remove any space around the scrollbar */
+        &::-webkit-scrollbar-track {
+            /* Use transparent background with some padding */
+            background: transparent;
+        }
+
+        /* Ensure the thumb fills the entire width */
+        &::-webkit-scrollbar-thumb {
+            background: var(--application-accent-scrollbar-color);
+
+            /* Create padding effect with smaller thumb */
+            border: 6px solid transparent;
+            background-clip: content-box;
+        }
+    }
+}

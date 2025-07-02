@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Style Contact Me App">
-      <change afterPath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" afterDir="false" />
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Clean up CSS, separate Desktop.css into their separate part in style folder, clean up JS custom hook and update README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/useDraggableComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/useDraggableComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/useResizableComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/useResizableComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useVisibility/useVisibility.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useVisibility/useVisibility.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +17,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JSX File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -61,45 +57,45 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Danny/Desktop/Personal Project/HTML_CSS_JS/Landing_Page/react_os_portfolio_style/public/Assets/Image/Icons",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "npm.npm dev.executor": "Run",
-    "settings.editor.selected.configurable": "discord-application",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Danny/Desktop/Personal Project/HTML_CSS_JS/Landing_Page/react_os_portfolio_style/public/Assets/Image/Icons&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.npm dev.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;discord-application&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory",
-      "repository"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;repository&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\public\Assets\Image\Icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src" />
+      <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src\style" />
       <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src\Hook\useVisibility" />
       <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src\Hook\useDragAndResize" />
       <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\public" />
-      <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src\Assets" />
-      <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src\TEMP" />
     </key>
   </component>
   <component name="RunManager">
@@ -156,6 +152,8 @@
       <workItem from="1751196159046" duration="2096000" />
       <workItem from="1751264904299" duration="11932000" />
       <workItem from="1751442862178" duration="10411000" />
+      <workItem from="1751469306175" duration="481000" />
+      <workItem from="1751472572866" duration="8967000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -349,7 +347,31 @@
       <option name="project" value="LOCAL" />
       <updated>1751454373257</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Clean up CSS, separate Desktop.css into their separate part in style folder, update README.md">
+      <option name="closed" value="true" />
+      <created>1751480470201</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1751480470201</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Clean up CSS, separate Desktop.css into their separate part in style folder, clean up JS custom hook and update README.md">
+      <option name="closed" value="true" />
+      <created>1751480646948</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1751480646948</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Clean up CSS, separate Desktop.css into their separate part in style folder, clean up JS custom hook and update README.md">
+      <option name="closed" value="true" />
+      <created>1751480750729</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1751480750729</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,7 +401,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial Commit" />
     <MESSAGE value="Initial Commit with .gitignore" />
     <MESSAGE value="Open and Close action now has animation" />
     <MESSAGE value="App now had Resizable and Draggable component..." />
@@ -403,6 +424,8 @@
     <MESSAGE value="update README.md and custom hook" />
     <MESSAGE value="FIX: ResizerDiv stay still when user drag the resizer" />
     <MESSAGE value="Style Contact Me App" />
-    <option name="LAST_COMMIT_MESSAGE" value="Style Contact Me App" />
+    <MESSAGE value="Clean up CSS, separate Desktop.css into their separate part in style folder, update README.md" />
+    <MESSAGE value="Clean up CSS, separate Desktop.css into their separate part in style folder, clean up JS custom hook and update README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clean up CSS, separate Desktop.css into their separate part in style folder, clean up JS custom hook and update README.md" />
   </component>
 </project>
