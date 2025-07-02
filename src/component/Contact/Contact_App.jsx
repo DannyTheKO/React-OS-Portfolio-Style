@@ -28,7 +28,8 @@ export const Contact_Executable = forwardRef(({onClick_Open}, iconRef) => {
 });
 
 export const Contact_App = forwardRef(({visibleClass, onClick_Close, onClick_Minimize}, componentRef) => {
-    const Contact_Icon_Image = "./Assets/Image/Icons/contact.jpeg"
+    const Contact_Icon_Image = "./Assets/Image/Icons/Toast.png"
+    const SVG_EMAIL = "./Assets/SVG/email.svg"
 
     return (
         // Contact Container
@@ -60,7 +61,7 @@ export const Contact_App = forwardRef(({visibleClass, onClick_Close, onClick_Min
 
                 <div className="wrapperIcon">
                     <a href="mailto:someone@mail.com">
-                        <img src="../../../public/Assets/SVG/email.svg" alt="Email Icon"/>
+                        <img src={SVG_EMAIL} alt="Email Icon"/>
                         <p>thanhan1100@gmail.com</p>
                     </a>
                 </div>

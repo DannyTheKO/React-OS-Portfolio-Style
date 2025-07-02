@@ -5,12 +5,10 @@ import {FaWindowMinimize} from "react-icons/fa6";
 import {MdFullscreen} from "react-icons/md";
 import "./Introduction.css"
 
-const ProfilePicture = "./Assets/Image/Icons/Hewwo.png"
-const Introduction_Icon_Image = "./Assets/Image/Icons/Introduction_Icon.jpg"
-
 const APPLICATION_NAME = "Introduction"
 
 export const Introduction_Executable = forwardRef(({onClick_Open}, iconRef) => {
+    const Introduction_Icon_Image = "./Assets/Image/Icons/Introduction_Icon.jpg"
 
     return (
         // Introduction Icon
@@ -29,6 +27,7 @@ export const Introduction_Executable = forwardRef(({onClick_Open}, iconRef) => {
 });
 
 export const Introduction_App = forwardRef(({visibleClass, onClick_Close, onClick_Minimize}, componentRef) => {
+    const ProfilePicture = "./Assets/Image/Icons/Toast.png"
 
     return (
         // Introduction Container
@@ -52,13 +51,13 @@ export const Introduction_App = forwardRef(({visibleClass, onClick_Close, onClic
 
             {/* Display */}
             <div className="Introduction_Display">
-                <div className="container_pfp">
+                <div className="wrapper_pfp">
                     <img className="profile_picture" src={ProfilePicture} alt="Danny's Profile Image"/>
                     <h2>DANNY</h2>
                 </div>
                 <hr/>
 
-                <div className="container_paragraph">
+                <div className="wrapper_paragraph">
                     <p>Hi, my name is Danny.</p>
                     <p>I'm a software engineer, currently studied in Saigon University.</p>
                     <p>Starting this project is a tough one for me, I find that is hard to start a new page with a blank
@@ -74,7 +73,7 @@ export const Introduction_App = forwardRef(({visibleClass, onClick_Close, onClic
                         to check it out!</i></p>
                 </div>
 
-                <div className="container_links">
+                <div className="wrapper_links">
                     <a href="https://github.com/DannyTheKO/React-OS-Portfolio-Style"
                        target="_blank">React-OS-Portfolio-Style</a>
                 </div>

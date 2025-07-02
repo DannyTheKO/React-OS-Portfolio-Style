@@ -9,6 +9,8 @@ export function useVisibility(componentRef) {
     const [isMounted, setIsMounted] = useState(false);
     const [visibleClass, setVisibleClass] = useState("")
 
+    // TODO: Maximize Function
+
     // Mounted on every component
     const onClick_Focus = useCallback(() => {
         const component = componentRef.current;
@@ -38,7 +40,6 @@ export function useVisibility(componentRef) {
 
     }, [componentRef]);
 
-    // TODO: Maximize Function
     const onClick_Open = useCallback(() => {
         // Mount component on user screen BUT visible is still false
         setIsMounted(true)
@@ -61,7 +62,13 @@ export function useVisibility(componentRef) {
             onClick_Focus()
 
         }, 10); // <-- Set this to 10ms, to use the eventLoop callback queue
+
+        return (
+            componentRef.current.removeEventListener("dblclick", onClick_Open)
+        )
+
     }, [componentRef.current]);
+
 
     const onClick_Close = useCallback(() => {
         const component = componentRef.current;

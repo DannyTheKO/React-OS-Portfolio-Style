@@ -4,7 +4,10 @@
     overflow: hidden;
 
     /* Color Setting */
-    --color-accent: ;
+    --color-accent-red: rgba(187, 21, 39, 1);
+    --color-accent-yellow: rgba(182, 169, 25, 1);
+    --color-accent-green: rgba(34, 183, 74, 1);
+    --color-accent-blue: rgb(36, 80, 191, 1);
 
     /* Font Global Variable */
     --font-family-Consolas: "Consolas";
@@ -52,6 +55,7 @@
 
     width: 78px;
     height: 95px;
+    font-size: 14px;
 
     /* Default App Icon Position */
     position: absolute;
@@ -60,7 +64,6 @@
     left: 0;
 
     color: white;
-
     cursor: pointer;
     user-select: none;
 
@@ -75,7 +78,6 @@
     }
 
     /* Image Icon */
-
     [class$="_ImageIcon"] {
         display: flex;
 
@@ -83,7 +85,7 @@
         height: 48px;
         overflow: hidden;
 
-        border-radius: 16px;
+        border-radius: 6px;
     }
 }
 
@@ -107,10 +109,8 @@
     flex-direction: column;
 
     /* Default Size */
-    width: 720px;
-    min-width: 320px;
-    height: 700px;
-    min-height: 200px;
+    width: 500px; min-width: 300px;
+    height: 500px; min-height: 300px;
 
     /* Default Font */
     color: white;
@@ -156,20 +156,20 @@
                 translate 100ms ease;
     }
 
-    /* Resizer Div */
+    /* == Resizer == */
     .resizer {
         border-radius: 16px;
         transition: 100ms ease-in-out;
     }
 
     .resizer:hover {
-        background-color: var(--application-border-color);
-        transition: 200ms ease-in-out;
+        /*background-color: var(--application-border-color);*/
+        /*transition: 200ms ease-in-out;*/
     }
 
     .resizer:active {
-        background-color: rgba(255, 0, 0, 0.8);
-        transition: 200ms ease-in-out;
+        /*background-color: rgba(255, 0, 0, 0.8);*/
+        /*transition: 200ms ease-in-out;*/
     }
 
     /* == Default App Title == */
@@ -241,17 +241,14 @@
 
     /* == Default App Display == */
     [class$="_Display"] {
-        padding: 1em;
+        padding: 1em 0 1em 1em;
         z-index: 0;
 
-        /*resize: both;*/
         overflow: scroll;
         overflow-x: hidden;
 
         &::-webkit-scrollbar {
-            position: absolute;
-            width: 12px;
-            height: auto;
+            width: 1em;
         }
 
         /* Remove any space around the scrollbar */
@@ -263,14 +260,10 @@
         /* Ensure the thumb fills the entire width */
         &::-webkit-scrollbar-thumb {
             background: var(--scrollbar-thumb-color);
-            border-radius: 12px;
-            /* Create padding effect with smaller thumb */
-            border: 4px solid transparent;
-            background-clip: content-box;
-        }
 
-        &::-webkit-scrollbar-corner {
-            display: none;
+            /* Create padding effect with smaller thumb */
+            border: 6px solid transparent;
+            background-clip: content-box;
         }
     }
 }

@@ -14,6 +14,11 @@
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
+    gap: 16px;
+
+    /* Size */
+    width: var(--topbar-containerSize-width);
+    height: var(--topbar-containerSize-height);
 
     /* Position Type */
     position: absolute;
@@ -32,20 +37,10 @@
     -webkit-user-drag: none;
     -webkit-user-select: none;
     user-select: none;
-}
-
-/* Container */
-.Taskbar_Container {
-    /* Overflow */
-    overflow: hidden;
-
-    /* Size */
-    width: var(--topbar-containerSize-width);
-    height: var(--topbar-containerSize-height);
 
     /* Border */
-    border-top: 1px solid var(--topbar-border-color);
-    box-shadow: 0 0 10px 0 var(--topbar-border-color);
+    /*border-top: 1px solid var(--topbar-border-color);*/
+    /*box-shadow: 0 0 10px 0 var(--topbar-border-color);*/
 }
 
 /* Logo */
@@ -54,14 +49,14 @@
     display: flex;
     cursor: pointer;
     overflow: hidden;
-
-    padding: 0 0.5em 0 0.5em;
+    min-width: max-content;
 
     .Taskbar_Logo_Display {
         display: flex;
         justify-content: space-evenly;
         gap: 0.25em;
         overflow: hidden;
+        text-wrap: nowrap;
 
         height: var(--topbar-containerSize-height);
         width: 10em;

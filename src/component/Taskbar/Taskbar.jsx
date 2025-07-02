@@ -36,8 +36,9 @@ const Taskbar = () => {
                 <span>DANNY'S OS</span>
             </div>
 
-            <div>
-                Something will show here...
+            {/*TODO: WAT?*/}
+            <div style={{width: `100%`}}>
+                Opened app will show here...
             </div>
 
             {/*Date and Time*/}

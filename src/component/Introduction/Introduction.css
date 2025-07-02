@@ -15,22 +15,21 @@
     color: white;
     font-family: var(--font-family-Consolas), sans-serif;
 
-    /* Introduction App Size */
-    width: 720px; min-width: 420px;
-    height: 500px; min-height: 200px;
-
-    /* Introduction App Position */
     &.Introduction_App {
         /* == Introduction Setting == */
         /* Introduction App Display Position  */
         position: absolute;
         top: 25%;
         left: 20%;
+
+        /* Introduction App Size */
+        width: 720px; min-width: 420px;
+        height: 500px; min-height: 200px;
     }
 }
 
 /* == Introduction Context Style == */
-.container_pfp {
+.wrapper_pfp {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,14 +47,14 @@
     }
 }
 
-.container_paragraph {
+.wrapper_paragraph {
     p {
         line-height: 1.5;
         margin-bottom: 1em;
     }
 }
 
-.container_links {
+.wrapper_links {
     display: flex;
     justify-content: center;
 
@@ -66,18 +65,18 @@
     padding: 8px 0 8px 0;
 
     a {
-        transition: background-color 0.2s ease 0s,
-        scale 0.2s ease 0s,
-        color 0.2s ease 0s;
-
         padding: 0.5em;
         border: 2px solid var(--application-border-color);
+
+        transition:
+                background-color 0.2s ease 0s,
+                scale 0.2s ease 0s,
+                color 0.2s ease 0s;
     }
 
     a:hover {
         color: black;
         scale: 1.5;
-        background-color: rgb(109, 204, 61);
     }
 
     a:visited {

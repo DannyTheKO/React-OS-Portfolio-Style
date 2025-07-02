@@ -15,22 +15,28 @@
     color: white;
     font-family: var(--font-family-Consolas), sans-serif;
 
-    /* Contact App Size */
-    width: 720px;
-    min-width: 420px;
-    height: 500px;
-    min-height: 200px;
-
     &.Contact_App {
         /* == Contact Setting == */
         /* Contact App Display Position  */
         position: absolute;
         top: 10%;
-        left: 20%;
+        left: 22%;
+
+        /* Contact App Size */
+        width: 500px; min-width: 300px;
+        height: 500px; min-height: 300px;
     }
 }
 
 /* == Contact Context Style == */
+.Contact_Display {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-content: center;
+    gap: 16px;
+}
+
 .wrapperHeader {
     display: flex;
     flex-direction: column;
@@ -39,12 +45,10 @@
 
     text-align: center;
 
-    margin-bottom: 16px;
-
     .pfp {
         border-radius: 100%;
         aspect-ratio: 1;
-        width: 96px;
+        width: 150px;
         margin-bottom: 16px;
     }
 }
@@ -52,30 +56,28 @@
 .wrapperIcon {
     display: flex;
     justify-content: center;
-    overflow: hidden;
+    align-items: center;
+
+    border: 0 solid var(--color-accent-red);
+    transition: border 100ms ease;
+
+    &:hover {
+        border: 4px solid var(--color-accent-red);
+    }
 
     a {
         display: flex;
         justify-content: center;
         align-items: center;
-
         gap: 12px;
 
         padding: 0.2em;
-
-        transition: background-color 0.1s ease;
 
         img {
             aspect-ratio: 1/1;
             height: 28px;
         }
-
-        &:hover {
-
-            background-color: rgb(20, 100, 225, 0.7);
-        }
     }
-
 }
 
 .wrapperLinks {
@@ -98,12 +100,13 @@
 
         cursor: pointer;
         user-select: none;
+        color: white;
 
-        background-color: var(--application-background-color);
-        transition: background-color 0.2s ease 0s;
+        background-color: var(--color-accent-blue);
+        transition: background-color 200ms ease 0ms;
 
         &:hover {
-            outline: 4px solid var(--application-border-color);
+            outline: 4px solid var(--color-accent-blue);
             background-color: rgba(0, 0, 0, 0.5);
         }
     }
