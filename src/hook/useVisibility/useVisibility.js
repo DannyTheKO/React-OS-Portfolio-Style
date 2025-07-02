@@ -1,4 +1,5 @@
 import React, {useState, useCallback} from "react";
+import {useSaveRect} from "../useSaveRect/useSaveRect.js";
 
 // Focus Variable Function
 let zIndexCurrent = 0;      // Initialize Component (n)
@@ -8,8 +9,10 @@ let zIndexTaskbar = 0;      // Initialize Taskbar (n + zIndexThreshold + 1)
 export function useVisibility(componentRef) {
     const [isMounted, setIsMounted] = useState(false);
     const [visibleClass, setVisibleClass] = useState("")
+    const {RectSetter, RectGetter} = useSaveRect()
 
     // TODO: Maximize Function
+    // TODO: Get Rect Windows
 
     // Mounted on every component
     const onClick_Focus = useCallback(() => {
@@ -60,13 +63,7 @@ export function useVisibility(componentRef) {
 
             component.addEventListener("mousedown", onClick_Focus)
             onClick_Focus()
-
         }, 10); // <-- Set this to 10ms, to use the eventLoop callback queue
-
-        return (
-            componentRef.current.removeEventListener("dblclick", onClick_Open)
-        )
-
     }, [componentRef.current]);
 
 
@@ -85,6 +82,7 @@ export function useVisibility(componentRef) {
         }
 
         component.removeEventListener("mousedown", onClick_Focus)
+        RectSetter(componentRef)
     }, [componentRef.current]);
 
 
@@ -100,6 +98,7 @@ export function useVisibility(componentRef) {
         }
 
         component.removeEventListener("mousedown", onClick_Focus)
+        RectSetter(componentRef)
     }, [componentRef.current])
 
 

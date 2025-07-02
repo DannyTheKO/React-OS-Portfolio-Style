@@ -1,18 +1,21 @@
 import React, {useState, useEffect} from 'react'
+import {useSaveRect} from "../useSaveRect/useSaveRect.js";
 
 export function useResizableComponent(componentRef) {
     const [dimensions, setDimensions] = useState({width: 0, height: 0})
+    const {RectSetter, RectGetter} = useSaveRect()
 
     useEffect(() => {
         if (!componentRef.current) return;
 
-        const saveDimensions = () => {
-            // Save the updated dimensions
-            const rect = componentRef.current.getBoundingClientRect();
+        let saveDimensionsTimeout;
+        const saveDimensions = (componentRef) => {
+            clearTimeout(saveDimensionsTimeout);
+            saveDimensionsTimeout = setTimeout(() => {
+                RectSetter(componentRef);
+            }, 300);
+        };
 
-            // TODO: Dynamic App
-            sessionStorage.setItem("Introduction_App", JSON.stringify(rect))
-        }
 
         const updateDimensions = () => {
             const rect = componentRef.current.getBoundingClientRect();
@@ -31,7 +34,7 @@ export function useResizableComponent(componentRef) {
                 if (entry.target === componentRef.current) {
                     updateDimensions();
                     createResizerDiv(componentRef);
-                    debounce(saveDimensions, 300);
+                    saveDimensions(componentRef);
                 }
             }
         });
@@ -51,14 +54,6 @@ export function useResizableComponent(componentRef) {
         }
 
     }, [componentRef.current]);
-
-    function debounce(callback, msDelay) {
-        let timeout
-        return (...args) => {
-            clearTimeout(timeout)
-            timeout = setTimeout(() => callback(...args), msDelay)
-        }
-    }
 
     // Resizer Logic
     function createResizerDiv(componentRef) {
@@ -125,7 +120,7 @@ export function useResizableComponent(componentRef) {
         // HACK: Delay Resizer
         if (component.classList.contains("CLOSE")) {
             setTimeout(() => dirResizer(), 110);
-        } else  {
+        } else {
             dirResizer()
         }
 

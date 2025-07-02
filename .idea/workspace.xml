@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="FIX: ResizerDiv stay still when user drag the resizer">
-      <change afterPath="$PROJECT_DIR$/public/Assets/Image/Icons/Toast.png" afterDir="false" />
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Style Contact Me App">
+      <change afterPath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Desktop.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Desktop.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TEMP/app/introduction.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/TEMP/app/introduction.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Contact/Contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Contact/Contact.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Contact/Contact_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Contact/Contact_App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Introduction/Introduction.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Introduction/Introduction.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Introduction/Introduction_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Introduction/Introduction_App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Taskbar/Taskbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Taskbar/Taskbar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Taskbar/Taskbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Taskbar/Taskbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/useDraggableComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/useDraggableComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/useResizableComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/useResizableComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hook/useVisibility/useVisibility.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useVisibility/useVisibility.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JSX File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -161,7 +155,7 @@
       <workItem from="1751182325522" duration="4099000" />
       <workItem from="1751196159046" duration="2096000" />
       <workItem from="1751264904299" duration="11932000" />
-      <workItem from="1751442862178" duration="5817000" />
+      <workItem from="1751442862178" duration="10411000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -347,7 +341,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751279824301</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Style Contact Me App">
+      <option name="closed" value="true" />
+      <created>1751454373257</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1751454373257</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,6 +402,7 @@
     <MESSAGE value="update .gitignore" />
     <MESSAGE value="update README.md and custom hook" />
     <MESSAGE value="FIX: ResizerDiv stay still when user drag the resizer" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIX: ResizerDiv stay still when user drag the resizer" />
+    <MESSAGE value="Style Contact Me App" />
+    <option name="LAST_COMMIT_MESSAGE" value="Style Contact Me App" />
   </component>
 </project>

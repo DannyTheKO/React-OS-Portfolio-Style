@@ -1,7 +1,9 @@
 import {useEffect, useState} from "react";
+import {useSaveRect} from "../useSaveRect/useSaveRect.js";
 
 export function useDraggableComponent(componentRef) {
     const [position, setPosition] = useState({x: 0, y: 0});
+    const {RectSetter, RectGetter} = useSaveRect()
 
     useEffect(() => {
         if (!componentRef.current) return;
@@ -79,8 +81,7 @@ export function useDraggableComponent(componentRef) {
             e.target.style.cursor = "grab";
 
             // Save the position of the app
-            const rect = componentApp.getBoundingClientRect();
-            sessionStorage.setItem("Introduction_App", JSON.stringify(rect))
+            RectSetter(componentRef)
 
             document.removeEventListener("mousemove", handleMouseMove);
             document.removeEventListener("mouseup", handleMouseUp);

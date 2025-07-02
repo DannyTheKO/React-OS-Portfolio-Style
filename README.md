@@ -6,9 +6,7 @@ If you like it, give me a **star** and feel free to copy my code.
 ## 🐛 Swatting Bug/Chores ^^
 1. [ ] Reformat the CSS variable
 2. [ ] Font are oversize when user browser zoom-in
-3. [ ] Dynamic app on `sessionStorage`, get the class name or component name?
-4. [ ] Executable padding it a little bit tight
-5. [ ] Dragging application make cursor sometime stuck at grab icon
+3. [ ] Dragging application make cursor sometime stuck at grab icon
 
 **Backlog**
 - [X] Move `visibleClass` useState out of the App
@@ -17,6 +15,8 @@ If you like it, give me a **star** and feel free to copy my code.
 - [X] logic calculation on z-index is wrong
 - [X] Resize div are in wrong position when reopen the app
 - [X] Style Contact Me App
+- [X] Executable padding it a little bit tight
+- [X] Dynamic app on `sessionStorage`
 
 ## 💡 Ideal
 - Pokédex App, use PokeAPI
