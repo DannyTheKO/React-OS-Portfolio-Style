@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {useSaveRect} from "../useSaveRect/useSaveRect.js";
 
-export function useDraggableComponent(componentRef) {
+export function useDraggableAppComponent(componentRef) {
     const [position, setPosition] = useState({x: 0, y: 0});
     const {RectSetter, RectGetter} = useSaveRect()
 
@@ -41,17 +41,17 @@ export function useDraggableComponent(componentRef) {
             viewportWidth = window.innerWidth;
             viewportHeight = window.innerHeight;
 
+            // Get current componentApp position
+            startLeft = rectComponent.left;
+            startTop = rectComponent.top;
+
             // To set limit of the app position
             maxTop = viewportHeight - (rectComponentTitle.height + Taskbar_height + componentApp_borderWidth);
             maxLeft = viewportWidth - (rectComponentTitle.width + componentApp_borderWidth);
 
-            // Get initial position
+            // Get initial mouse position
             startX = e.clientX;
             startY = e.clientY;
-
-            // Get current componentApp position
-            startLeft = rectComponent.left;
-            startTop = rectComponent.top;
 
             document.addEventListener("mousemove", handleMouseMove);
             document.addEventListener("mouseup", handleMouseUp);
@@ -71,14 +71,15 @@ export function useDraggableComponent(componentRef) {
             // Update componentApp position
             componentApp.style.left = `${newLeft}px`;
             componentApp.style.top = `${newTop}px`;
-
-            // Update state
-            setPosition({x: newLeft, y: newTop});
         }
 
         const handleMouseUp = (e) => {
             dragging = false;
             e.target.style.cursor = "grab";
+
+            // Initialize position
+            const rect = componentApp.getBoundingClientRect();
+            setPosition({x: rect.left, y: rect.top});
 
             // Save the position of the app
             RectSetter(componentRef)
@@ -86,10 +87,6 @@ export function useDraggableComponent(componentRef) {
             document.removeEventListener("mousemove", handleMouseMove);
             document.removeEventListener("mouseup", handleMouseUp);
         };
-
-        // Initialize position
-        const rect = componentApp.getBoundingClientRect();
-        setPosition({x: rect.left, y: rect.top});
 
         // Attach listeners
         componentApp.addEventListener('mousedown', handleMouseDown);

@@ -47,8 +47,9 @@ export function useVisibility(componentRef) {
             if (component.classList.contains("CLOSE") || component.classList.contains("HIDE") || component.classList.length === 1) {
                 setVisibleClass("OPEN")
                 component.addEventListener("mousedown", onClick_Focus)
-                onClick_Focus()
             }
+
+            onClick_Focus()
 
         }, 10); // <-- Set this to 10ms, to use the eventLoop callback queue
     }, [componentRef.current]);

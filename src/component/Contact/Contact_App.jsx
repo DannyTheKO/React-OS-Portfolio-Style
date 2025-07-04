@@ -12,12 +12,12 @@ export const Contact_Executable = forwardRef(({onClick_Open}, iconRef) => {
     const Contact_Icon_Image = "./Assets/Image/Icons/contact.jpeg"
 
     return (
-        // Contact Icon
+        // Contact Executable
         <div
             id="Global_Executable_Setting"
-            className="Contact_Icon"
+            className="Contact_Executable"
             ref={iconRef}
-            onClick={onClick_Open}
+            onDoubleClick={onClick_Open}
         >
             <div className="Contact_ImageIcon">
                 <img src={Contact_Icon_Image} alt="ContactIcon"/>

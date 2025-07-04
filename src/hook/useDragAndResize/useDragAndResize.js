@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from "react";
-import {useResizableComponent} from "./useResizableComponent.js";
-import {useDraggableComponent} from "./useDraggableComponent.js";
+import {useResizableAppComponent} from "./useResizableAppComponent.js";
+import {useDraggableAppComponent} from "./useDraggableAppComponent.js";
 
 export function useDragAndResize(componentRef) {
     const [componentName, setComponentName] = useState("")
-    const {dimensions} = useResizableComponent(componentRef)
-    const {position} = useDraggableComponent(componentRef);
+    const {dimensions} = useResizableAppComponent(componentRef)
+    const {position} = useDraggableAppComponent(componentRef);
 
     useEffect(() => {
         if (!componentRef.current) return;

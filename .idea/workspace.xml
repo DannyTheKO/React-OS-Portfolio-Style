@@ -5,9 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Clean up CSS, separate Desktop.css into their separate part in style folder, clean up JS custom hook and update README.md">
+      <change afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/useDraggableIconComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Contact/Contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Contact/Contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Contact/Contact_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Contact/Contact_App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Contact/Contact_Wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Contact/Contact_Wrapper.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Introduction/Introduction.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Introduction/Introduction.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Introduction/Introduction_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Introduction/Introduction_App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Introduction/Introduction_Wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Introduction/Introduction_Wrapper.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/useDragAndResize.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/useDragAndResize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/useDraggableComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/useDraggableAppComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/useResizableComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/useResizableAppComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useVisibility/useVisibility.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useVisibility/useVisibility.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/application.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/executable.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/executable.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +30,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JSX File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -99,7 +111,7 @@
       <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\public" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.preview">
+  <component name="RunManager" selected="npm.npm dev">
     <configuration name="npm dev" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -170,6 +182,9 @@
       <workItem from="1751442862178" duration="10411000" />
       <workItem from="1751469306175" duration="481000" />
       <workItem from="1751472572866" duration="9706000" />
+      <workItem from="1751606973978" duration="9478000" />
+      <workItem from="1751640375552" duration="2298000" />
+      <workItem from="1751649371998" duration="310000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />

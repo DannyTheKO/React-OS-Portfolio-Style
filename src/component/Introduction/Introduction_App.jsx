@@ -11,12 +11,12 @@ export const Introduction_Executable = forwardRef(({onClick_Open}, iconRef) => {
     const Introduction_Icon_Image = "./Assets/Image/Icons/Introduction_Icon.jpg"
 
     return (
-        // Introduction Icon
+        // Introduction Executable
         <div
             id="Global_Executable_Setting"
-            className="Introduction_Icon"
+            className="Introduction_Executable"
             ref={iconRef}
-            onClick={onClick_Open}
+            onDoubleClick={onClick_Open}
         >
             <div className="Introduction_ImageIcon">
                 <img src={Introduction_Icon_Image} alt="introductionIcon"/>

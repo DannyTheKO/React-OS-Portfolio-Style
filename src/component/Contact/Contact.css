@@ -2,7 +2,7 @@
 /* == Custom Override Setting ==*/
 #Global_Executable_Setting {
 
-    &.Contact_Icon {
+    &.Contact_Executable {
         /* Contact Icon Position */
         position: absolute;
         top: 150px;
