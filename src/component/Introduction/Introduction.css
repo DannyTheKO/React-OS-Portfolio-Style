@@ -2,7 +2,7 @@
 /* == Custom Override Setting ==*/
 #Global_Executable_Setting {
 
-    &.Introduction_Icon {
+    &.Introduction_Executable {
         /* Introduction Icon Position */
         position: absolute;
         top: 25px;

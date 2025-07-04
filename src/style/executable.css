@@ -29,11 +29,11 @@
     left: 0;
 
     color: white;
-    cursor: pointer;
+    cursor: default;
     user-select: none;
 
-    /* Hover Animation */
-    transition: 100ms ease-out;
+    /* Hover Animation */;
+    transition: outline 100ms ease-out;
     outline: var(--icon-accent-color) solid 0;
 
     &:hover {
@@ -43,6 +43,7 @@
     }
 
     /* Image Icon */
+
     [class$="_ImageIcon"] {
         display: flex;
 

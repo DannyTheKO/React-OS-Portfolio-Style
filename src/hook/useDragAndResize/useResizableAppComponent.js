@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {useSaveRect} from "../useSaveRect/useSaveRect.js";
 
-export function useResizableComponent(componentRef) {
+export function useResizableAppComponent(componentRef) {
     const [dimensions, setDimensions] = useState({width: 0, height: 0})
     const {RectSetter, RectGetter} = useSaveRect()
 
@@ -59,6 +59,7 @@ export function useResizableComponent(componentRef) {
     function createResizerDiv(componentRef) {
         const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
         const component = componentRef.current;
+        component.style.position = 'absolute'; // this is important, don't fucking touch it
 
         if (!component) return;
 
@@ -74,27 +75,6 @@ export function useResizableComponent(componentRef) {
         // Get window.innerWidth and window.innerHeight limit
         const maxWidth = window.innerWidth;
         const maxHeight = window.innerHeight;
-
-        // console.log(component);
-
-        // Oh look, the one-liner that dethrones your entire CSS cascade in a single keystroke:
-        component.style.position = 'absolute';
-        // Because who needs the stylesheet you spent hours writing when you can just yank the element into absolute
-        // monarchy right here, right now?
-        //
-        // “Relative?” “Static?” Pfft. Peasants. We rule from the top-left corner of the viewport now.
-        // Those carefully crafted .OPEN, .HIDE, .CLOSE selectors in your CSS?
-        // Irrelevant. This bad boy blows past them like a div with pointer-events: none.
-        //
-        // Inline style = 🔒 Immortal. Good luck overriding it without an !important exorcism or another JS line.
-        //
-        // Resizer handles? They were happily using their parent as their relative containing block.
-        // You just flung their coordinate system into the void. Enjoy debugging where the S-E handle teleports to.
-        //
-        // And when you later wonder why two windows refuse to stack and instead overlap like drunken Tetris
-        // pieces—remember this single, solitary line quietly whispering “it was me”
-        //
-        // In short: it works… the same way a chainsaw can slice bread. Technically correct, aesthetically catastrophic.
 
         // Clean up any existing resizer
         const existingResizer = component.querySelectorAll('.resizer');
@@ -118,7 +98,7 @@ export function useResizableComponent(componentRef) {
         }
 
         // HACK: Delay Resizer
-        if (component.classList.contains("CLOSE")) {
+        if (component.classList.contains("OPEN")) {
             setTimeout(() => dirResizer(), 110);
         } else {
             dirResizer()
@@ -262,7 +242,7 @@ export function useResizableComponent(componentRef) {
                     style.height = `12px`
                     break;
                 case 'E':
-                    style.left = `calc(${rectComponent.width}px - 6px)`;
+                    style.left = `calc(${rectComponent.width}px - 8px)`;
                     style.top = `calc(${rectComponent.height / 2}px - 3px)`;
                     style.height = `100%`;
                     style.width = `10px`;

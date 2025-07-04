@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Clean up CSS, separate Desktop.css into their separate part in style folder, clean up JS custom hook and update README.md">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Contact/Contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Contact/Contact.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Introduction/Introduction.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Introduction/Introduction.css" afterDir="false" />
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Draggable Icon are functional, need testing and review">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +16,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JSX File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -99,7 +97,7 @@
       <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\public" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.preview">
+  <component name="RunManager" selected="npm.npm dev">
     <configuration name="npm dev" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -170,6 +168,9 @@
       <workItem from="1751442862178" duration="10411000" />
       <workItem from="1751469306175" duration="481000" />
       <workItem from="1751472572866" duration="9706000" />
+      <workItem from="1751606973978" duration="9478000" />
+      <workItem from="1751640375552" duration="2298000" />
+      <workItem from="1751649371998" duration="564000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -395,7 +396,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751481694162</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Draggable Icon are functional, need testing and review">
+      <option name="closed" value="true" />
+      <created>1751649908112</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1751649908113</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,7 +421,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="HEAD" />
                       </list>
                     </value>
                   </entry>
@@ -425,7 +434,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial Commit with .gitignore" />
     <MESSAGE value="Open and Close action now has animation" />
     <MESSAGE value="App now had Resizable and Draggable component..." />
     <MESSAGE value="move Assets into public folder" />
@@ -450,6 +458,7 @@
     <MESSAGE value="Style Contact Me App" />
     <MESSAGE value="Clean up CSS, separate Desktop.css into their separate part in style folder, update README.md" />
     <MESSAGE value="Clean up CSS, separate Desktop.css into their separate part in style folder, clean up JS custom hook and update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Clean up CSS, separate Desktop.css into their separate part in style folder, clean up JS custom hook and update README.md" />
+    <MESSAGE value="Draggable Icon are functional, need testing and review" />
+    <option name="LAST_COMMIT_MESSAGE" value="Draggable Icon are functional, need testing and review" />
   </component>
 </project>

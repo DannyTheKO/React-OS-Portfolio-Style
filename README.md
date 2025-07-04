@@ -17,17 +17,17 @@ If you like it, give me a **star** and feel free to copy my code.
 ### OS Core Function
 
 #### Draggable and Resizable Function
-- [x] Draggable Component
-- [ ] Draggable Icon
-- [x] Resizable Component
+- [X] Draggable Component
+- [X] Draggable Icon
+- [X] Resizable Component
 
 #### Controls Function
-- [x] Open Function
-   - [x] Animation
-- [x] Close Function
-   - [x] Animation
-- [x] Minimize Function
-   - [x] Animation
+- [X] Open Function
+   - [X] Animation
+- [X] Close Function
+   - [X] Animation
+- [X] Minimize Function
+   - [X] Animation
 - [X] Focus Function
 - [ ] Maximize Function
    - [ ] Remember the current width and height before maximize
