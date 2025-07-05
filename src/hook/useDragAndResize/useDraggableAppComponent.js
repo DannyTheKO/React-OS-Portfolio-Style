@@ -1,9 +1,11 @@
 import {useEffect, useState} from "react";
 import {useSaveRect} from "../useSaveRect/useSaveRect.js";
+import {useVisibility} from "../useVisibility/useVisibility.js";
 
 export function useDraggableAppComponent(componentRef) {
     const [position, setPosition] = useState({x: 0, y: 0});
     const {RectSetter, RectGetter} = useSaveRect()
+    const {onClick_Focus} = useVisibility(componentRef);
 
     useEffect(() => {
         if (!componentRef.current) return;
@@ -14,7 +16,7 @@ export function useDraggableAppComponent(componentRef) {
 
         // Component Border
         const componentApp_Styles = window.getComputedStyle(componentApp);
-        const componentApp_borderWidth = Math.ceil(parseFloat(componentApp_Styles.border) + 1) || 0;
+        const componentApp_borderWidth = parseFloat(componentApp_Styles.border) * 2 || 0;
 
         // Taskbar Height
         const Taskbar = document.querySelector(`.Taskbar_Container`)
@@ -31,8 +33,10 @@ export function useDraggableAppComponent(componentRef) {
             if (!e.target.closest('[class$="_Title"]')) return;
 
             e.preventDefault();
+            e.stopPropagation();
             dragging = true;
             e.target.style.cursor = "grabbing";
+            onClick_Focus()
 
             const rectComponent = componentApp.getBoundingClientRect();
             const rectComponentTitle = componentApp_Title.getBoundingClientRect();

@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Fix the resizer issue with the jump value">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/useDraggableAppComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/useDraggableAppComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/useResizableAppComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/useResizableAppComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/application.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/reset.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useVisibility/useVisibility.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useVisibility/useVisibility.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,19 +28,34 @@
     <branch-grouping />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="CentralStore-Method" />
+        <entry key="$PROJECT_DIR$" value="fix-resizer" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
     <option name="SHOW_RECENT_BRANCHES" value="false" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;DannyTheKO&quot;
-  }
-}</component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {}
+}]]></component>
+  <component name="GitHubPullRequestState"><![CDATA[{
+  "prStates": [
+    {
+      "id": {
+        "id": "PR_kwDOO6BKec6diW5Y",
+        "number": 7
+      },
+      "lastSeen": 1751706549463
+    },
+    {
+      "id": {
+        "id": "PR_kwDOO6BKec6dimpL",
+        "number": 8
+      },
+      "lastSeen": 1751707727014
+    }
+  ]
+}]]></component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/DannyTheKO/React-OS-Portfolio-Style&quot;,
@@ -124,6 +139,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.preview" />
+        <item itemvalue="npm.preview" />
         <item itemvalue="npm.preview" />
       </list>
     </recent_temporary>

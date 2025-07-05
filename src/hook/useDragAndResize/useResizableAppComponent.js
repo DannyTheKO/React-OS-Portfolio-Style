@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import {useSaveRect} from "../useSaveRect/useSaveRect.js";
+import {useVisibility} from "../useVisibility/useVisibility.js";
 
 export function useResizableAppComponent(componentRef) {
     const [dimensions, setDimensions] = useState({width: 0, height: 0})
     const {RectSetter, RectGetter} = useSaveRect()
+    const {onClick_Focus} = useVisibility(componentRef);
 
     useEffect(() => {
         if (!componentRef.current) return;
@@ -111,6 +113,7 @@ export function useResizableAppComponent(componentRef) {
             return function (e) {
                 e.preventDefault();
                 e.stopPropagation();
+                onClick_Focus()
 
                 const startWidth = component.offsetWidth;
                 const startHeight = component.offsetHeight;

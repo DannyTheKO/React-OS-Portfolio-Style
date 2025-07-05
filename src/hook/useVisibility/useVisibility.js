@@ -48,9 +48,7 @@ export function useVisibility(componentRef) {
                 setVisibleClass("OPEN")
                 component.addEventListener("mousedown", onClick_Focus)
             }
-
             onClick_Focus()
-
         }, 10); // <-- Set this to 10ms, to use the eventLoop callback queue
     }, [componentRef.current]);
 
@@ -86,5 +84,5 @@ export function useVisibility(componentRef) {
         }
 
     }, [componentRef.current])
-    return {visibleClass, isMounted, onClick_Open, onClick_Close, onClick_Minimize};
+    return {visibleClass, isMounted, onClick_Open, onClick_Close, onClick_Minimize, onClick_Focus};
 }
