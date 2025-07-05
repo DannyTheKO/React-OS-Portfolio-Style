@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Draggable Icon are functional, need testing and review">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Fix the resizer issue with the jump value">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Introduction/Introduction_Wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Introduction/Introduction_Wrapper.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/useResizableAppComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/useResizableAppComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useVisibility/useVisibility.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useVisibility/useVisibility.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/style/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/application.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/style/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/reset.css" afterDir="false" />
     </list>
@@ -35,28 +32,14 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
     <option name="SHOW_RECENT_BRANCHES" value="false" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-  &quot;history&quot;: [
-    {
-      &quot;assignee&quot;: &quot;DannyTheKO&quot;
-    }
-  ],
   &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
     &quot;assignee&quot;: &quot;DannyTheKO&quot;
   }
-}</component>
-  <component name="GitHubPullRequestState">{
-  &quot;prStates&quot;: [
-    {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOO6BKec6diW5Y&quot;,
-        &quot;number&quot;: 7
-      },
-      &quot;lastSeen&quot;: 1751702963432
-    }
-  ]
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
@@ -84,7 +67,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;fix-resizer&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Danny/Desktop/Personal Project/HTML_CSS_JS/Landing_Page/react_os_portfolio_style/public/Assets/Image/Icons&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
@@ -425,7 +408,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751649908113</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Fix the resizer issue with the jump value">
+      <option name="closed" value="true" />
+      <created>1751705584097</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1751705584097</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,7 +433,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="fix-resizer" />
+                        <option value="HEAD" />
                       </list>
                     </value>
                   </entry>
@@ -455,7 +446,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Open and Close action now has animation" />
     <MESSAGE value="App now had Resizable and Draggable component..." />
     <MESSAGE value="move Assets into public folder" />
     <MESSAGE value="App now had resizable" />
@@ -480,6 +470,7 @@
     <MESSAGE value="Clean up CSS, separate Desktop.css into their separate part in style folder, update README.md" />
     <MESSAGE value="Clean up CSS, separate Desktop.css into their separate part in style folder, clean up JS custom hook and update README.md" />
     <MESSAGE value="Draggable Icon are functional, need testing and review" />
-    <option name="LAST_COMMIT_MESSAGE" value="Draggable Icon are functional, need testing and review" />
+    <MESSAGE value="Fix the resizer issue with the jump value" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix the resizer issue with the jump value" />
   </component>
 </project>
