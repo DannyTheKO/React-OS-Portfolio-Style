@@ -110,19 +110,17 @@ export function useResizableAppComponent(componentRef) {
             // onMouseDown
             return function (e) {
                 e.preventDefault();
+                e.stopPropagation();
 
                 const rectComponent = component.getBoundingClientRect();
+                let startWidth = component.offsetWidth;
+                let startHeight = component.offsetHeight;
+                let startLeft = component.offsetLeft;
+                let startTop = component.offsetTop;
 
                 // Initialize, (refresh const if resize already done)
                 const startX = e.clientX;
                 const startY = e.clientY;
-
-                const startWidth = rectComponent.width;
-                const startHeight = rectComponent.height;
-
-                const startLeft = rectComponent.left;
-                const startTop = rectComponent.top;
-
 
                 function onMouseMove(e) {
                     const dx = e.clientX - startX;
@@ -236,10 +234,7 @@ export function useResizableAppComponent(componentRef) {
                     style.height = `10px`
                     break;
                 case 'NE':
-                    style.left = `calc(${rectComponent.width}px - 3px)`;
-                    style.top = `-3px`;
-                    style.width = `12px`
-                    style.height = `12px`
+                    style.zIndex = `11`;
                     break;
                 case 'E':
                     style.left = `calc(${rectComponent.width}px - 8px)`;
@@ -250,8 +245,7 @@ export function useResizableAppComponent(componentRef) {
                 case 'SE':
                     style.left = `calc(${rectComponent.width}px - 3px)`;
                     style.top = `calc(${rectComponent.height}px - 6px)`;
-                    style.width = `12px`
-                    style.height = `12px`
+                    style.zIndex = `11`;
                     break;
                 case 'S':
                     style.left = `calc(${rectComponent.width / 2}px - 3px)`;
@@ -262,8 +256,7 @@ export function useResizableAppComponent(componentRef) {
                 case 'SW':
                     style.left = `0px`;
                     style.top = `calc(${rectComponent.height}px - 6px)`;
-                    style.width = `12px`
-                    style.height = `12px`
+                    style.zIndex = `11`;
                     break;
                 case 'W':
                     style.left = `0px`;
@@ -274,8 +267,7 @@ export function useResizableAppComponent(componentRef) {
                 case 'NW':
                     style.left = `0px`;
                     style.top = `-3px`;
-                    style.width = `12px`
-                    style.height = `12px`
+                    style.zIndex = `11`;
                     break;
             }
 

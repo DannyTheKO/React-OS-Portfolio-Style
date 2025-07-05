@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Draggable Icon are functional, need testing and review">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Draggable Icon are functional, need testing and review, update README.md">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/useResizableAppComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/useResizableAppComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/reset.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +172,8 @@
       <workItem from="1751472572866" duration="9706000" />
       <workItem from="1751606973978" duration="9478000" />
       <workItem from="1751640375552" duration="2298000" />
-      <workItem from="1751649371998" duration="564000" />
+      <workItem from="1751649371998" duration="842000" />
+      <workItem from="1751695888300" duration="5039000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -404,7 +407,23 @@
       <option name="project" value="LOCAL" />
       <updated>1751649908113</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Draggable Icon are functional, need testing and review, update README.md">
+      <option name="closed" value="true" />
+      <created>1751649957260</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1751649957260</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Draggable Icon are functional, need testing and review, update README.md">
+      <option name="closed" value="true" />
+      <created>1751649964385</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1751649964386</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -434,7 +453,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Open and Close action now has animation" />
     <MESSAGE value="App now had Resizable and Draggable component..." />
     <MESSAGE value="move Assets into public folder" />
     <MESSAGE value="App now had resizable" />
@@ -459,6 +477,7 @@
     <MESSAGE value="Clean up CSS, separate Desktop.css into their separate part in style folder, update README.md" />
     <MESSAGE value="Clean up CSS, separate Desktop.css into their separate part in style folder, clean up JS custom hook and update README.md" />
     <MESSAGE value="Draggable Icon are functional, need testing and review" />
-    <option name="LAST_COMMIT_MESSAGE" value="Draggable Icon are functional, need testing and review" />
+    <MESSAGE value="Draggable Icon are functional, need testing and review, update README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Draggable Icon are functional, need testing and review, update README.md" />
   </component>
 </project>
