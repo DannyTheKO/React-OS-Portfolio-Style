@@ -112,11 +112,10 @@ export function useResizableAppComponent(componentRef) {
                 e.preventDefault();
                 e.stopPropagation();
 
-                const rectComponent = component.getBoundingClientRect();
-                let startWidth = component.offsetWidth;
-                let startHeight = component.offsetHeight;
-                let startLeft = component.offsetLeft;
-                let startTop = component.offsetTop;
+                const startWidth = component.offsetWidth;
+                const startHeight = component.offsetHeight;
+                const startLeft = component.offsetLeft;
+                const startTop = component.offsetTop;
 
                 // Initialize, (refresh const if resize already done)
                 const startX = e.clientX;
@@ -229,45 +228,55 @@ export function useResizableAppComponent(componentRef) {
             switch (dir) {
                 case 'N':
                     style.left = `calc(${rectComponent.width / 2}px - 4px)`;
-                    style.top = `-6px`;
-                    style.width = `100%`;
-                    style.height = `10px`
+                    style.top = `-2px`;
+                    style.width = `calc(${rectComponent.width}px - 6px)`;
+                    style.height = `5px`;
                     break;
                 case 'NE':
-                    style.zIndex = `11`;
+                    style.left = `calc(${rectComponent.width}px - 6px)`;
+                    style.top = `0px`;
+                    style.width = `10px`;
+                    style.height = `10px`;
+                    style.zIndex = '11';
                     break;
                 case 'E':
-                    style.left = `calc(${rectComponent.width}px - 8px)`;
-                    style.top = `calc(${rectComponent.height / 2}px - 3px)`;
-                    style.height = `100%`;
-                    style.width = `10px`;
+                    style.left = `calc(${rectComponent.width}px - 6px)`;
+                    style.top = `calc(${rectComponent.height / 2}px - 4px)`;
+                    style.height = `calc(${rectComponent.height}px - 6px)`;
+                    style.width = `5px`;
                     break;
                 case 'SE':
-                    style.left = `calc(${rectComponent.width}px - 3px)`;
-                    style.top = `calc(${rectComponent.height}px - 6px)`;
-                    style.zIndex = `11`;
+                    style.left = `calc(${rectComponent.width}px - 8px)`;
+                    style.top = `calc(${rectComponent.height}px - 8px)`;
+                    style.width = `10px`;
+                    style.height = `10px`;
+                    style.zIndex = '11';
                     break;
                 case 'S':
-                    style.left = `calc(${rectComponent.width / 2}px - 3px)`;
+                    style.left = `calc(${rectComponent.width / 2}px - 4px)`;
                     style.top = `calc(${rectComponent.height}px - 6px)`;
-                    style.width = `100%`;
-                    style.height = `10px`
+                    style.width = `calc(${rectComponent.width}px - 6px)`;
+                    style.height = `5px`
                     break;
                 case 'SW':
-                    style.left = `0px`;
+                    style.left = ``;
                     style.top = `calc(${rectComponent.height}px - 6px)`;
-                    style.zIndex = `11`;
+                    style.width = `10px`;
+                    style.height = `10px`;
+                    style.zIndex = '11';
                     break;
                 case 'W':
-                    style.left = `0px`;
-                    style.top = `calc(${rectComponent.height / 2}px - 6px)`;
-                    style.height = `100%`;
-                    style.width = `10px`;
+                    style.left = `-2px`;
+                    style.top = `calc(${rectComponent.height / 2}px - 4px)`;
+                    style.height = `calc(${rectComponent.height}px - 6px)`;
+                    style.width = `5px`;
                     break;
                 case 'NW':
                     style.left = `0px`;
-                    style.top = `-3px`;
-                    style.zIndex = `11`;
+                    style.top = `0px`;
+                    style.width = `10px`;
+                    style.height = `10px`;
+                    style.zIndex = '11';
                     break;
             }
 

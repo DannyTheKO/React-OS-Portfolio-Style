@@ -86,7 +86,5 @@ export function useVisibility(componentRef) {
         }
 
     }, [componentRef.current])
-
-
     return {visibleClass, isMounted, onClick_Open, onClick_Close, onClick_Minimize};
 }
