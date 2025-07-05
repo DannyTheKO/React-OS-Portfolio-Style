@@ -79,13 +79,13 @@
 
     /* == Resizer == */
     .resizer {
-        border-radius: 16px;
         transition: 100ms ease-in-out;
     }
 
     .resizer:hover {
         /*background-color: var(--application-border-color);*/
         /*transition: 200ms ease-in-out;*/
+        /*background-color: greenyellow;*/
     }
 
     .resizer:active {
@@ -136,10 +136,11 @@
 
             cursor: pointer;
             z-index: 2;
-            padding: 4px 8px;
 
             /* All the action button */
             * {
+                width: 32px;
+                height: 24px;
                 padding: 4px 8px;
 
                 background-color: transparent;

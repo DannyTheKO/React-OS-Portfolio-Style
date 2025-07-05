@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Draggable Icon are functional, need testing and review, update README.md">
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Fix the resizer issue with the jump value">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/useResizableAppComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/useResizableAppComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/application.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/style/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/reset.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +32,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
     <option name="SHOW_RECENT_BRANCHES" value="false" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -172,8 +174,7 @@
       <workItem from="1751472572866" duration="9706000" />
       <workItem from="1751606973978" duration="9478000" />
       <workItem from="1751640375552" duration="2298000" />
-      <workItem from="1751649371998" duration="842000" />
-      <workItem from="1751695888300" duration="5039000" />
+      <workItem from="1751649371998" duration="564000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -407,23 +408,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751649908113</updated>
     </task>
-    <task id="LOCAL-00030" summary="Draggable Icon are functional, need testing and review, update README.md">
+    <task id="LOCAL-00030" summary="Fix the resizer issue with the jump value">
       <option name="closed" value="true" />
-      <created>1751649957260</created>
+      <created>1751705584097</created>
       <option name="number" value="00030" />
       <option name="presentableId" value="LOCAL-00030" />
       <option name="project" value="LOCAL" />
-      <updated>1751649957260</updated>
+      <updated>1751705584097</updated>
     </task>
-    <task id="LOCAL-00031" summary="Draggable Icon are functional, need testing and review, update README.md">
-      <option name="closed" value="true" />
-      <created>1751649964385</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1751649964386</updated>
-    </task>
-    <option name="localTasksCounter" value="32" />
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,7 +470,7 @@
     <MESSAGE value="Clean up CSS, separate Desktop.css into their separate part in style folder, update README.md" />
     <MESSAGE value="Clean up CSS, separate Desktop.css into their separate part in style folder, clean up JS custom hook and update README.md" />
     <MESSAGE value="Draggable Icon are functional, need testing and review" />
-    <MESSAGE value="Draggable Icon are functional, need testing and review, update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Draggable Icon are functional, need testing and review, update README.md" />
+    <MESSAGE value="Fix the resizer issue with the jump value" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix the resizer issue with the jump value" />
   </component>
 </project>
