@@ -4,8 +4,8 @@ import {useControl} from "../useControl/useControl.js";
 
 export function useDraggableAppComponent(componentRef) {
     const [position, setPosition] = useState({x: 0, y: 0});
+    const {onClick_Focus, onClick_Maximize} = useControl(componentRef);
     const {RectSetter} = useSaveRect()
-    const {onClick_Focus} = useControl(componentRef);
 
     useEffect(() => {
         if (!componentRef.current) return;
@@ -27,7 +27,6 @@ export function useDraggableAppComponent(componentRef) {
         let viewportWidth, viewportHeight, maxTop, maxLeft;
         let dragging = false;
 
-
         const handleMouseDown = (e) => {
             //Only start dragging from the title bar
             if (!e.target.closest('[class$="_Title"]')) return;
@@ -35,7 +34,7 @@ export function useDraggableAppComponent(componentRef) {
             e.preventDefault();
             e.stopPropagation();
             dragging = true;
-            e.target.style.cursor = "grabbing";
+            e.target.style.cursor = "default";
             onClick_Focus()
 
             const rectComponent = componentApp.getBoundingClientRect();
@@ -63,6 +62,7 @@ export function useDraggableAppComponent(componentRef) {
 
         const handleMouseMove = (e) => {
             if (!dragging) return;
+            e.target.style.cursor = "grabbing";
 
             // Calculate new position
             let newTop = startTop + (e.clientY - startY);
@@ -79,7 +79,7 @@ export function useDraggableAppComponent(componentRef) {
 
         const handleMouseUp = (e) => {
             dragging = false;
-            e.target.style.cursor = "grab";
+            e.target.style.cursor = "default";
 
             // Initialize position
             const rect = componentApp.getBoundingClientRect();
@@ -95,8 +95,12 @@ export function useDraggableAppComponent(componentRef) {
         // Attach listeners
         componentApp.addEventListener('mousedown', handleMouseDown);
 
+        // Double click will change app state to maximize by the `title bar`
+        componentApp_Title.addEventListener("dblclick", onClick_Maximize)
+
         return () => {
             componentApp.removeEventListener('mousedown', handleMouseDown);
+            componentApp_Title.addEventListener("dblclick", onClick_Maximize);
             document.removeEventListener('mousemove', handleMouseMove);
             document.removeEventListener('mouseup', handleMouseUp);
         };

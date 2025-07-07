@@ -14,7 +14,6 @@ export function useControl(componentRef) {
     const [, updateState] = useState();
     const forceRender = useCallback(() => updateState({}), []);
 
-
     // Mounted on every component
     const onClick_Focus = useCallback(() => {
         const component = componentRef.current;
@@ -78,28 +77,48 @@ export function useControl(componentRef) {
         const component = componentRef.current;
         if (!component) return;
 
-        setIsMounted(true)
-        if (!component.hasAttribute("app-control-state")) {
-            const Taskbar = document.querySelector(`.Taskbar_Container`);
-            const Taskbar_height = parseFloat(window.getComputedStyle(Taskbar).height) || 0
-            component.setAttribute("app-control-state", "MAXIMIZE")
+        setIsMounted(true);
 
-            component.style.top = `0px`
-            component.style.left = `0px`
+        // Add transitionend event listener
+        const handleTransitionEnd = (event) => {
+            // Only proceed if one of the positioned properties finished transitioning
+            if (['width', 'height', 'top', 'left'].includes(event.propertyName)) {
+                // Remove transition class after animation completes
+                component.classList.remove("STATE_TRANSITION");
+
+                // Update the saved rect dimensions after transition completes
+                RectSetter(componentRef);
+
+                // Remove the event listener to prevent multiple calls
+                component.removeEventListener('transitionend', handleTransitionEnd);
+            }
+        };
+
+        // Add the transition class before starting changes
+        component.classList.add("STATE_TRANSITION");
+
+        // Add event listener before starting transition
+        component.addEventListener('transitionend', handleTransitionEnd);
+
+        if (component.getAttribute("app-control-state") !== "MAXIMIZE") {
+            const Taskbar = document.querySelector(`.Taskbar_Container`);
+            const Taskbar_height = parseFloat(window.getComputedStyle(Taskbar).height) || 0;
+            component.setAttribute("app-control-state", "MAXIMIZE");
+
+            component.style.top = `0px`;
+            component.style.left = `0px`;
             component.style.width = `${window.innerWidth}px`;
             component.style.height = `${window.innerHeight - Taskbar_height}px`;
         } else {
-            const {rectDimension} = RectGetter(componentRef)
-            component.removeAttribute("app-control-state")
-            console.log(component)
+            const {rectDimension} = RectGetter(componentRef);
+            component.setAttribute("app-control-state", "ORIGINAL");
 
             component.style.top = `${rectDimension.top}px`;
             component.style.left = `${rectDimension.left}px`;
             component.style.width = `${rectDimension.width}px`;
             component.style.height = `${rectDimension.height}px`;
         }
-
-    }, [componentRef.current])
+    }, [componentRef.current]);
 
     return {isMounted, onClick_Open, onClick_Close, onClick_Minimize, onClick_Maximize, onClick_Focus};
 }

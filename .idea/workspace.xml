@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Chores: clean up useResizableAppComponent.js">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Double-click the title bar will maximize the app" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -562,7 +560,23 @@
       <option name="project" value="LOCAL" />
       <updated>1751909730773</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="update README.md">
+      <option name="closed" value="true" />
+      <created>1751910266201</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1751910266201</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Double-click the title bar will maximize the app">
+      <option name="closed" value="true" />
+      <created>1751913195643</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1751913195643</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,8 +606,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="FIX: Position is wrong when both app open" />
-    <MESSAGE value="implement useFocus.js but still buggy, will fix it later" />
     <MESSAGE value="format/rename folder file, save work" />
     <MESSAGE value="FIX: logic calculation on z-index is wrong and group useFocus hook into useVisibility, rename ID and Class on Taskbar.jsx and Taskbar.css, update on README.md" />
     <MESSAGE value="FIX: Resize div are in wrong position when reopen the app, update README.md" />
@@ -617,6 +629,8 @@
     <MESSAGE value="Chores: clean up variable" />
     <MESSAGE value="FIX: App can't drag and resize when user first open the application" />
     <MESSAGE value="Chores: clean up useResizableAppComponent.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chores: clean up useResizableAppComponent.js" />
+    <MESSAGE value="update README.md" />
+    <MESSAGE value="Double-click the title bar will maximize the app" />
+    <option name="LAST_COMMIT_MESSAGE" value="Double-click the title bar will maximize the app" />
   </component>
 </project>

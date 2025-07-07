@@ -4,7 +4,7 @@ export function useSaveRect() {
     // Set Rect of the component
     const RectSetter =  useCallback((componentRef) => {
         if (!componentRef.current) return;
-        if (componentRef.current.hasAttribute("app-control-state")) return;
+        if (componentRef.current.getAttribute("app-control-state") === "MAXIMIZE") return;
 
         const component = componentRef.current;
         const appName = [...component.classList]

@@ -3,6 +3,7 @@
     opacity: 0;
     transform-origin: bottom left;
 
+    /* Control Status */
     &[app-control-status="OPEN"] {
         opacity: 1;
         scale: 1;
@@ -39,15 +40,17 @@
                 translate 200ms ease ;
     }
 
-    &[app-control-status="MAXIMIZE"] {
-        opacity: 1;
-        scale: 1;
-        translate: 0 0;
-        pointer-events: auto;
-
+    /* App State */
+    &.STATE_TRANSITION {
         transition:
-                opacity 100ms ease,
-                scale 100ms ease,
-                translate 100ms ease;
+                width 200ms ease,
+                height 200ms ease,
+                top 200ms ease,
+                left 200ms ease;
+    }
+
+    &[app-control-state="MAXIMIZE"],
+    &[app-control-state="ORIGINAL"] {
+        pointer-events: auto;
     }
 }
