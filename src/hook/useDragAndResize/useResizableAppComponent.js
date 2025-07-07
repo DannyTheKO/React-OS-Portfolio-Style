@@ -61,9 +61,10 @@ export function useResizableAppComponent(componentRef) {
     function createResizerDiv(componentRef) {
         const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
         const component = componentRef.current;
-        component.style.position = 'absolute'; // this is important, don't fucking touch it
 
         if (!component) return;
+
+        component.style.position = 'absolute'; // this is important, don't fucking touch it
 
         // Get min-width and min-height of the app
         const computedStyles = window.getComputedStyle(component);
@@ -215,7 +216,6 @@ export function useResizableAppComponent(componentRef) {
             const rectComponent = componentRef.current.getBoundingClientRect();
             const style = {
                 transform: 'translate(-50%, -50%)',  // Center the resizer
-                // background: 'red', // DEBUG
             };
 
             switch (dir) {
