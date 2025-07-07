@@ -9,7 +9,6 @@ export default function Introduction_Wrapper() {
     const appRef = useRef(null)
     const iconRef = useRef(null)
     const {
-        visibleClass,
         isMounted,
         onClick_Open,
         onClick_Close,
@@ -32,7 +31,6 @@ export default function Introduction_Wrapper() {
             {isMounted &&
                 <Introduction_App
                     ref={appRef}
-                    visibleClass={visibleClass}
                     onClick_Close={onClick_Close}
                     onClick_Minimize={onClick_Minimize}
                     onClick_Maximize={onClick_Maximize}

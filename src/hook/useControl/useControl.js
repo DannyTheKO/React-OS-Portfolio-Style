@@ -105,5 +105,5 @@ export function useControl(componentRef) {
 
     }, [componentRef.current])
 
-    return {visibleClass, isMounted, onClick_Open, onClick_Close, onClick_Minimize, onClick_Maximize, onClick_Focus};
+    return {isMounted, onClick_Open, onClick_Close, onClick_Minimize, onClick_Maximize, onClick_Focus};
 }

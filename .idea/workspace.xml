@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="move css animation app to separate animations.css">
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="remove visibleClass variable from Application and fix the css selector, but still got bug from useControl.js onClick_Maximize function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useControl/useControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useControl/useControl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/style/animations.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/animations.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -475,7 +473,23 @@
       <option name="project" value="LOCAL" />
       <updated>1751901767814</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="temporary remove debug line in useSaveRect.js, and update useControl.js">
+      <option name="closed" value="true" />
+      <created>1751902093265</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1751902093265</updated>
+    </task>
+    <task id="LOCAL-00037" summary="remove visibleClass variable from Application and fix the css selector, but still got bug from useControl.js onClick_Maximize function">
+      <option name="closed" value="true" />
+      <created>1751902439822</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1751902439822</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,8 +519,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change variable from elementRef to componentRef, for better consistence" />
-    <MESSAGE value="Save some work..." />
     <MESSAGE value="Small update, add README.md" />
     <MESSAGE value="clean up code, updated README.md todo list and ideal list" />
     <MESSAGE value="more clean up code, more note on README.md and save work before the disaster :)" />
@@ -530,6 +542,8 @@
     <MESSAGE value="update .gitignore" />
     <MESSAGE value="Rename from useVisibility.js to useControl.js" />
     <MESSAGE value="move css animation app to separate animations.css" />
-    <option name="LAST_COMMIT_MESSAGE" value="move css animation app to separate animations.css" />
+    <MESSAGE value="temporary remove debug line in useSaveRect.js, and update useControl.js" />
+    <MESSAGE value="remove visibleClass variable from Application and fix the css selector, but still got bug from useControl.js onClick_Maximize function" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove visibleClass variable from Application and fix the css selector, but still got bug from useControl.js onClick_Maximize function" />
   </component>
 </project>

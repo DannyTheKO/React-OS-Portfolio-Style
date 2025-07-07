@@ -27,14 +27,14 @@ export const Introduction_Executable = forwardRef(({onClick_Open}, iconRef) => {
 });
 
 export const Introduction_App = forwardRef(
-    ({visibleClass, onClick_Close, onClick_Minimize, onClick_Maximize}, componentRef) => {
+    ({onClick_Close, onClick_Minimize, onClick_Maximize}, componentRef) => {
     const ProfilePicture = "./Assets/Image/Icons/Toast.png"
 
     return (
         // Introduction Container
         <div
             id="Global_App_Setting"
-            className={`Introduction_App ${visibleClass}`}
+            className={`Introduction_App`}
             ref={componentRef}
         >
 

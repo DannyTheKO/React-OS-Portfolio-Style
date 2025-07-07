@@ -8,7 +8,6 @@ export default function Contact_Wrapper() {
     const appRef = useRef(null)
     const iconRef = useRef(null)
     const {
-        visibleClass,
         isMounted,
         onClick_Open,
         onClick_Close,
@@ -29,7 +28,6 @@ export default function Contact_Wrapper() {
             {isMounted &&
                 <Contact_App
                     ref={appRef}
-                    visibleClass={visibleClass}
                     onClick_Close={onClick_Close}
                     onClick_Minimize={onClick_Minimize}
                     onClick_Maximize={onClick_Maximize}
