@@ -37,58 +37,6 @@
     display: flex;
     flex-direction: column;
 
-    /* == Transition From Open And Close Action == */
-    opacity: 0;
-    transform-origin: bottom left;
-
-    &.OPEN {
-        opacity: 1;
-        scale: 1;
-        translate: 0 0;
-        pointer-events: auto;
-
-        transition:
-                opacity 100ms ease,
-                scale 100ms ease,
-                translate 100ms ease;
-    }
-
-    &.MAXIMIZE {
-        opacity: 1;
-        scale: 1;
-        translate: 0 0;
-        pointer-events: auto;
-
-        transition:
-                opacity 100ms ease,
-                scale 100ms ease,
-                translate 100ms ease;
-    }
-
-    &.HIDE {
-        opacity: 0;
-        scale: 0.2;
-        translate: 0 100%;
-        pointer-events: none;
-
-        transition:
-                opacity 200ms ease,
-                scale 200ms ease,
-                translate 200ms ease ;
-    }
-
-    &.CLOSE {
-        opacity: 0;
-        scale: 0.2;
-        translate: 0 0;
-        pointer-events: auto;
-
-        transition:
-                opacity 100ms ease,
-                scale 100ms ease,
-                translate 100ms ease;
-    }
-
     /* == Resizer == */
     .resizer {
         transition: 100ms ease-in-out;

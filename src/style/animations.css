@@ -1,0 +1,101 @@
+#Global_App_Setting {
+    /* == Transition From Open, Close, Minimize and Maximize Action == */
+    opacity: 0;
+    transform-origin: bottom left;
+
+    &[data-app-control-status="OPEN"] {
+        opacity: 1;
+        scale: 1;
+        translate: 0 0;
+        pointer-events: auto;
+
+        transition:
+                opacity 100ms ease,
+                scale 100ms ease,
+                translate 100ms ease;
+    }
+
+    &[data-app-control-status="CLOSE"] {
+        opacity: 0;
+        scale: 0.2;
+        translate: 0 0;
+        pointer-events: auto;
+
+        transition:
+                opacity 100ms ease,
+                scale 100ms ease,
+                translate 100ms ease;
+    }
+
+    &[data-app-control-status="MINIMIZE"] {
+        opacity: 0;
+        scale: 0.2;
+        translate: 0 100%;
+        pointer-events: none;
+
+        transition:
+                opacity 200ms ease,
+                scale 200ms ease,
+                translate 200ms ease ;
+    }
+
+    &[data-app-control-status="MAXIMIZE"] {
+        opacity: 1;
+        scale: 1;
+        translate: 0 0;
+        pointer-events: auto;
+
+        transition:
+                opacity 100ms ease,
+                scale 100ms ease,
+                translate 100ms ease;
+    }
+
+    &.OPEN {
+        opacity: 1;
+        scale: 1;
+        translate: 0 0;
+        pointer-events: auto;
+
+        transition:
+                opacity 100ms ease,
+                scale 100ms ease,
+                translate 100ms ease;
+    }
+
+    &.MAXIMIZE {
+        opacity: 1;
+        scale: 1;
+        translate: 0 0;
+        pointer-events: auto;
+
+        transition:
+                opacity 100ms ease,
+                scale 100ms ease,
+                translate 100ms ease;
+    }
+
+    &.HIDE {
+        opacity: 0;
+        scale: 0.2;
+        translate: 0 100%;
+        pointer-events: none;
+
+        transition:
+                opacity 200ms ease,
+                scale 200ms ease,
+                translate 200ms ease ;
+    }
+
+    &.CLOSE {
+        opacity: 0;
+        scale: 0.2;
+        translate: 0 0;
+        pointer-events: auto;
+
+        transition:
+                opacity 100ms ease,
+                scale 100ms ease,
+                translate 100ms ease;
+    }
+}

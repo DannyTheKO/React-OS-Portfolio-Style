@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Rename from useVisibility.js to useControl.js">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Contact/Contact_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Contact/Contact_App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Contact/Contact_Wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Contact/Contact_Wrapper.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Introduction/Introduction_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Introduction/Introduction_App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Introduction/Introduction_Wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Introduction/Introduction_Wrapper.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useControl/useControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useControl/useControl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/useDraggableAppComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/useDraggableAppComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Desktop.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Desktop.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/style/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/application.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +81,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "9-maximize-function",
+    "git-widget-placeholder": "10-change-application-usecontrol-data-type",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/Danny/Desktop/Personal Project/HTML_CSS_JS/Landing_Page/react_os_portfolio_style/public/Assets/Image/Icons",
     "list.type.of.created.stylesheet": "CSS",
