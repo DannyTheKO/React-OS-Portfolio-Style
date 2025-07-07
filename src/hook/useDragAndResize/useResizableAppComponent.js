@@ -83,29 +83,19 @@ export function useResizableAppComponent(componentRef) {
         existingResizer.forEach(resizer => resizer.remove());
 
         // Create Div base on directions arrays
-        const dirResizer = () => {
-            directions.forEach(dir => {
-                const resizer = document.createElement("div");
-                resizer.classList.add('resizer', `resizer_${dir}`);
-                Object.assign(resizer.style, {
-                    position: 'absolute',
-                    zIndex: 10,
-                    cursor: getCursor(dir),
-                    ...getPositionStyle(dir, componentRef),
-                });
-
-                resizer.addEventListener('mousedown', initResize(dir, component));
-                component.appendChild(resizer);
+        directions.forEach(dir => {
+            const resizer = document.createElement("div");
+            resizer.classList.add('resizer', `resizer_${dir}`);
+            Object.assign(resizer.style, {
+                position: 'absolute',
+                zIndex: 10,
+                cursor: getCursor(dir),
+                ...getPositionStyle(dir, componentRef),
             });
-        }
 
-        // HACK: Delay Resizer
-        if (component.classList.contains("OPEN")) {
-            setTimeout(() => dirResizer(), 110);
-        } else {
-            dirResizer()
-        }
-
+            resizer.addEventListener('mousedown', initResize(dir, component));
+            component.appendChild(resizer);
+        });
 
         // Create Resizer Logic
         function initResize(dir, component) {
