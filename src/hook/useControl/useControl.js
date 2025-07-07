@@ -8,8 +8,12 @@ let zIndexTaskbar = 0;      // Initialize Taskbar (n + zIndexThreshold + 1)
 
 export function useControl(componentRef) {
     const [isMounted, setIsMounted] = useState(false);
-    const [visibleClass, setVisibleClass] = useState("" || null)
     const {RectSetter, RectGetter} = useSaveRect()
+
+    // Force render functionality
+    const [, updateState] = useState();
+    const forceRender = useCallback(() => updateState({}), []);
+
 
     // Mounted on every component
     const onClick_Focus = useCallback(() => {
@@ -39,12 +43,10 @@ export function useControl(componentRef) {
             const component = componentRef.current
             if (!component) return;
 
-            if (!component.classList.contains("OPEN")) {
-                setVisibleClass("OPEN")
-                component.setAttribute("app-control-status", "OPEN")
-                component.addEventListener("mousedown", onClick_Focus)
-            }
-            onClick_Focus()
+            component.setAttribute("app-control-status", "OPEN")
+            component.addEventListener("mousedown", onClick_Focus)
+            onClick_Focus();
+            forceRender();
         }, 10); // <-- Set this to 10ms, to use the eventLoop callback queue
     }, [componentRef.current]);
 
@@ -53,14 +55,11 @@ export function useControl(componentRef) {
         const component = componentRef.current;
         if (!component) return;
 
-        if (!component.classList.contains("CLOSE")) {
-            setVisibleClass("CLOSE")
-            component.setAttribute("app-control-status", "CLOSE")
-            component.removeEventListener("mousedown", onClick_Focus)
-            RectSetter(componentRef)
+        component.setAttribute("app-control-status", "CLOSE")
+        component.removeEventListener("mousedown", onClick_Focus)
+        RectSetter(componentRef)
 
-            setTimeout(() => setIsMounted(false), 300); // Match CSS transition duration
-        }
+        setTimeout(() => setIsMounted(false), 300); // Match CSS transition duration
     }, [componentRef.current]);
 
 
@@ -68,24 +67,21 @@ export function useControl(componentRef) {
         const component = componentRef.current;
         if (!component) return;
 
-        if (!component.classList.contains("MINIMIZE")) {
-            setVisibleClass("MINIMIZE")
-            component.setAttribute("app-control-status", "MINIMIZE")
-            component.removeEventListener("mousedown", onClick_Focus)
-            RectSetter(componentRef)
-        }
+        setIsMounted(true)
+        component.setAttribute("app-control-status", "MINIMIZE")
+        component.removeEventListener("mousedown", onClick_Focus)
+        RectSetter(componentRef)
 
     }, [componentRef.current])
 
-    // TODO: Maximize Function
     const onClick_Maximize = useCallback(() => {
         const component = componentRef.current;
         if (!component) return;
 
+        setIsMounted(true)
         if (!component.hasAttribute("app-control-state")) {
             const Taskbar = document.querySelector(`.Taskbar_Container`);
             const Taskbar_height = parseFloat(window.getComputedStyle(Taskbar).height) || 0
-            setVisibleClass("MAXIMIZE")
             component.setAttribute("app-control-state", "MAXIMIZE")
 
             component.style.top = `0px`
@@ -94,7 +90,6 @@ export function useControl(componentRef) {
             component.style.height = `${window.innerHeight - Taskbar_height}px`;
         } else {
             const {rectDimension} = RectGetter(componentRef)
-            setVisibleClass("OPEN");
             component.removeAttribute("app-control-state")
             console.log(component)
 

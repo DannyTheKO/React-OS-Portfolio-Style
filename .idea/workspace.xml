@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Chores: reformat variable in _Wrapper.jsx and _App.jsx">
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Chores: clean up variable">
+      <change afterPath="$PROJECT_DIR$/src/hook/useWrapper/useWrapper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Contact/Contact_Wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Contact/Contact_Wrapper.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Introduction/Introduction_Wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Introduction/Introduction_Wrapper.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hook/useControl/useControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useControl/useControl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/useResizableAppComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/useResizableAppComponent.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,35 +76,35 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "10-change-application-usecontrol-data-type",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Danny/Desktop/Personal Project/HTML_CSS_JS/Landing_Page/react_os_portfolio_style/public/Assets/Image/Icons",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "npm.npm dev.executor": "Run",
-    "settings.editor.selected.configurable": "discord-application",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;10-change-application-usecontrol-data-type&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Danny/Desktop/Personal Project/HTML_CSS_JS/Landing_Page/react_os_portfolio_style/public/Assets/Image/Icons&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.npm dev.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;discord-application&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory",
-      "repository"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;repository&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\public\Assets\Image\Icons" />
@@ -522,7 +524,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751904821487</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Chores: clean up variable">
+      <option name="closed" value="true" />
+      <created>1751908588462</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1751908588462</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -552,7 +562,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="FIX: Draggable function now has limit to prevent user drag beyond the taskbar" />
     <MESSAGE value="Move `visibleClass` useState out of the App, change CSS class name with animation, improve resize event area" />
     <MESSAGE value="format README.md" />
     <MESSAGE value="FIX: Position is wrong when both app open" />
@@ -577,6 +586,7 @@
     <MESSAGE value="update useControl.js and useSaveRect.js, fix the Maximize function" />
     <MESSAGE value="Chores: clean up useSaveRect.js debug line" />
     <MESSAGE value="Chores: reformat variable in _Wrapper.jsx and _App.jsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chores: reformat variable in _Wrapper.jsx and _App.jsx" />
+    <MESSAGE value="Chores: clean up variable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chores: clean up variable" />
   </component>
 </project>
