@@ -29,9 +29,9 @@ If you like it, give me a **star** and feel free to copy my code.
 - [X] Minimize Function
    - [X] Animation
 - [X] Focus Function
-- [ ] Maximize Function
-   - [ ] Remember the current width and height before maximize
-   - [ ] Set width and height using `window.innerWidth` and `window.innerHeight`
+- [X] Maximize Function
+   - [X] Remember the current width and height before maximize
+   - [X] Set width and height using `window.innerWidth` and `window.innerHeight`
    - [ ] Maximize Animation
 - [ ] Popup Component (this is hard...)
    - [ ] Create new window when user clicks on the image
