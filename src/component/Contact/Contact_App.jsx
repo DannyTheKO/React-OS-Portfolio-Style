@@ -27,7 +27,7 @@ export const Contact_Executable = forwardRef(({onClick_Open}, iconRef) => {
 });
 
 export const Contact_App = forwardRef(
-    ({onClick_Close, onClick_Minimize, onClick_Maximize}, componentRef) => {
+    ({onClick_Close, onClick_Minimize, onClick_Maximize}, appRef) => {
     const Contact_Icon_Image = "./Assets/Image/Icons/Toast.png"
     const SVG_EMAIL = "./Assets/SVG/email.svg"
 
@@ -36,7 +36,7 @@ export const Contact_App = forwardRef(
         <div
             id="Global_App_Setting"
             className={`Contact_App`}
-            ref={componentRef}
+            ref={appRef}
         >
 
             {/* Title */}

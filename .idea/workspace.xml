@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="update useControl.js and useSaveRect.js, fix the Maximize function">
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Chores: clean up useSaveRect.js debug line">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Contact/Contact_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Contact/Contact_App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Contact/Contact_Wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Contact/Contact_Wrapper.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Introduction/Introduction_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Introduction/Introduction_App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Introduction/Introduction_Wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Introduction/Introduction_Wrapper.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useControl/useControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useControl/useControl.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -505,7 +509,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751903308041</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Chores: clean up useSaveRect.js debug line">
+      <option name="closed" value="true" />
+      <created>1751903409870</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1751903409870</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -535,7 +547,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="clean up code, updated README.md todo list and ideal list" />
     <MESSAGE value="more clean up code, more note on README.md and save work before the disaster :)" />
     <MESSAGE value="FIX: Draggable function now has limit to prevent user drag beyond the taskbar" />
     <MESSAGE value="Move `visibleClass` useState out of the App, change CSS class name with animation, improve resize event area" />
@@ -560,6 +571,7 @@
     <MESSAGE value="temporary remove debug line in useSaveRect.js, and update useControl.js" />
     <MESSAGE value="remove visibleClass variable from Application and fix the css selector, but still got bug from useControl.js onClick_Maximize function" />
     <MESSAGE value="update useControl.js and useSaveRect.js, fix the Maximize function" />
-    <option name="LAST_COMMIT_MESSAGE" value="update useControl.js and useSaveRect.js, fix the Maximize function" />
+    <MESSAGE value="Chores: clean up useSaveRect.js debug line" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chores: clean up useSaveRect.js debug line" />
   </component>
 </project>

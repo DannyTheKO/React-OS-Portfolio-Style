@@ -6,7 +6,6 @@ import {useDraggableIconComponent} from "../../hook/useDragAndResize/useDraggabl
 
 export default function Contact_Wrapper() {
     const appRef = useRef(null)
-    const iconRef = useRef(null)
     const {
         isMounted,
         onClick_Open,
@@ -14,7 +13,9 @@ export default function Contact_Wrapper() {
         onClick_Minimize,
         onClick_Maximize
     } = useControl(appRef);
-    const {componentState: appState} = useDragAndResize(appRef);
+    useDragAndResize(appRef);
+
+    const iconRef = useRef(null)
     useDraggableIconComponent(iconRef)
 
     return (
