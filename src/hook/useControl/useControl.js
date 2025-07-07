@@ -41,6 +41,7 @@ export function useControl(componentRef) {
 
             if (!component.classList.contains("OPEN")) {
                 setVisibleClass("OPEN")
+                component.setAttribute("app-control-status", "OPEN")
                 component.addEventListener("mousedown", onClick_Focus)
             }
             onClick_Focus()
@@ -54,6 +55,7 @@ export function useControl(componentRef) {
 
         if (!component.classList.contains("CLOSE")) {
             setVisibleClass("CLOSE")
+            component.setAttribute("app-control-status", "CLOSE")
             component.removeEventListener("mousedown", onClick_Focus)
             RectSetter(componentRef)
 
@@ -66,8 +68,9 @@ export function useControl(componentRef) {
         const component = componentRef.current;
         if (!component) return;
 
-        if (!component.classList.contains("HIDE")) {
-            setVisibleClass("HIDE")
+        if (!component.classList.contains("MINIMIZE")) {
+            setVisibleClass("MINIMIZE")
+            component.setAttribute("app-control-status", "MINIMIZE")
             component.removeEventListener("mousedown", onClick_Focus)
             RectSetter(componentRef)
         }
@@ -83,6 +86,7 @@ export function useControl(componentRef) {
             const Taskbar = document.querySelector(`.Taskbar_Container`);
             const Taskbar_height = parseFloat(window.getComputedStyle(Taskbar).height) || 0
             setVisibleClass("MAXIMIZE")
+            component.setAttribute("app-control-status", "MAXIMIZE")
 
             component.style.top = `0px`
             component.style.left = `0px`
@@ -91,6 +95,7 @@ export function useControl(componentRef) {
         } else {
             const {rectDimension} = RectGetter(componentRef)
             setVisibleClass("OPEN");
+            component.removeAttribute("app-control-status")
 
             component.style.top = `${rectDimension.top}px`;
             component.style.left = `${rectDimension.left}px`;

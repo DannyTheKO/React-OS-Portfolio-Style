@@ -16,9 +16,9 @@ export function useSaveRect() {
         sessionStorage.setItem(appName, JSON.stringify(rectDimension))
 
         // DEBUG
-        console.group(`SET: ${appName}`)
-        console.log(rectDimension)
-        console.groupEnd()
+        // console.group(`SET: ${appName}`)
+        // console.log(rectDimension)
+        // console.groupEnd()
 
     }, [])
 
@@ -31,9 +31,9 @@ export function useSaveRect() {
         const rectDimension = JSON.parse(sessionStorage.getItem(appName))
 
         // DEBUG
-        console.group(`GET: ${appName}`)
-        console.log(rectDimension)
-        console.groupEnd()
+        // console.group(`GET: ${appName}`)
+        // console.log(rectDimension)
+        // console.groupEnd()
 
         return {rectDimension, appName}
     }, [])
