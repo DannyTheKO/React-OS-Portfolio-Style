@@ -6,7 +6,7 @@ let zIndexCurrent = 0;      // Initialize Component (n)
 let zIndexThreshold = 3;    // Set current top focus zIndex (n + 1)
 let zIndexTaskbar = 0;      // Initialize Taskbar (n + zIndexThreshold + 1)
 
-export function useVisibility(componentRef) {
+export function useControl(componentRef) {
     const [isMounted, setIsMounted] = useState(false);
     const [visibleClass, setVisibleClass] = useState("")
     const {RectSetter, RectGetter} = useSaveRect()

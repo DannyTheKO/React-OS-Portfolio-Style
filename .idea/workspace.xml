@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Fix: add more trigger for onClick_Focus function into other hook">
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="update .gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Contact/Contact_Wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Contact/Contact_Wrapper.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Introduction/Introduction_Wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Introduction/Introduction_Wrapper.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/useDraggableAppComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/useDraggableAppComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/useResizableAppComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/useResizableAppComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useVisibility/useVisibility.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useControl/useControl.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +195,7 @@
       <workItem from="1751640375552" duration="2298000" />
       <workItem from="1751649371998" duration="564000" />
       <workItem from="1751821349989" duration="1327000" />
-      <workItem from="1751868408121" duration="1405000" />
+      <workItem from="1751868408121" duration="2480000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -442,7 +445,23 @@
       <option name="project" value="LOCAL" />
       <updated>1751709691122</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Add RectGetter function to get the dimension and position of the component app">
+      <option name="closed" value="true" />
+      <created>1751869861881</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1751869861881</updated>
+    </task>
+    <task id="LOCAL-00033" summary="update .gitignore">
+      <option name="closed" value="true" />
+      <created>1751869990633</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1751869990633</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +478,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HEAD" />
+                        <option value="9-maximize-function" />
                       </list>
                     </value>
                   </entry>
@@ -472,7 +491,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="move Assets into public folder" />
     <MESSAGE value="App now had resizable" />
     <MESSAGE value="update createResizerDiv.js, now fix the resizer bug now app do have min-width and min-height base on CSS variable" />
     <MESSAGE value="Change variable from elementRef to componentRef, for better consistence" />
@@ -488,7 +506,6 @@
     <MESSAGE value="format/rename folder file, save work" />
     <MESSAGE value="FIX: logic calculation on z-index is wrong and group useFocus hook into useVisibility, rename ID and Class on Taskbar.jsx and Taskbar.css, update on README.md" />
     <MESSAGE value="FIX: Resize div are in wrong position when reopen the app, update README.md" />
-    <MESSAGE value="update .gitignore" />
     <MESSAGE value="update README.md and custom hook" />
     <MESSAGE value="FIX: ResizerDiv stay still when user drag the resizer" />
     <MESSAGE value="Style Contact Me App" />
@@ -497,6 +514,8 @@
     <MESSAGE value="Draggable Icon are functional, need testing and review" />
     <MESSAGE value="Fix the resizer issue with the jump value" />
     <MESSAGE value="Fix: add more trigger for onClick_Focus function into other hook" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix: add more trigger for onClick_Focus function into other hook" />
+    <MESSAGE value="Add RectGetter function to get the dimension and position of the component app" />
+    <MESSAGE value="update .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="update .gitignore" />
   </component>
 </project>

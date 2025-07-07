@@ -1,6 +1,6 @@
 import React, {memo, useRef} from 'react'
 import {Introduction_App, Introduction_Executable} from './Introduction_App.jsx'
-import {useVisibility} from "../../hook/useVisibility/useVisibility.js";
+import {useControl} from "../../hook/useControl/useControl.js";
 import {useDragAndResize} from "../../hook/useDragAndResize/useDragAndResize.js";
 import {useDraggableAppComponent} from "../../hook/useDragAndResize/useDraggableAppComponent.js";
 import {useDraggableIconComponent} from "../../hook/useDragAndResize/useDraggableIconComponent.js";
@@ -14,7 +14,7 @@ export default function Introduction_Wrapper() {
         onClick_Open,
         onClick_Close,
         onClick_Minimize
-    } = useVisibility(appRef);
+    } = useControl(appRef);
     const {componentState: appState} = useDragAndResize(appRef);
     useDraggableIconComponent(iconRef)
 
