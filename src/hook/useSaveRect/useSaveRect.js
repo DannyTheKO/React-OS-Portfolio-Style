@@ -3,8 +3,8 @@ import {useCallback} from "react";
 export function useSaveRect() {
     // Set Rect of the component
     const RectSetter =  useCallback((componentRef) => {
-        if (!componentRef.current) return console.log("Invalid ComponentRef")
-        if (componentRef.current.classList.contains("MAXIMIZE")) return;
+        if (!componentRef.current) return;
+        if (componentRef.current.hasAttribute("app-control-state")) return;
 
         const component = componentRef.current;
         const appName = [...component.classList]

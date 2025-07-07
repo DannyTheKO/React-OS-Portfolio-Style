@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="remove visibleClass variable from Application and fix the css selector, but still got bug from useControl.js onClick_Maximize function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/animations.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/animations.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useControl/useControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useControl/useControl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -489,7 +490,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751902439822</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="remove visibleClass variable from Application and fix the css selector, but still got bug from useControl.js onClick_Maximize function">
+      <option name="closed" value="true" />
+      <created>1751902471938</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1751902471938</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

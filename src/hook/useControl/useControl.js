@@ -82,11 +82,11 @@ export function useControl(componentRef) {
         const component = componentRef.current;
         if (!component) return;
 
-        if (!component.classList.contains("MAXIMIZE")) {
+        if (!component.hasAttribute("app-control-state")) {
             const Taskbar = document.querySelector(`.Taskbar_Container`);
             const Taskbar_height = parseFloat(window.getComputedStyle(Taskbar).height) || 0
             setVisibleClass("MAXIMIZE")
-            component.setAttribute("app-control-status", "MAXIMIZE")
+            component.setAttribute("app-control-state", "MAXIMIZE")
 
             component.style.top = `0px`
             component.style.left = `0px`
@@ -95,7 +95,8 @@ export function useControl(componentRef) {
         } else {
             const {rectDimension} = RectGetter(componentRef)
             setVisibleClass("OPEN");
-            component.removeAttribute("app-control-status")
+            component.removeAttribute("app-control-state")
+            console.log(component)
 
             component.style.top = `${rectDimension.top}px`;
             component.style.left = `${rectDimension.left}px`;
