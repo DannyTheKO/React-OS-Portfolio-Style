@@ -4,7 +4,7 @@ import {useControl} from "../useControl/useControl.js";
 
 export function useResizableAppComponent(componentRef) {
     const [dimensions, setDimensions] = useState({width: 0, height: 0})
-    const {RectSetter, RectGetter} = useSaveRect()
+    const {RectSetter} = useSaveRect()
     const {onClick_Focus} = useControl(componentRef);
 
     useEffect(() => {
@@ -61,9 +61,10 @@ export function useResizableAppComponent(componentRef) {
     function createResizerDiv(componentRef) {
         const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
         const component = componentRef.current;
-        component.style.position = 'absolute'; // this is important, don't fucking touch it
 
         if (!component) return;
+
+        component.style.position = 'absolute'; // this is important, don't fucking touch it
 
         // Get min-width and min-height of the app
         const computedStyles = window.getComputedStyle(component);
@@ -83,29 +84,19 @@ export function useResizableAppComponent(componentRef) {
         existingResizer.forEach(resizer => resizer.remove());
 
         // Create Div base on directions arrays
-        const dirResizer = () => {
-            directions.forEach(dir => {
-                const resizer = document.createElement("div");
-                resizer.classList.add('resizer', `resizer_${dir}`);
-                Object.assign(resizer.style, {
-                    position: 'absolute',
-                    zIndex: 10,
-                    cursor: getCursor(dir),
-                    ...getPositionStyle(dir, componentRef),
-                });
-
-                resizer.addEventListener('mousedown', initResize(dir, component));
-                component.appendChild(resizer);
+        directions.forEach(dir => {
+            const resizer = document.createElement("div");
+            resizer.classList.add('resizer', `resizer_${dir}`);
+            Object.assign(resizer.style, {
+                position: 'absolute',
+                zIndex: 10,
+                cursor: getCursor(dir),
+                ...getPositionStyle(dir, componentRef),
             });
-        }
 
-        // HACK: Delay Resizer
-        if (component.classList.contains("OPEN")) {
-            setTimeout(() => dirResizer(), 110);
-        } else {
-            dirResizer()
-        }
-
+            resizer.addEventListener('mousedown', initResize(dir, component));
+            component.appendChild(resizer);
+        });
 
         // Create Resizer Logic
         function initResize(dir, component) {
@@ -225,7 +216,6 @@ export function useResizableAppComponent(componentRef) {
             const rectComponent = componentRef.current.getBoundingClientRect();
             const style = {
                 transform: 'translate(-50%, -50%)',  // Center the resizer
-                // background: 'red', // DEBUG
             };
 
             switch (dir) {

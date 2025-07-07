@@ -4,7 +4,7 @@ import {useControl} from "../useControl/useControl.js";
 
 export function useDraggableAppComponent(componentRef) {
     const [position, setPosition] = useState({x: 0, y: 0});
-    const {RectSetter, RectGetter} = useSaveRect()
+    const {RectSetter} = useSaveRect()
     const {onClick_Focus} = useControl(componentRef);
 
     useEffect(() => {

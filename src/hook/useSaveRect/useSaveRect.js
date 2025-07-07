@@ -3,8 +3,8 @@ import {useCallback} from "react";
 export function useSaveRect() {
     // Set Rect of the component
     const RectSetter =  useCallback((componentRef) => {
-        if (!componentRef.current) return console.log("Invalid ComponentRef")
-        if (componentRef.current.classList.contains("MAXIMIZE")) return;
+        if (!componentRef.current) return;
+        if (componentRef.current.hasAttribute("app-control-state")) return;
 
         const component = componentRef.current;
         const appName = [...component.classList]
@@ -15,11 +15,6 @@ export function useSaveRect() {
 
         sessionStorage.setItem(appName, JSON.stringify(rectDimension))
 
-        // DEBUG
-        console.group(`SET: ${appName}`)
-        console.log(rectDimension)
-        console.groupEnd()
-
     }, [])
 
     const RectGetter = useCallback((componentRef) => {
@@ -29,11 +24,6 @@ export function useSaveRect() {
             .toString()
             .trim();
         const rectDimension = JSON.parse(sessionStorage.getItem(appName))
-
-        // DEBUG
-        console.group(`GET: ${appName}`)
-        console.log(rectDimension)
-        console.groupEnd()
 
         return {rectDimension, appName}
     }, [])

@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Rename from useVisibility.js to useControl.js">
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="FIX: App can't drag and resize when user first open the application">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Contact/Contact_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Contact/Contact_App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Contact/Contact_Wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Contact/Contact_Wrapper.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Introduction/Introduction_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Introduction/Introduction_App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Introduction/Introduction_Wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Introduction/Introduction_Wrapper.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useControl/useControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useControl/useControl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/useDraggableAppComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/useDraggableAppComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/useResizableAppComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/useResizableAppComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/style/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/application.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,35 +74,35 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "9-maximize-function",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Danny/Desktop/Personal Project/HTML_CSS_JS/Landing_Page/react_os_portfolio_style/public/Assets/Image/Icons",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "npm.npm dev.executor": "Run",
-    "settings.editor.selected.configurable": "discord-application",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;10-change-application-usecontrol-data-type&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Danny/Desktop/Personal Project/HTML_CSS_JS/Landing_Page/react_os_portfolio_style/public/Assets/Image/Icons&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.npm dev.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;discord-application&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory",
-      "repository"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;repository&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\public\Assets\Image\Icons" />
@@ -472,7 +466,79 @@
       <option name="project" value="LOCAL" />
       <updated>1751871721215</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="move css animation app to separate animations.css">
+      <option name="closed" value="true" />
+      <created>1751901767814</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1751901767814</updated>
+    </task>
+    <task id="LOCAL-00036" summary="temporary remove debug line in useSaveRect.js, and update useControl.js">
+      <option name="closed" value="true" />
+      <created>1751902093265</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1751902093265</updated>
+    </task>
+    <task id="LOCAL-00037" summary="remove visibleClass variable from Application and fix the css selector, but still got bug from useControl.js onClick_Maximize function">
+      <option name="closed" value="true" />
+      <created>1751902439822</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1751902439822</updated>
+    </task>
+    <task id="LOCAL-00038" summary="remove visibleClass variable from Application and fix the css selector, but still got bug from useControl.js onClick_Maximize function">
+      <option name="closed" value="true" />
+      <created>1751902471938</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1751902471938</updated>
+    </task>
+    <task id="LOCAL-00039" summary="update useControl.js and useSaveRect.js, fix the Maximize function">
+      <option name="closed" value="true" />
+      <created>1751903308041</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1751903308041</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Chores: clean up useSaveRect.js debug line">
+      <option name="closed" value="true" />
+      <created>1751903409870</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1751903409870</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Chores: reformat variable in _Wrapper.jsx and _App.jsx">
+      <option name="closed" value="true" />
+      <created>1751904821487</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1751904821487</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Chores: clean up variable">
+      <option name="closed" value="true" />
+      <created>1751908588462</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1751908588462</updated>
+    </task>
+    <task id="LOCAL-00043" summary="FIX: App can't drag and resize when user first open the application">
+      <option name="closed" value="true" />
+      <created>1751909001324</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1751909001324</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,14 +568,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update createResizerDiv.js, now fix the resizer bug now app do have min-width and min-height base on CSS variable" />
-    <MESSAGE value="Change variable from elementRef to componentRef, for better consistence" />
-    <MESSAGE value="Save some work..." />
-    <MESSAGE value="Small update, add README.md" />
-    <MESSAGE value="clean up code, updated README.md todo list and ideal list" />
-    <MESSAGE value="more clean up code, more note on README.md and save work before the disaster :)" />
-    <MESSAGE value="FIX: Draggable function now has limit to prevent user drag beyond the taskbar" />
-    <MESSAGE value="Move `visibleClass` useState out of the App, change CSS class name with animation, improve resize event area" />
     <MESSAGE value="format README.md" />
     <MESSAGE value="FIX: Position is wrong when both app open" />
     <MESSAGE value="implement useFocus.js but still buggy, will fix it later" />
@@ -527,6 +585,14 @@
     <MESSAGE value="Add RectGetter function to get the dimension and position of the component app" />
     <MESSAGE value="update .gitignore" />
     <MESSAGE value="Rename from useVisibility.js to useControl.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename from useVisibility.js to useControl.js" />
+    <MESSAGE value="move css animation app to separate animations.css" />
+    <MESSAGE value="temporary remove debug line in useSaveRect.js, and update useControl.js" />
+    <MESSAGE value="remove visibleClass variable from Application and fix the css selector, but still got bug from useControl.js onClick_Maximize function" />
+    <MESSAGE value="update useControl.js and useSaveRect.js, fix the Maximize function" />
+    <MESSAGE value="Chores: clean up useSaveRect.js debug line" />
+    <MESSAGE value="Chores: reformat variable in _Wrapper.jsx and _App.jsx" />
+    <MESSAGE value="Chores: clean up variable" />
+    <MESSAGE value="FIX: App can't drag and resize when user first open the application" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIX: App can't drag and resize when user first open the application" />
   </component>
 </project>
