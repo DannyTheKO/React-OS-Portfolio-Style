@@ -3,22 +3,34 @@ import {useCallback} from "react";
 export function useSaveRect() {
     // Set Rect of the component
     const RectSetter =  useCallback((componentRef) => {
-        if (!componentRef.current) return;
+        const {rectDimension, appName} = getAppDetail(componentRef);
+        sessionStorage.setItem(appName, JSON.stringify(rectDimension))
+    }, [])
 
-        const component = componentRef.current
-        const rect = component.getBoundingClientRect();
+    // TODO: GETTER
+    const RectGetter = useCallback((componentRef) => {
+        const {rectDimension, appName} = getAppDetail(componentRef);
+
+        // DEBUG
+        console.group(appName)
+        console.log(rectDimension)
+        console.groupEnd()
+
+        return {rectDimension, appName}
+    }, [])
+
+    function getAppDetail(componentRef) {
+        if (!componentRef.current) return console.log("Invalid ComponentRef")
+
+        const component = componentRef.current;
+        const rectDimension = component.getBoundingClientRect();
         const appName = [...component.classList]
             .filter(className => className.endsWith("_App"))
             .toString()
             .trim();
 
-        sessionStorage.setItem(appName, JSON.stringify(rect))
-    }, [])
-
-    // TODO: GETTER
-    const RectGetter = useCallback((componentRef) => {
-        console.log(componentRef)
-    }, [])
+        return {rectDimension, appName}
+    }
 
     return {RectSetter, RectGetter}
 }

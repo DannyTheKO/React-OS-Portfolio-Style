@@ -87,6 +87,7 @@ export function useDraggableAppComponent(componentRef) {
 
             // Save the position of the app
             RectSetter(componentRef)
+            RectGetter(componentRef);
 
             document.removeEventListener("mousemove", handleMouseMove);
             document.removeEventListener("mouseup", handleMouseUp);
