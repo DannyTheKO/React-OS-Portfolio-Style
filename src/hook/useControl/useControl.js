@@ -8,10 +8,8 @@ let zIndexTaskbar = 0;      // Initialize Taskbar (n + zIndexThreshold + 1)
 
 export function useControl(componentRef) {
     const [isMounted, setIsMounted] = useState(false);
-    const [visibleClass, setVisibleClass] = useState("")
+    const [visibleClass, setVisibleClass] = useState("" || null)
     const {RectSetter, RectGetter} = useSaveRect()
-
-    // TODO: Maximize Function
 
     // Mounted on every component
     const onClick_Focus = useCallback(() => {
@@ -32,19 +30,16 @@ export function useControl(componentRef) {
             zIndexTaskbar = zIndexThreshold + 1;
             Taskbar.style.zIndex = zIndexTaskbar;
         }
-    }, [componentRef]);
+    }, [componentRef.current]);
 
     const onClick_Open = useCallback(() => {
         setIsMounted(true)
 
         setTimeout(() => {
             const component = componentRef.current
-            if (!component) {
-                console.error("something fuck in the useVisibility -> onClick_Open()")
-                return;
-            }
+            if (!component) return;
 
-            if (component.classList.contains("CLOSE") || component.classList.contains("HIDE") || component.classList.length === 1) {
+            if (!component.classList.contains("OPEN")) {
                 setVisibleClass("OPEN")
                 component.addEventListener("mousedown", onClick_Focus)
             }
@@ -55,12 +50,9 @@ export function useControl(componentRef) {
 
     const onClick_Close = useCallback(() => {
         const component = componentRef.current;
-        if (!component) {
-            console.error("something fuck in the useVisibility -> onClick_Close()")
-            return;
-        }
+        if (!component) return;
 
-        if (component.classList.contains("OPEN") || component.classList.contains("HIDE") || component.classList.length === 1) {
+        if (!component.classList.contains("CLOSE")) {
             setVisibleClass("CLOSE")
             component.removeEventListener("mousedown", onClick_Focus)
             RectSetter(componentRef)
@@ -72,17 +64,41 @@ export function useControl(componentRef) {
 
     const onClick_Minimize = useCallback(() => {
         const component = componentRef.current;
-        if (!component) {
-            console.error("something fuck in the useVisibility -> onClick_Minimize()")
-            return;
-        }
+        if (!component) return;
 
-        if (component.classList.contains("OPEN") || component.classList.length === 1) {
+        if (!component.classList.contains("HIDE")) {
             setVisibleClass("HIDE")
             component.removeEventListener("mousedown", onClick_Focus)
             RectSetter(componentRef)
         }
 
     }, [componentRef.current])
-    return {visibleClass, isMounted, onClick_Open, onClick_Close, onClick_Minimize, onClick_Focus};
+
+    // TODO: Maximize Function
+    const onClick_Maximize = useCallback(() => {
+        const component = componentRef.current;
+        if (!component) return;
+
+        if (!component.classList.contains("MAXIMIZE")) {
+            const Taskbar = document.querySelector(`.Taskbar_Container`);
+            const Taskbar_height = parseFloat(window.getComputedStyle(Taskbar).height) || 0
+            setVisibleClass("MAXIMIZE")
+
+            component.style.top = `0px`
+            component.style.left = `0px`
+            component.style.width = `${window.innerWidth}px`;
+            component.style.height = `${window.innerHeight - Taskbar_height}px`;
+        } else {
+            const {rectDimension} = RectGetter(componentRef)
+            setVisibleClass("OPEN");
+
+            component.style.top = `${rectDimension.top}px`;
+            component.style.left = `${rectDimension.left}px`;
+            component.style.width = `${rectDimension.width}px`;
+            component.style.height = `${rectDimension.height}px`;
+        }
+
+    }, [componentRef.current])
+
+    return {visibleClass, isMounted, onClick_Open, onClick_Close, onClick_Minimize, onClick_Maximize, onClick_Focus};
 }

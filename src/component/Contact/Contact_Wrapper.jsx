@@ -12,7 +12,8 @@ export default function Contact_Wrapper() {
         isMounted,
         onClick_Open,
         onClick_Close,
-        onClick_Minimize
+        onClick_Minimize,
+        onClick_Maximize
     } = useControl(appRef);
     const {componentState: appState} = useDragAndResize(appRef);
     useDraggableIconComponent(iconRef)
@@ -31,6 +32,7 @@ export default function Contact_Wrapper() {
                     visibleClass={visibleClass}
                     onClick_Close={onClick_Close}
                     onClick_Minimize={onClick_Minimize}
+                    onClick_Maximize={onClick_Maximize}
                 />
             }
         </>

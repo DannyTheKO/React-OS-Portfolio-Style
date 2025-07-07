@@ -27,7 +27,8 @@ export const Contact_Executable = forwardRef(({onClick_Open}, iconRef) => {
     )
 });
 
-export const Contact_App = forwardRef(({visibleClass, onClick_Close, onClick_Minimize}, componentRef) => {
+export const Contact_App = forwardRef(
+    ({visibleClass, onClick_Close, onClick_Minimize, onClick_Maximize}, componentRef) => {
     const Contact_Icon_Image = "./Assets/Image/Icons/Toast.png"
     const SVG_EMAIL = "./Assets/SVG/email.svg"
 
@@ -46,7 +47,7 @@ export const Contact_App = forwardRef(({visibleClass, onClick_Close, onClick_Min
                 </div>
                 <div className="Contact_Title_Action">
                     <FaWindowMinimize className="action_minimize" onClick={onClick_Minimize} alt="Minimize"/>
-                    <MdFullscreen className="action_maximize" alt="Fullscreen"/>
+                    <MdFullscreen className="action_maximize" onClick={onClick_Maximize} alt="Fullscreen"/>
                     <FiX className="action_close" onClick={onClick_Close} alt="Close"/>
                 </div>
             </div>

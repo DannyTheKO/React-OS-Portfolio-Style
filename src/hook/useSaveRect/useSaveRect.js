@@ -3,34 +3,40 @@ import {useCallback} from "react";
 export function useSaveRect() {
     // Set Rect of the component
     const RectSetter =  useCallback((componentRef) => {
-        const {rectDimension, appName} = getAppDetail(componentRef);
-        sessionStorage.setItem(appName, JSON.stringify(rectDimension))
-    }, [])
+        if (!componentRef.current) return console.log("Invalid ComponentRef")
+        if (componentRef.current.classList.contains("MAXIMIZE")) return;
 
-    // TODO: GETTER
-    const RectGetter = useCallback((componentRef) => {
-        const {rectDimension, appName} = getAppDetail(componentRef);
+        const component = componentRef.current;
+        const appName = [...component.classList]
+            .filter(className => className.endsWith("_App"))
+            .toString()
+            .trim();
+        const rectDimension = component.getBoundingClientRect();
+
+        sessionStorage.setItem(appName, JSON.stringify(rectDimension))
 
         // DEBUG
-        console.group(appName)
+        console.group(`SET: ${appName}`)
+        console.log(rectDimension)
+        console.groupEnd()
+
+    }, [])
+
+    const RectGetter = useCallback((componentRef) => {
+        const component = componentRef.current;
+        const appName = [...component.classList]
+            .filter(className => className.endsWith("_App"))
+            .toString()
+            .trim();
+        const rectDimension = JSON.parse(sessionStorage.getItem(appName))
+
+        // DEBUG
+        console.group(`GET: ${appName}`)
         console.log(rectDimension)
         console.groupEnd()
 
         return {rectDimension, appName}
     }, [])
-
-    function getAppDetail(componentRef) {
-        if (!componentRef.current) return console.log("Invalid ComponentRef")
-
-        const component = componentRef.current;
-        const rectDimension = component.getBoundingClientRect();
-        const appName = [...component.classList]
-            .filter(className => className.endsWith("_App"))
-            .toString()
-            .trim();
-
-        return {rectDimension, appName}
-    }
 
     return {RectSetter, RectGetter}
 }
