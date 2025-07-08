@@ -1,5 +1,5 @@
 import {useCallback, useState} from "react";
-import {FocusFunction} from "./FocusFunction.js";
+import {FocusFunction} from "../onFocus/FocusFunction.js";
 
 export function OpenFunction(componentRef, setIsMounted, CONTROL_STATUS_DATA, CONTROL_STATUS_OPEN) {
     const {onClick_Focus} = FocusFunction(componentRef)

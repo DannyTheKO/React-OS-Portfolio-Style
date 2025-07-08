@@ -1,5 +1,5 @@
 import {useCallback} from "react";
-import {useSaveRect} from "../useSaveRect/useSaveRect.js";
+import {useSaveRect} from "../../useSaveRect/useSaveRect.js";
 
 const CONTROL_STATE_DATA = "app-control-state";
 const CONTROL_STATE_ANIMATION = "STATE_TRANSITION";
@@ -26,15 +26,9 @@ export function MaximizeFunction(componentRef) {
         }
     }, [componentRef])
 
-    const onClick_Maximize = useCallback(() => {
+    const toggleControlState = useCallback((componentRef) => {
+        if (!componentRef.current) return console.error("Invalid Component")
         const component = componentRef.current;
-        if (!component) return;
-
-        // Add the transition class before starting changes
-        component.classList.add(CONTROL_STATE_ANIMATION);
-
-        // Add event listener before starting transition
-        component.addEventListener('transitionend', handleTransitionEnd);
 
         if (component.getAttribute(CONTROL_STATE_DATA) !== CONTROL_STATE_MAXIMIZE) {
             const Taskbar = document.querySelector(`.Taskbar_Container`);
@@ -54,14 +48,33 @@ export function MaximizeFunction(componentRef) {
             component.style.width = `${rectDimension.width}px`;
             component.style.height = `${rectDimension.height}px`;
         }
-    }, [componentRef, handleTransitionEnd]);
+    }, [componentRef])
 
     const forceControlState = useCallback((componentRef, wantedState) => {
         if (!componentRef.current) return console.error("Invalid Component")
         const component = componentRef.current
         const componentState = component.getAttribute("app-control-state")
 
-    }, [componentRef])
+        if (componentState !== wantedState) {
+            toggleControlState(componentRef)
+        }
+
+    }, [componentRef, toggleControlState])
+
+    const onClick_Maximize = useCallback(() => {
+        const component = componentRef.current;
+        if (!component) return;
+
+        // Add the transition class before starting changes
+        component.classList.add(CONTROL_STATE_ANIMATION);
+
+        // Add event listener before starting transition
+        component.addEventListener('transitionend', handleTransitionEnd);
+
+        // toggle state
+        toggleControlState(componentRef)
+
+    }, [componentRef, toggleControlState, handleTransitionEnd]);
 
     return {onClick_Maximize, forceControlState};
 }

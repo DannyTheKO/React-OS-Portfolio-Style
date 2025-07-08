@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Chores: move js files to respective location base on functionality">
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Reformat: move DraggableIcon.js custom hook into useDragAndResize.js">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/Drag/DraggableIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/Drag/DraggableIcon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/useDragAndResize.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/useDragAndResize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useWrapper/useWrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useWrapper/useWrapper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useControl/CloseFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useControl/appStatus/CloseFunction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useControl/FocusFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useControl/onFocus/FocusFunction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useControl/MaximizeFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useControl/appState/MaximizeFunction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useControl/MinimizeFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useControl/appStatus/MinimizeFunction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useControl/OpenFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useControl/appStatus/OpenFunction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useControl/useControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useControl/useControl.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,11 +129,11 @@
       <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\public\Assets\Image\Icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src\hook\useControl\appState" />
+      <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src\hook\useControl\appStatus" />
+      <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src\hook\useControl\onFocus" />
       <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src\hook\useDragAndResize\Resize" />
       <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src\hook\useDragAndResize\Drag" />
-      <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src" />
-      <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src\style" />
-      <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src\Hook\useVisibility" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm dev">
@@ -212,15 +215,7 @@
       <workItem from="1751649371998" duration="564000" />
       <workItem from="1751821349989" duration="1327000" />
       <workItem from="1751868408121" duration="11962000" />
-      <workItem from="1751956927542" duration="8639000" />
-    </task>
-    <task id="LOCAL-00007" summary="update createResizerDiv.js, now fix the resizer bug now app do have min-width and min-height base on CSS variable">
-      <option name="closed" value="true" />
-      <created>1750262188966</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1750262188966</updated>
+      <workItem from="1751956927542" duration="9757000" />
     </task>
     <task id="LOCAL-00008" summary="Change variable from elementRef to componentRef, for better consistence">
       <option name="closed" value="true" />
@@ -606,7 +601,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751964877378</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Reformat: move DraggableIcon.js custom hook into useDragAndResize.js">
+      <option name="closed" value="true" />
+      <created>1751965727418</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1751965727418</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -636,7 +639,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Draggable Icon are functional, need testing and review" />
     <MESSAGE value="Fix the resizer issue with the jump value" />
     <MESSAGE value="Fix: add more trigger for onClick_Focus function into other hook" />
     <MESSAGE value="Add RectGetter function to get the dimension and position of the component app" />
@@ -661,6 +663,7 @@
     <MESSAGE value="Chores: reformat useControl.js function to separate JS file base on functionality" />
     <MESSAGE value="Chores: reformat useDragAndResize.js function to separate JS file base on functionality and rename js files" />
     <MESSAGE value="Chores: move js files to respective location base on functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chores: move js files to respective location base on functionality" />
+    <MESSAGE value="Reformat: move DraggableIcon.js custom hook into useDragAndResize.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reformat: move DraggableIcon.js custom hook into useDragAndResize.js" />
   </component>
 </project>

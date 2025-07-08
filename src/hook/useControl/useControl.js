@@ -1,10 +1,10 @@
 import {useState, useCallback} from "react";
 import {useSaveRect} from "../useSaveRect/useSaveRect.js";
-import {FocusFunction} from "./FocusFunction.js";
-import {MaximizeFunction} from "./MaximizeFunction.js";
-import {OpenFunction} from "./OpenFunction.js";
-import {CloseFunction} from "./CloseFunction.js";
-import {MinimizeFunction} from "./MinimizeFunction.js";
+import {FocusFunction} from "./onFocus/FocusFunction.js";
+import {MaximizeFunction} from "./appState/MaximizeFunction.js";
+import {OpenFunction} from "./appStatus/OpenFunction.js";
+import {CloseFunction} from "./appStatus/CloseFunction.js";
+import {MinimizeFunction} from "./appStatus/MinimizeFunction.js";
 
 // Control Attribute
 const CONTROL_STATUS_DATA = "app-control-status";

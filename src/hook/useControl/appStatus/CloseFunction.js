@@ -1,6 +1,6 @@
 import {useCallback} from "react";
-import {useSaveRect} from "../useSaveRect/useSaveRect.js";
-import {FocusFunction} from "./FocusFunction.js";
+import {useSaveRect} from "../../useSaveRect/useSaveRect.js";
+import {FocusFunction} from "../onFocus/FocusFunction.js";
 
 export function CloseFunction(componentRef, setIsMounted, CONTROL_STATUS_DATA, CONTROL_STATUS_CLOSE) {
     const {RectSetter, RectGetter} = useSaveRect();
