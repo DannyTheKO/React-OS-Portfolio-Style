@@ -4,7 +4,6 @@ export function draggableIcon(componentRef) {
 
     useEffect(() => {
         if (!componentRef.current) return;
-
         const componentIcon = componentRef.current;
 
         // Taskbar Height

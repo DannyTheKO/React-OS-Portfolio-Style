@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Chores: reformat useControl.js function to separate JS file base on functionality">
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Chores: reformat useDragAndResize.js function to separate JS file base on functionality and rename js files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/DraggableApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/Drag/DraggableApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/DraggableIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/Drag/DraggableIcon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/ResizableApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/Resize/ResizableApp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/useDragAndResize.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/useDragAndResize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/useDraggableAppComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/DraggableApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/useDraggableIconComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/DraggableIcon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/useResizableAppComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/ResizableApp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hook/useWrapper/useWrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useWrapper/useWrapper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/animations.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/animations.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,11 +129,11 @@
       <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\public\Assets\Image\Icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src\hook\useDragAndResize\Resize" />
+      <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src\hook\useDragAndResize\Drag" />
       <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src" />
       <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src\style" />
       <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src\Hook\useVisibility" />
-      <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src\Hook\useDragAndResize" />
-      <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\public" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm dev">
@@ -214,15 +215,7 @@
       <workItem from="1751649371998" duration="564000" />
       <workItem from="1751821349989" duration="1327000" />
       <workItem from="1751868408121" duration="11962000" />
-      <workItem from="1751956927542" duration="6595000" />
-    </task>
-    <task id="LOCAL-00005" summary="move Assets into public folder">
-      <option name="closed" value="true" />
-      <created>1750187526578</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1750187526578</updated>
+      <workItem from="1751956927542" duration="7808000" />
     </task>
     <task id="LOCAL-00006" summary="App now had resizable">
       <option name="closed" value="true" />
@@ -608,7 +601,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751963339757</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Chores: reformat useDragAndResize.js function to separate JS file base on functionality and rename js files">
+      <option name="closed" value="true" />
+      <created>1751963647385</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1751963647385</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -638,7 +639,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Clean up CSS, separate Desktop.css into their separate part in style folder, update README.md" />
     <MESSAGE value="Clean up CSS, separate Desktop.css into their separate part in style folder, clean up JS custom hook and update README.md" />
     <MESSAGE value="Draggable Icon are functional, need testing and review" />
     <MESSAGE value="Fix the resizer issue with the jump value" />
@@ -663,6 +663,7 @@
     <MESSAGE value="FIX: Double-click event is not trigger after the application reopen" />
     <MESSAGE value="Chores: variable clarity and modify animation speed" />
     <MESSAGE value="Chores: reformat useControl.js function to separate JS file base on functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chores: reformat useControl.js function to separate JS file base on functionality" />
+    <MESSAGE value="Chores: reformat useDragAndResize.js function to separate JS file base on functionality and rename js files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chores: reformat useDragAndResize.js function to separate JS file base on functionality and rename js files" />
   </component>
 </project>

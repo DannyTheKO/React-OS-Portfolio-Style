@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
-import {resizableApp} from "./ResizableApp.js";
-import {draggableApp} from "./DraggableApp.js";
+import {resizableApp} from "./Resize/ResizableApp.js";
+import {draggableApp} from "./Drag/DraggableApp.js";
 
 export function useDragAndResize(componentRef) {
     const [componentName, setComponentName] = useState("")
@@ -10,9 +10,8 @@ export function useDragAndResize(componentRef) {
     useEffect(() => {
         if (!componentRef.current) return;
 
-        const classList = Array.from(componentRef.current.classList);
-        const filteredClassList = classList.filter(cls => cls !== "SHOW" && cls !== "HIDE");
-        setComponentName(filteredClassList.toString())
+        const classList = componentRef.current.classList
+        setComponentName(classList.toString())
 
     }, [componentRef.current]);
 
@@ -22,7 +21,7 @@ export function useDragAndResize(componentRef) {
         dimensions,
     }
 
-    // DEBUG
+    // // DEBUG
     // useEffect(() => {
     //     if (componentState.componentName.length === 0) return;
     //

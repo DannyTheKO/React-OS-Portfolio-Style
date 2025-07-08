@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import {useSaveRect} from "../useSaveRect/useSaveRect.js";
-import {useControl} from "../useControl/useControl.js";
+import {useSaveRect} from "../../useSaveRect/useSaveRect.js";
+import {useControl} from "../../useControl/useControl.js";
 
 export function resizableApp(componentRef) {
     const [dimensions, setDimensions] = useState({width: 0, height: 0})
