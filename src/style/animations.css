@@ -3,6 +3,10 @@
     opacity: 0;
     transform-origin: bottom left;
 
+    --transition-delay-state: 150ms;
+    --transition-delay-status: 150ms;
+
+
     /* Control Status */
     &[app-control-status="OPEN"] {
         opacity: 1;
@@ -11,9 +15,9 @@
         pointer-events: auto;
 
         transition:
-                opacity 100ms ease,
-                scale 100ms ease,
-                translate 100ms ease;
+                opacity var(--transition-delay-status) ease,
+                scale var(--transition-delay-status) ease,
+                translate var(--transition-delay-status) ease;
     }
 
     &[app-control-status="CLOSE"] {
@@ -23,9 +27,9 @@
         pointer-events: auto;
 
         transition:
-                opacity 100ms ease,
-                scale 100ms ease,
-                translate 100ms ease;
+                opacity var(--transition-delay-status) ease,
+                scale var(--transition-delay-status) ease,
+                translate var(--transition-delay-status) ease;
     }
 
     &[app-control-status="MINIMIZE"] {
@@ -35,18 +39,18 @@
         pointer-events: none;
 
         transition:
-                opacity 200ms ease,
-                scale 200ms ease,
-                translate 200ms ease ;
+                opacity var(--transition-delay-status) ease,
+                scale var(--transition-delay-status) ease,
+                translate var(--transition-delay-status) ease ;
     }
 
     /* App State */
     &.STATE_TRANSITION {
         transition:
-                width 150ms ease,
-                height 150ms ease,
-                top 150ms ease,
-                left 150ms ease;
+                width var(--transition-delay-state) ease,
+                height var(--transition-delay-state) ease,
+                top var(--transition-delay-state) ease,
+                left var(--transition-delay-state) ease;
     }
 
     &[app-control-state="MAXIMIZE"],
