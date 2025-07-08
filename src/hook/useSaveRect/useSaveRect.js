@@ -4,17 +4,11 @@ const CONTROL_DIMENSION_DATA = "app-control-dimension";
 const CONTROL_DIMENSION_MAXIMIZE = "MAXIMIZE";
 
 export function useSaveRect() {
-    // Set Rect of the component
-    const RectSetter =  useCallback((componentRef) => {
+    const RectSetter = useCallback((componentRef) => {
         if (!componentRef.current) return;
         if (componentRef.current.getAttribute(CONTROL_DIMENSION_DATA) === CONTROL_DIMENSION_MAXIMIZE) return;
 
-        const component = componentRef.current;
-        const appName = [...component.classList]
-            .filter(className => className.endsWith("_App"))
-            .toString()
-            .trim();
-        const rectDimension = component.getBoundingClientRect();
+        const {rectDimension, appName} = RectGetter(componentRef);
 
         sessionStorage.setItem(appName, JSON.stringify(rectDimension))
 
@@ -31,6 +25,15 @@ export function useSaveRect() {
         return {rectDimension, appName}
     }, [])
 
+    const RectInitialize = useCallback((componentRef) => {
+        if (!componentRef.current) return;
+        const {appName} = RectGetter(componentRef);
+        const component = componentRef.current;
+        const rectDimension = component.getBoundingClientRect();
+
+        sessionStorage.setItem(appName, JSON.stringify(rectDimension))
+    }, [])
+
     const RectLoader = useCallback((componentRef) => {
         if (!componentRef.current) return;
         const component = componentRef.current;
@@ -42,17 +45,18 @@ export function useSaveRect() {
             component.style.width = window.innerWidth + "px";
             component.style.height = window.innerHeight + "px";
         } else {
-            const appName = [...component.classList]
-                .filter(className => className.endsWith("_App"))
-                .toString()
-                .trim();
-            const rectDimension = JSON.parse(sessionStorage.getItem(appName))
+            const {rectDimension, appName} = RectGetter(componentRef);
+            if (sessionStorage.getItem(appName) === null) {
+                RectInitialize(componentRef)
+                RectLoader(componentRef)
+            }
 
             component.style.top = rectDimension.top + "px";
             component.style.left = rectDimension.left + "px";
             component.style.width = rectDimension.width + "px";
             component.style.height = rectDimension.height + "px";
         }
+
     }, [])
 
     return {RectSetter, RectGetter, RectLoader}
