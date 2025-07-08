@@ -3,6 +3,7 @@
 @import "style/reset.css";
 @import "style/application.css";
 @import "style/executable.css";
+@import "style/animations.css";
 
 :root {
     overflow: hidden;

@@ -1,0 +1,59 @@
+#Global_App_Setting {
+    /* == Transition From Open, Close, Minimize and Maximize Action == */
+    --transition-delay-status: 150ms;
+    --transition-delay-state: 200ms;
+
+    opacity: 0;
+    transform-origin: bottom left;
+
+    /* Control Status */
+    &[app-control-status="OPEN"] {
+        opacity: 1;
+        scale: 1;
+        translate: 0 0;
+        pointer-events: auto;
+
+        transition:
+                opacity var(--transition-delay-status) ease,
+                scale var(--transition-delay-status) ease,
+                translate var(--transition-delay-status) ease;
+    }
+
+    &[app-control-status="CLOSE"] {
+        opacity: 0;
+        scale: 0.2;
+        translate: 0 0;
+        pointer-events: auto;
+
+        transition:
+                opacity var(--transition-delay-status) ease,
+                scale var(--transition-delay-status) ease,
+                translate var(--transition-delay-status) ease;
+    }
+
+    &[app-control-status="MINIMIZE"] {
+        opacity: 0;
+        scale: 0.2;
+        translate: 0 100%;
+        pointer-events: none;
+
+        transition:
+                opacity var(--transition-delay-status) ease,
+                scale var(--transition-delay-status) ease,
+                translate var(--transition-delay-status) ease ;
+    }
+
+    /* App State */
+    &.STATE_TRANSITION {
+        transition:
+                width var(--transition-delay-state) ease,
+                height var(--transition-delay-state) ease,
+                top var(--transition-delay-state) ease,
+                left var(--transition-delay-state) ease;
+    }
+
+    &[app-control-state="MAXIMIZE"],
+    &[app-control-state="ORIGINAL"] {
+        pointer-events: auto;
+    }
+}

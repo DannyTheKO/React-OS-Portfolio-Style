@@ -26,15 +26,16 @@ export const Introduction_Executable = forwardRef(({onClick_Open}, iconRef) => {
     )
 });
 
-export const Introduction_App = forwardRef(({visibleClass, onClick_Close, onClick_Minimize}, componentRef) => {
+export const Introduction_App = forwardRef(
+    ({onClick_Close, onClick_Minimize, onClick_Maximize}, appRef) => {
     const ProfilePicture = "./Assets/Image/Icons/Toast.png"
 
     return (
         // Introduction Container
         <div
             id="Global_App_Setting"
-            className={`Introduction_App ${visibleClass}`}
-            ref={componentRef}
+            className={`Introduction_App`}
+            ref={appRef}
         >
 
             {/* Title */}
@@ -44,7 +45,7 @@ export const Introduction_App = forwardRef(({visibleClass, onClick_Close, onClic
                 </div>
                 <div className="Introduction_Title_Action">
                     <FaWindowMinimize className="action_minimize" onClick={onClick_Minimize} alt="Minimize"/>
-                    <MdFullscreen className="action_maximize" alt="Fullscreen"/>
+                    <MdFullscreen className="action_maximize" onClick={onClick_Maximize} alt="Fullscreen"/>
                     <FiX className="action_close" onClick={onClick_Close} alt="Close"/>
                 </div>
             </div>

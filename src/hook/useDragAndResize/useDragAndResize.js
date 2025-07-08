@@ -1,28 +1,33 @@
 import React, {useEffect, useState} from "react";
-import {useResizableAppComponent} from "./useResizableAppComponent.js";
-import {useDraggableAppComponent} from "./useDraggableAppComponent.js";
+import {resizableApp} from "./Resize/ResizableApp.js";
+import {draggableApp} from "./Drag/DraggableApp.js";
+import {draggableIcon} from "./Drag/DraggableIcon.js";
 
-export function useDragAndResize(componentRef) {
-    const [componentName, setComponentName] = useState("")
-    const {dimensions} = useResizableAppComponent(componentRef)
-    const {position} = useDraggableAppComponent(componentRef);
+export function useDragAndResize(appRef, iconRef) {
+    const [name, setName] = useState("")
+    const {dimensions} = resizableApp(appRef)
+    const {position: appPosition} = draggableApp(appRef);
+    const {position: iconPosition} = draggableIcon(iconRef);
 
     useEffect(() => {
-        if (!componentRef.current) return;
+        if (!appRef.current) return;
 
-        const classList = Array.from(componentRef.current.classList);
-        const filteredClassList = classList.filter(cls => cls !== "SHOW" && cls !== "HIDE");
-        setComponentName(filteredClassList.toString())
+        const classList = appRef.current.classList
+        setName(classList.toString())
 
-    }, [componentRef.current]);
+    }, [appRef]);
 
-    const componentState = {
-        componentName,
-        position,
+    const appState = {
+        name,
+        appPosition,
         dimensions,
     }
 
-    // DEBUG
+    const iconState = {
+        iconPosition
+    }
+
+    // // DEBUG
     // useEffect(() => {
     //     if (componentState.componentName.length === 0) return;
     //
@@ -35,5 +40,5 @@ export function useDragAndResize(componentRef) {
     //     return () => clearTimeout(timeout);
     // }, [componentState]);
 
-    return {componentState}
+    return {appState, iconState}
 }

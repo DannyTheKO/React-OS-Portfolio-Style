@@ -1,21 +1,17 @@
-import React, {memo, useRef} from 'react'
+import React from 'react'
 import {Contact_App, Contact_Executable} from './Contact_App.jsx'
-import {useVisibility} from "../../hook/useVisibility/useVisibility.js";
-import {useDragAndResize} from "../../hook/useDragAndResize/useDragAndResize.js";
-import {useDraggableIconComponent} from "../../hook/useDragAndResize/useDraggableIconComponent.js";
+import {useWrapper} from "../../hook/useWrapper/useWrapper.js";
 
 export default function Contact_Wrapper() {
-    const appRef = useRef(null)
-    const iconRef = useRef(null)
     const {
-        visibleClass,
+        appRef,
+        iconRef,
         isMounted,
         onClick_Open,
         onClick_Close,
-        onClick_Minimize
-    } = useVisibility(appRef);
-    const {componentState: appState} = useDragAndResize(appRef);
-    useDraggableIconComponent(iconRef)
+        onClick_Minimize,
+        onClick_Maximize,
+    } = useWrapper();
 
     return (
         <>
@@ -28,9 +24,9 @@ export default function Contact_Wrapper() {
             {isMounted &&
                 <Contact_App
                     ref={appRef}
-                    visibleClass={visibleClass}
                     onClick_Close={onClick_Close}
                     onClick_Minimize={onClick_Minimize}
+                    onClick_Maximize={onClick_Maximize}
                 />
             }
         </>

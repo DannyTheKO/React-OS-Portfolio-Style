@@ -4,7 +4,6 @@ import {FiX} from "react-icons/fi";
 import {FaWindowMinimize} from "react-icons/fa6";
 import {MdFullscreen} from "react-icons/md";
 import "./Contact.css"
-import {useDragAndResize} from "../../hook/useDragAndResize/useDragAndResize.js";
 
 const APPLICATION_NAME = "Contact Me"
 
@@ -27,7 +26,8 @@ export const Contact_Executable = forwardRef(({onClick_Open}, iconRef) => {
     )
 });
 
-export const Contact_App = forwardRef(({visibleClass, onClick_Close, onClick_Minimize}, componentRef) => {
+export const Contact_App = forwardRef(
+    ({onClick_Close, onClick_Minimize, onClick_Maximize}, appRef) => {
     const Contact_Icon_Image = "./Assets/Image/Icons/Toast.png"
     const SVG_EMAIL = "./Assets/SVG/email.svg"
 
@@ -35,8 +35,8 @@ export const Contact_App = forwardRef(({visibleClass, onClick_Close, onClick_Min
         // Contact Container
         <div
             id="Global_App_Setting"
-            className={`Contact_App ${visibleClass}`}
-            ref={componentRef}
+            className={`Contact_App`}
+            ref={appRef}
         >
 
             {/* Title */}
@@ -46,7 +46,7 @@ export const Contact_App = forwardRef(({visibleClass, onClick_Close, onClick_Min
                 </div>
                 <div className="Contact_Title_Action">
                     <FaWindowMinimize className="action_minimize" onClick={onClick_Minimize} alt="Minimize"/>
-                    <MdFullscreen className="action_maximize" alt="Fullscreen"/>
+                    <MdFullscreen className="action_maximize" onClick={onClick_Maximize} alt="Fullscreen"/>
                     <FiX className="action_close" onClick={onClick_Close} alt="Close"/>
                 </div>
             </div>
