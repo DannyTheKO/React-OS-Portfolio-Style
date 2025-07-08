@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Chores: reformat useControl.js function to separate JS files base on functionality">
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="When maximized, dragging will return original width and height but still bug got on `transition position`">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useControl/appState/MaximizeFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useControl/appDimension/MaximizeFunction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useControl/appStatus/CloseFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useControl/appVisibility/CloseFunction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useControl/appStatus/MinimizeFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useControl/appVisibility/MinimizeFunction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useControl/appStatus/OpenFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useControl/appVisibility/OpenFunction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useControl/useControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useControl/useControl.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/Drag/DraggableApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/Drag/DraggableApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,15 +210,7 @@
       <workItem from="1751649371998" duration="564000" />
       <workItem from="1751821349989" duration="1327000" />
       <workItem from="1751868408121" duration="11962000" />
-      <workItem from="1751956927542" duration="18545000" />
-    </task>
-    <task id="LOCAL-00009" summary="Save some work...">
-      <option name="closed" value="true" />
-      <created>1750582016891</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1750582016891</updated>
+      <workItem from="1751956927542" duration="18938000" />
     </task>
     <task id="LOCAL-00010" summary="Small update, add README.md">
       <option name="closed" value="true" />
@@ -610,7 +596,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751966875787</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="When maximized, dragging will return original width and height but still bug got on `transition position`">
+      <option name="closed" value="true" />
+      <created>1751975816178</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1751975816178</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -640,7 +634,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix: add more trigger for onClick_Focus function into other hook" />
     <MESSAGE value="Add RectGetter function to get the dimension and position of the component app" />
     <MESSAGE value="update .gitignore" />
     <MESSAGE value="Rename from useVisibility.js to useControl.js" />
@@ -665,6 +658,7 @@
     <MESSAGE value="Chores: move js files to respective location base on functionality" />
     <MESSAGE value="Reformat: move DraggableIcon.js custom hook into useDragAndResize.js" />
     <MESSAGE value="Chores: reformat useControl.js function to separate JS files base on functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chores: reformat useControl.js function to separate JS files base on functionality" />
+    <MESSAGE value="When maximized, dragging will return original width and height but still bug got on `transition position`" />
+    <option name="LAST_COMMIT_MESSAGE" value="When maximized, dragging will return original width and height but still bug got on `transition position`" />
   </component>
 </project>

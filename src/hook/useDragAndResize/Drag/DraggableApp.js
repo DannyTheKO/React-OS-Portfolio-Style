@@ -25,8 +25,6 @@ export function draggableApp(componentRef) {
         const Taskbar = document.querySelector(`.Taskbar_Container`)
         const Taskbar_height = parseFloat(window.getComputedStyle(Taskbar).height) || 0
 
-        const {rectDimension} = RectGetter(componentRef)
-
         // Initialize
         let startX, startY, startLeft, startTop;
         let viewportWidth, viewportHeight, maxTop, maxLeft;
@@ -57,6 +55,7 @@ export function draggableApp(componentRef) {
 
             // To set limit of the app position
             if (isMaximize(componentRef)) {
+                const {rectDimension} = RectGetter(componentRef)
                 maxTop = viewportHeight - (rectDimension.height + Taskbar_height + componentApp_borderWidth);
                 maxLeft = viewportWidth - (rectDimension.width + componentApp_borderWidth);
             } else {
@@ -91,6 +90,7 @@ export function draggableApp(componentRef) {
             newLeft = Math.max(0, Math.min(newLeft, maxLeft));
 
             if (isMaximize(componentRef)) {
+                const {rectDimension} = RectGetter(componentRef)
                 componentApp.style.width = `${rectDimension.width}px`
                 componentApp.style.height = `${rectDimension.height}px`
                 componentApp.style.left = `${e.clientX}px`;
