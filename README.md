@@ -23,19 +23,16 @@ If you like it, give me a **star** and feel free to copy my code.
 
 #### Controls Function
 - [X] Open Function
-   - [X] Animation
 - [X] Close Function
-   - [X] Animation
 - [X] Minimize Function
-   - [X] Animation
 - [X] Focus Function
 - [X] Maximize Function
    - [X] Remember the current width and height before maximize
    - [X] Set width and height using `window.innerWidth` and `window.innerHeight`
    - [X] Maximize Animation
    - [X] Double-click the title bar will maximize the app
-   - [ ] When `maximize`, double click the title bar to return the original width and height
-   - [ ] When `maximize`, dragging will bring back the width and height of the app and stayed with the mouse drag position
+   - [X] When `maximize`, double click the title bar to return the original width and height
+   - [X] When `maximize`, dragging will bring back the width and height of the app and stayed with the mouse drag position
 - [ ] Popup Component (this is hard...)
    - [ ] Create new window when user clicks on the image
 
