@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Fix on position but still got bug on dragging when maximized mouse position">
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="update README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useControl/appVisibility/MinimizeFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useControl/appVisibility/MinimizeFunction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,14 +213,6 @@
       <workItem from="1751868408121" duration="11962000" />
       <workItem from="1751956927542" duration="18979000" />
       <workItem from="1751986470208" duration="11164000" />
-    </task>
-    <task id="LOCAL-00011" summary="clean up code, updated README.md todo list and ideal list">
-      <option name="closed" value="true" />
-      <created>1750672316542</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1750672316542</updated>
     </task>
     <task id="LOCAL-00012" summary="more clean up code, more note on README.md and save work before the disaster :)">
       <option name="closed" value="true" />
@@ -605,7 +598,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751976160496</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="update README.md">
+      <option name="closed" value="true" />
+      <created>1751998281451</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1751998281451</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -635,7 +636,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update .gitignore" />
     <MESSAGE value="Rename from useVisibility.js to useControl.js" />
     <MESSAGE value="move css animation app to separate animations.css" />
     <MESSAGE value="temporary remove debug line in useSaveRect.js, and update useControl.js" />
@@ -646,7 +646,6 @@
     <MESSAGE value="Chores: clean up variable" />
     <MESSAGE value="FIX: App can't drag and resize when user first open the application" />
     <MESSAGE value="Chores: clean up useResizableAppComponent.js" />
-    <MESSAGE value="update README.md" />
     <MESSAGE value="Double-click the title bar will maximize the app" />
     <MESSAGE value="- Double-click the title bar will maximize the app&#10;- When `maximize`, double-click the title bar to return the original width and height" />
     <MESSAGE value="FIX: Dragging application make cursor sometime stuck at grab icon" />
@@ -660,6 +659,8 @@
     <MESSAGE value="Chores: reformat useControl.js function to separate JS files base on functionality" />
     <MESSAGE value="When maximized, dragging will return original width and height but still bug got on `transition position`" />
     <MESSAGE value="Fix on position but still got bug on dragging when maximized mouse position" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix on position but still got bug on dragging when maximized mouse position" />
+    <MESSAGE value="Merge pull request #14 Maximize Function&#10;&#10;* Add RectGetter function to get the dimension and position of the comp…&#10;&#10;* update .gitignore&#10;&#10;* Rename from useVisibility.js to useControl.js&#10;&#10;* Maximize function now complete&#10;&#10;* Merge pull request #12 change application userControl data type&#10;&#10;* update README.md&#10;&#10;* - Double-click the title bar will maximize the app&#10;&#10;* FIX: Dragging application make cursor sometime stuck at grab icon&#10;&#10;* Chores: reformat variable&#10;&#10;* FIX: Double-click event is not trigger after the application reopen&#10;&#10;* Chores: variable clarity and modify animation speed&#10;&#10;* Chores: reformat useControl.js function to separate JS file base on f…&#10;&#10;* Chores: reformat useDragAndResize.js function to separate JS file bas…&#10;&#10;* Chores: move js files to respective location base on functionality&#10;&#10;* Reformat: move DraggableIcon.js custom hook into useDragAndResize.js&#10;&#10;* Chores: reformat useControl.js function to separate JS files base on …&#10;&#10;* When maximized, dragging will return original width and height but st…&#10;&#10;* Fix on position but still got bug on dragging when maximized mouse po…&#10;&#10;* When `maximize`, dragging will bring back the width and height of the…" />
+    <MESSAGE value="update README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="update README.md" />
   </component>
 </project>
