@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {useSaveRect} from "../useSaveRect/useSaveRect.js";
 import {useControl} from "../useControl/useControl.js";
 
-export function useDraggableAppComponent(componentRef) {
+export function draggableApp(componentRef) {
     const [position, setPosition] = useState({x: 0, y: 0});
     const {onClick_Focus, onClick_Maximize} = useControl(componentRef);
     const {RectSetter, RectGetter} = useSaveRect()

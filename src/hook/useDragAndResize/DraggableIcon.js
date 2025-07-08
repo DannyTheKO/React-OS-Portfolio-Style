@@ -1,6 +1,6 @@
 import {useEffect} from "react";
 
-export function useDraggableIconComponent(componentRef) {
+export function draggableIcon(componentRef) {
 
     useEffect(() => {
         if (!componentRef.current) return;

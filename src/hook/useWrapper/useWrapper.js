@@ -2,7 +2,7 @@
 import { useRef, useCallback, useState } from 'react';
 import { useControl } from "../useControl/useControl.js";
 import { useDragAndResize } from "../useDragAndResize/useDragAndResize.js";
-import { useDraggableIconComponent } from "../useDragAndResize/useDraggableIconComponent.js";
+import { draggableIcon } from "../useDragAndResize/DraggableIcon.js";
 
 export function useWrapper() {
     const appRef = useRef(null);
@@ -22,7 +22,7 @@ export function useWrapper() {
     const { componentState } = useDragAndResize(appRef);
 
     // Get drag for Icon
-    useDraggableIconComponent(iconRef)
+    draggableIcon(iconRef)
 
     return {
         appRef,
