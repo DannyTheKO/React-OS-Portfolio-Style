@@ -109,7 +109,7 @@ export function useDraggableAppComponent(componentRef) {
 
         return () => {
             componentApp.removeEventListener('mousedown', handleMouseDown);
-            componentApp_Title.addEventListener("dblclick", onClick_Maximize);
+            componentApp_Title.removeEventListener("dblclick", onClick_Maximize);
             document.removeEventListener('mousemove', handleMouseMove);
             document.removeEventListener('mouseup', handleMouseUp);
         };
