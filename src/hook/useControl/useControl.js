@@ -1,10 +1,10 @@
 import {useState, useCallback} from "react";
 import {useSaveRect} from "../useSaveRect/useSaveRect.js";
 import {FocusFunction} from "./onFocus/FocusFunction.js";
-import {MaximizeFunction} from "./appState/MaximizeFunction.js";
-import {OpenFunction} from "./appStatus/OpenFunction.js";
-import {CloseFunction} from "./appStatus/CloseFunction.js";
-import {MinimizeFunction} from "./appStatus/MinimizeFunction.js";
+import {MaximizeFunction} from "./appDimension/MaximizeFunction.js";
+import {OpenFunction} from "./appVisibility/OpenFunction.js";
+import {CloseFunction} from "./appVisibility/CloseFunction.js";
+import {MinimizeFunction} from "./appVisibility/MinimizeFunction.js";
 
 // Control Attribute
 const CONTROL_STATUS_DATA = "app-control-status";
@@ -17,7 +17,7 @@ export function useControl(componentRef) {
 
     // Control Function
     const {onClick_Focus} = FocusFunction(componentRef);
-    const {onClick_Maximize, forceControlState} = MaximizeFunction(componentRef);
+    const {onClick_Maximize} = MaximizeFunction(componentRef);
     const {onClick_Open} = OpenFunction(componentRef, setIsMounted, CONTROL_STATUS_DATA, CONTROL_STATUS_OPEN)
     const {onClick_Close} = CloseFunction(componentRef, setIsMounted, CONTROL_STATUS_DATA, CONTROL_STATUS_CLOSE)
     const {onClick_Minimize} = MinimizeFunction(componentRef, setIsMounted, CONTROL_STATUS_DATA, CONTROL_STATUS_MINIMIZE)
