@@ -43,10 +43,10 @@
     /* App State */
     &.STATE_TRANSITION {
         transition:
-                width 200ms ease,
-                height 200ms ease,
-                top 200ms ease,
-                left 200ms ease;
+                width 150ms ease,
+                height 150ms ease,
+                top 150ms ease,
+                left 150ms ease;
     }
 
     &[app-control-state="MAXIMIZE"],
