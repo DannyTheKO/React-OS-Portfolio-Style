@@ -102,13 +102,13 @@ export function useControl(componentRef) {
 
         if (component.getAttribute("app-control-state") !== "MAXIMIZE") {
             const Taskbar = document.querySelector(`.Taskbar_Container`);
-            const Taskbar_height = parseFloat(window.getComputedStyle(Taskbar).height) || 0;
+            const Taskbar_Height = parseFloat(window.getComputedStyle(Taskbar).height) || 0;
             component.setAttribute("app-control-state", "MAXIMIZE");
 
             component.style.top = `0px`;
             component.style.left = `0px`;
             component.style.width = `${window.innerWidth}px`;
-            component.style.height = `${window.innerHeight - Taskbar_height}px`;
+            component.style.height = `${window.innerHeight - Taskbar_Height}px`;
         } else {
             const {rectDimension} = RectGetter(componentRef);
             component.setAttribute("app-control-state", "ORIGINAL");
