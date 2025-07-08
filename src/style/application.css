@@ -39,18 +39,16 @@
 
     /* == Resizer == */
     .resizer {
-        transition: 100ms ease-in-out;
+        /*background-color: greenyellow;*/
     }
 
     .resizer:hover {
         /*background-color: var(--application-border-color);*/
-        /*transition: 200ms ease-in-out;*/
         /*background-color: greenyellow;*/
     }
 
     .resizer:active {
         /*background-color: rgba(255, 0, 0, 0.8);*/
-        /*transition: 200ms ease-in-out;*/
     }
 
     /* == Default App Title == */

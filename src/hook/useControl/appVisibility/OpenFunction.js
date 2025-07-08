@@ -1,8 +1,10 @@
 import {useCallback, useState} from "react";
 import {FocusFunction} from "../onFocus/FocusFunction.js";
+import {useSaveRect} from "../../useSaveRect/useSaveRect.js";
 
 export function OpenFunction(componentRef, setIsMounted, CONTROL_STATUS_DATA, CONTROL_STATUS_OPEN) {
     const {onClick_Focus} = FocusFunction(componentRef)
+    const {RectLoader} = useSaveRect();
 
     // Force render functionality
     const [, updateState] = useState();
@@ -17,6 +19,7 @@ export function OpenFunction(componentRef, setIsMounted, CONTROL_STATUS_DATA, CO
 
             component.setAttribute(CONTROL_STATUS_DATA, CONTROL_STATUS_OPEN)
             component.addEventListener("mousedown", onClick_Focus)
+            RectLoader(componentRef);
             onClick_Focus();
             forceRender();
         }, 10); // <-- Set this to 10ms, to use the eventLoop callback queue

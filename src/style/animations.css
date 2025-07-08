@@ -1,7 +1,7 @@
 #Global_App_Setting {
     /* == Transition From Open, Close, Minimize and Maximize Action == */
-    --transition-delay-state: 150ms;
     --transition-delay-status: 150ms;
+    --transition-delay-state: 200ms;
 
     opacity: 0;
     transform-origin: bottom left;

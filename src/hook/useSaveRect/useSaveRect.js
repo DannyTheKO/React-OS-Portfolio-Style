@@ -31,5 +31,20 @@ export function useSaveRect() {
         return {rectDimension, appName}
     }, [])
 
-    return {RectSetter, RectGetter}
+    const RectLoader = useCallback((componentRef) => {
+        if (!componentRef.current) return;
+        const component = componentRef.current;
+        const appName = [...component.classList]
+            .filter(className => className.endsWith("_App"))
+            .toString()
+            .trim();
+        const rectDimension = JSON.parse(sessionStorage.getItem(appName))
+
+        component.style.top = rectDimension.top + "px";
+        component.style.left = rectDimension.left + "px";
+        component.style.width = rectDimension.width + "px";
+        component.style.height = rectDimension.height + "px";
+    }, [])
+
+    return {RectSetter, RectGetter, RectLoader}
 }
