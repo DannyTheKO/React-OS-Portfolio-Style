@@ -1,24 +1,30 @@
 import React, {useEffect, useState} from "react";
 import {resizableApp} from "./Resize/ResizableApp.js";
 import {draggableApp} from "./Drag/DraggableApp.js";
+import {draggableIcon} from "./Drag/DraggableIcon.js";
 
-export function useDragAndResize(componentRef) {
-    const [componentName, setComponentName] = useState("")
-    const {dimensions} = resizableApp(componentRef)
-    const {position} = draggableApp(componentRef);
+export function useDragAndResize(appRef, iconRef) {
+    const [name, setName] = useState("")
+    const {dimensions} = resizableApp(appRef)
+    const {position: appPosition} = draggableApp(appRef);
+    const {position: iconPosition} = draggableIcon(iconRef);
 
     useEffect(() => {
-        if (!componentRef.current) return;
+        if (!appRef.current) return;
 
-        const classList = componentRef.current.classList
-        setComponentName(classList.toString())
+        const classList = appRef.current.classList
+        setName(classList.toString())
 
-    }, [componentRef.current]);
+    }, [appRef]);
 
-    const componentState = {
-        componentName,
-        position,
+    const appState = {
+        name,
+        appPosition,
         dimensions,
+    }
+
+    const iconState = {
+        iconPosition
     }
 
     // // DEBUG
@@ -34,5 +40,5 @@ export function useDragAndResize(componentRef) {
     //     return () => clearTimeout(timeout);
     // }, [componentState]);
 
-    return {componentState}
+    return {appState, iconState}
 }

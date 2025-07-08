@@ -1,6 +1,7 @@
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 export function draggableIcon(componentRef) {
+    const [position, setPosition] = useState({x: 0, y: 0});
 
     useEffect(() => {
         if (!componentRef.current) return;
@@ -63,6 +64,10 @@ export function draggableIcon(componentRef) {
             dragging = false;
             e.target.style.cursor = "default";
 
+            // Initialize position
+            const rectPosition = componentIcon.getBoundingClientRect();
+            setPosition({x: rectPosition.left, y: rectPosition.top});
+
             document.removeEventListener("mousemove", handleMouseMove);
             document.removeEventListener("mouseup", handleMouseUp);
         }
@@ -77,4 +82,5 @@ export function draggableIcon(componentRef) {
         };
     }, [componentRef.current]);
 
+    return {position}
 }

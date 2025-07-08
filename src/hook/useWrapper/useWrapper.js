@@ -19,10 +19,7 @@ export function useWrapper() {
     } = useControl(appRef);
 
     // Get drag and resize functionality
-    const { componentState } = useDragAndResize(appRef);
-
-    // Get drag for Icon
-    draggableIcon(iconRef)
+    const {appState, iconState} = useDragAndResize(appRef, iconRef);
 
     return {
         appRef,
@@ -33,6 +30,7 @@ export function useWrapper() {
         onClick_Minimize,
         onClick_Maximize,
         onClick_Focus,
-        componentState
+        appState,
+        iconState,
     };
 }
