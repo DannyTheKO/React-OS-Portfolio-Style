@@ -5,7 +5,7 @@ import {useControl} from "../useControl/useControl.js";
 export function useDraggableAppComponent(componentRef) {
     const [position, setPosition] = useState({x: 0, y: 0});
     const {onClick_Focus, onClick_Maximize} = useControl(componentRef);
-    const {RectSetter} = useSaveRect()
+    const {RectSetter, RectGetter} = useSaveRect()
 
     useEffect(() => {
         if (!componentRef.current) return;
@@ -33,8 +33,10 @@ export function useDraggableAppComponent(componentRef) {
 
             e.preventDefault();
             e.stopPropagation();
+
+            const targetElement = e.target.closest('[class$="_Title"]');
+            targetElement.style.cursor = "default";
             dragging = true;
-            e.target.style.cursor = "default";
             onClick_Focus()
 
             const rectComponent = componentApp.getBoundingClientRect();
@@ -62,7 +64,11 @@ export function useDraggableAppComponent(componentRef) {
 
         const handleMouseMove = (e) => {
             if (!dragging) return;
-            e.target.style.cursor = "grabbing";
+
+            e.preventDefault();
+            e.preventDefault();
+
+            componentApp_Title.style.cursor = "grabbing";
 
             // Calculate new position
             let newTop = startTop + (e.clientY - startY);
@@ -79,11 +85,14 @@ export function useDraggableAppComponent(componentRef) {
 
         const handleMouseUp = (e) => {
             dragging = false;
-            e.target.style.cursor = "default";
+
+            e.preventDefault()
+            e.stopPropagation()
+            componentApp_Title.style.cursor = "default";
 
             // Initialize position
-            const rect = componentApp.getBoundingClientRect();
-            setPosition({x: rect.left, y: rect.top});
+            const {rectDimension} = RectGetter(componentRef);
+            setPosition({x: rectDimension.left, y: rectDimension.top});
 
             // Save the position of the app
             RectSetter(componentRef)
