@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="FIX: Application initialize position logic">
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/hook/useSaveRect/useSaveRect.js">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useControl/appVisibility/OpenFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useControl/appVisibility/OpenFunction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/Drag/DraggableApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/Drag/DraggableApp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,35 +93,35 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Danny/Desktop/Personal Project/HTML_CSS_JS/Landing_Page/react_os_portfolio_style/public/Assets/Image/Icons",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "npm.npm dev.executor": "Run",
-    "settings.editor.selected.configurable": "editor.preferences.inline.completion",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Danny/Desktop/Personal Project/HTML_CSS_JS/Landing_Page/react_os_portfolio_style/public/Assets/Image/Icons&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.npm dev.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.inline.completion&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory",
-      "repository"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;repository&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\public\Assets\Image\Icons" />
@@ -212,22 +215,9 @@
       <workItem from="1751868408121" duration="11962000" />
       <workItem from="1751956927542" duration="18979000" />
       <workItem from="1751986470208" duration="11164000" />
-    </task>
-    <task id="LOCAL-00014" summary="Move `visibleClass` useState out of the App, change CSS class name with animation, improve resize event area">
-      <option name="closed" value="true" />
-      <created>1750763957553</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1750763957553</updated>
-    </task>
-    <task id="LOCAL-00015" summary="format README.md">
-      <option name="closed" value="true" />
-      <created>1750764546853</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1750764546853</updated>
+      <workItem from="1752001279790" duration="111000" />
+      <workItem from="1752135613063" duration="1889000" />
+      <workItem from="1752148377201" duration="3510000" />
     </task>
     <task id="LOCAL-00016" summary="FIX: Position is wrong when both app open">
       <option name="closed" value="true" />
@@ -605,7 +595,23 @@
       <option name="project" value="LOCAL" />
       <updated>1752000840797</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="FIX: Application initialize position logic">
+      <option name="closed" value="true" />
+      <created>1752001105169</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1752001105170</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/hook/useSaveRect/useSaveRect.js">
+      <option name="closed" value="true" />
+      <created>1752001175228</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1752001175228</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -622,7 +628,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="9-maximize-function" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -635,7 +641,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="temporary remove debug line in useSaveRect.js, and update useControl.js" />
     <MESSAGE value="remove visibleClass variable from Application and fix the css selector, but still got bug from useControl.js onClick_Maximize function" />
     <MESSAGE value="update useControl.js and useSaveRect.js, fix the Maximize function" />
     <MESSAGE value="Chores: clean up useSaveRect.js debug line" />
@@ -660,6 +665,7 @@
     <MESSAGE value="update README.md" />
     <MESSAGE value="FIX: RectLoader logic and small fix on MinimizeFunction.js" />
     <MESSAGE value="FIX: Application initialize position logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIX: Application initialize position logic" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/hook/useSaveRect/useSaveRect.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/hook/useSaveRect/useSaveRect.js" />
   </component>
 </project>

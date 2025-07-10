@@ -1,4 +1,4 @@
-import {useCallback, useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import {useSaveRect} from "../../useSaveRect/useSaveRect.js";
 import {useControl} from "../../useControl/useControl.js";
 import {MaximizeFunction} from "../../useControl/appDimension/MaximizeFunction.js";
@@ -12,7 +12,7 @@ export function draggableApp(componentRef) {
 
     const {onClick_Focus, onClick_Maximize} = useControl(componentRef);
     const {RectSetter, RectGetter} = useSaveRect()
-    const {isMaximize, handleTransitionEnd} = MaximizeFunction();
+    const {isMaximize} = MaximizeFunction();
 
     const initializeDimension = (componentRef) => {
         // Get Component App
@@ -50,7 +50,10 @@ export function draggableApp(componentRef) {
 
         const handleMouseDown = (e) => {
             //Only start dragging from the title bar
-            if (!e.target.closest('[class$="_Title"]')) return;
+            if (
+                !e.target.closest('[class$="_Title"]') ||
+                e.target.closest('[class$="_Action"]')
+            ) return;
 
             e.preventDefault();
             e.stopPropagation();
@@ -131,12 +134,12 @@ export function draggableApp(componentRef) {
             e.stopPropagation()
             componentApp_Title.style.cursor = "default";
 
-            // Initialize position
-            const {rectDimension} = RectGetter(componentRef);
-            setPosition({x: rectDimension.left, y: rectDimension.top});
-
             // Save the position of the app
             RectSetter(componentRef)
+
+            // For debug
+            const {rectDimension} = RectGetter(componentRef);
+            setPosition({x: rectDimension.left, y: rectDimension.top});
 
             document.removeEventListener("mousemove", handleMouseMove);
             document.removeEventListener("mouseup", handleMouseUp);

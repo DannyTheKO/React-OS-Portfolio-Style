@@ -80,7 +80,7 @@ If you like it, give me a **star** and feel free to copy my code.
 - [ ] Sidebar menu to create note
 - [ ] Sidebar menu to delete multiple/selected notes
 
-**Left Side (Scale 3/4): Content Note**
+**Right Side (Scale 3/4): Content Note**
 - [ ] Edit content note
 - [ ] Upload picture based on location (needs more research)
 
