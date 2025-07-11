@@ -34,20 +34,18 @@ export function useSaveRect() {
     const RectLoader = useCallback((componentRef) => {
         if (!componentRef.current) return;
         const component = componentRef.current;
+        const {rectDimension} = RectGetter(componentRef);
 
-        if (componentRef.current.getAttribute(CONTROL_DIMENSION_DATA) === CONTROL_DIMENSION_MAXIMIZE) {
-
+        if (rectDimension === null) {
+            RectSetter(componentRef);
+            RectLoader(componentRef);
+        } else if (componentRef.current.getAttribute(CONTROL_DIMENSION_DATA) === CONTROL_DIMENSION_MAXIMIZE) {
+            // If detect application state maximize
             component.style.top = "0px";
             component.style.left = "0px";
             component.style.width = window.innerWidth + "px";
             component.style.height = window.innerHeight + "px";
         } else {
-            const appName = [...component.classList]
-                .filter(className => className.endsWith("_App"))
-                .toString()
-                .trim();
-            const rectDimension = JSON.parse(sessionStorage.getItem(appName))
-
             component.style.top = rectDimension.top + "px";
             component.style.left = rectDimension.left + "px";
             component.style.width = rectDimension.width + "px";

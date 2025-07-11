@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/hook/useSaveRect/useSaveRect.js">
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Rollback on `FIX: Application initialize position logic`&#10;&#10;FIX: Only Title bar can be drag not the _Action element">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hook/useControl/appVisibility/OpenFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useControl/appVisibility/OpenFunction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/Drag/DraggableApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/Drag/DraggableApp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -217,15 +215,8 @@
       <workItem from="1751986470208" duration="11164000" />
       <workItem from="1752001279790" duration="111000" />
       <workItem from="1752135613063" duration="1889000" />
-      <workItem from="1752148377201" duration="3510000" />
-    </task>
-    <task id="LOCAL-00016" summary="FIX: Position is wrong when both app open">
-      <option name="closed" value="true" />
-      <created>1750848268614</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1750848268614</updated>
+      <workItem from="1752148377201" duration="4469000" />
+      <workItem from="1752220592789" duration="416000" />
     </task>
     <task id="LOCAL-00017" summary="implement useFocus.js but still buggy, will fix it later">
       <option name="closed" value="true" />
@@ -611,7 +602,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752001175228</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Rollback on `FIX: Application initialize position logic`&#10;&#10;FIX: Only Title bar can be drag not the _Action element">
+      <option name="closed" value="true" />
+      <created>1752165073467</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1752165073467</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -641,7 +640,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="remove visibleClass variable from Application and fix the css selector, but still got bug from useControl.js onClick_Maximize function" />
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="update useControl.js and useSaveRect.js, fix the Maximize function" />
     <MESSAGE value="Chores: clean up useSaveRect.js debug line" />
     <MESSAGE value="Chores: reformat variable in _Wrapper.jsx and _App.jsx" />
@@ -666,6 +665,9 @@
     <MESSAGE value="FIX: RectLoader logic and small fix on MinimizeFunction.js" />
     <MESSAGE value="FIX: Application initialize position logic" />
     <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/hook/useSaveRect/useSaveRect.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/hook/useSaveRect/useSaveRect.js" />
+    <MESSAGE value="Rollback on `FIX: Application initialize position logic`&#10;&#10;FIX: Only Title bar can be drag not the _Action element" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rollback on `FIX: Application initialize position logic`&#10;&#10;FIX: Only Title bar can be drag not the _Action element" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
