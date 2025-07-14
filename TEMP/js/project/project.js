@@ -1,4 +1,5 @@
-import { windowElement, dragElement, btnOpenAndClose } from "../desktop.js";
+import {btnOpenAndClose, dragElement, windowElement} from "../desktop.js";
+
 //#region Initialize
 export async function initializeProject() {
     fetch("../../app/project.html")

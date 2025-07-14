@@ -4,10 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="created the frame display of the note">
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="FIX: fix the draggable jumpiness when the application not maximized, add some debug line in DraggableApp.js and reformat reset.css">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/app/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/TEMP/app/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/app/introduction.html" beforeDir="false" afterPath="$PROJECT_DIR$/TEMP/app/introduction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/app/note.html" beforeDir="false" afterPath="$PROJECT_DIR$/TEMP/app/note.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/app/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/TEMP/app/project.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/app/topbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/TEMP/app/topbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/data_storage/Note/noteId_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/TEMP/data_storage/Note/noteId_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/data_storage/Note/noteId_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/TEMP/data_storage/Note/noteId_2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/data_storage/Note/noteId_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/TEMP/data_storage/Note/noteId_3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/js/contact/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/TEMP/js/contact/contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/js/desktop.js" beforeDir="false" afterPath="$PROJECT_DIR$/TEMP/js/desktop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/js/introduction/introduction.js" beforeDir="false" afterPath="$PROJECT_DIR$/TEMP/js/introduction/introduction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/js/note/note.js" beforeDir="false" afterPath="$PROJECT_DIR$/TEMP/js/note/note.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/js/note/note_class.js" beforeDir="false" afterPath="$PROJECT_DIR$/TEMP/js/note/note_class.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/js/project/project.js" beforeDir="false" afterPath="$PROJECT_DIR$/TEMP/js/project/project.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TEMP/js/topbar/topbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/TEMP/js/topbar/topbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Contact/Contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Contact/Contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Contact/Contact_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Contact/Contact_App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Introduction/Introduction.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Introduction/Introduction.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Introduction/Introduction_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Introduction/Introduction_App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Note/Note.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Note/Note.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Note/Note_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Note/Note_App.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +36,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
-        <option value="CSS File" />
         <option value="JSX File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -59,6 +78,13 @@
         &quot;number&quot;: 12
       },
       &quot;lastSeen&quot;: 1751910073784
+    },
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOO6BKec6ev1y4&quot;,
+        &quot;number&quot;: 19
+      },
+      &quot;lastSeen&quot;: 1752479301501
     }
   ]
 }</component>
@@ -125,11 +151,11 @@
       <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\public\Assets\Image\Icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style" />
       <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src\hook\useControl\appState" />
       <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src\hook\useControl\appStatus" />
       <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src\hook\useControl\onFocus" />
       <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src\hook\useDragAndResize\Resize" />
-      <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\src\hook\useDragAndResize\Drag" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm dev">
@@ -217,8 +243,15 @@
       <workItem from="1752001279790" duration="111000" />
       <workItem from="1752135613063" duration="1889000" />
       <workItem from="1752148377201" duration="4469000" />
-      <workItem from="1752220592789" duration="8018000" />
-      <workItem from="1752475409619" duration="2462000" />
+      <workItem from="1752220592789" duration="416000" />
+    </task>
+    <task id="LOCAL-00018" summary="format/rename folder file, save work">
+      <option name="closed" value="true" />
+      <created>1751101759193</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1751101759193</updated>
     </task>
     <task id="LOCAL-00019" summary="FIX: logic calculation on z-index is wrong and group useFocus hook into useVisibility, rename ID and Class on Taskbar.jsx and Taskbar.css, update on README.md">
       <option name="closed" value="true" />
@@ -596,23 +629,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752165073467</updated>
     </task>
-    <task id="LOCAL-00066" summary="FIX: Application initialize position logic">
+    <task id="LOCAL-00066" summary="FIX: fix the draggable jumpiness when the application not maximized, add some debug line in DraggableApp.js and reformat reset.css">
       <option name="closed" value="true" />
-      <created>1752221015992</created>
+      <created>1752479236666</created>
       <option name="number" value="00066" />
       <option name="presentableId" value="LOCAL-00066" />
       <option name="project" value="LOCAL" />
-      <updated>1752221015993</updated>
+      <updated>1752479236667</updated>
     </task>
-    <task id="LOCAL-00067" summary="created the frame display of the note">
-      <option name="closed" value="true" />
-      <created>1752477909869</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1752477909869</updated>
-    </task>
-    <option name="localTasksCounter" value="68" />
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -629,7 +654,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="16-note-application" />
                       </list>
                     </value>
                   </entry>
@@ -664,11 +689,11 @@
     <MESSAGE value="Merge pull request #14 Maximize Function&#10;&#10;* Add RectGetter function to get the dimension and position of the comp…&#10;&#10;* update .gitignore&#10;&#10;* Rename from useVisibility.js to useControl.js&#10;&#10;* Maximize function now complete&#10;&#10;* Merge pull request #12 change application userControl data type&#10;&#10;* update README.md&#10;&#10;* - Double-click the title bar will maximize the app&#10;&#10;* FIX: Dragging application make cursor sometime stuck at grab icon&#10;&#10;* Chores: reformat variable&#10;&#10;* FIX: Double-click event is not trigger after the application reopen&#10;&#10;* Chores: variable clarity and modify animation speed&#10;&#10;* Chores: reformat useControl.js function to separate JS file base on f…&#10;&#10;* Chores: reformat useDragAndResize.js function to separate JS file bas…&#10;&#10;* Chores: move js files to respective location base on functionality&#10;&#10;* Reformat: move DraggableIcon.js custom hook into useDragAndResize.js&#10;&#10;* Chores: reformat useControl.js function to separate JS files base on …&#10;&#10;* When maximized, dragging will return original width and height but st…&#10;&#10;* Fix on position but still got bug on dragging when maximized mouse po…&#10;&#10;* When `maximize`, dragging will bring back the width and height of the…" />
     <MESSAGE value="update README.md" />
     <MESSAGE value="FIX: RectLoader logic and small fix on MinimizeFunction.js" />
+    <MESSAGE value="FIX: Application initialize position logic" />
     <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/hook/useSaveRect/useSaveRect.js" />
     <MESSAGE value="Rollback on `FIX: Application initialize position logic`&#10;&#10;FIX: Only Title bar can be drag not the _Action element" />
-    <MESSAGE value="FIX: Application initialize position logic" />
-    <MESSAGE value="created the frame display of the note" />
-    <option name="LAST_COMMIT_MESSAGE" value="created the frame display of the note" />
+    <MESSAGE value="FIX: fix the draggable jumpiness when the application not maximized, add some debug line in DraggableApp.js and reformat reset.css" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIX: fix the draggable jumpiness when the application not maximized, add some debug line in DraggableApp.js and reformat reset.css" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

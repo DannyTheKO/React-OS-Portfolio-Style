@@ -20,7 +20,7 @@
 </div>
 
 <script async type="module">
-    import { windowElement, dragElement, popupElement } from "../../js/desktop.js";
+    import {popupElement} from "../../js/desktop.js";
     // console.log("noteId script execute: 1");
     // console.log("=================================");
     await scriptsLoadOrder();
@@ -28,6 +28,6 @@
     async function scriptsLoadOrder() {
         let content = document.querySelector(".noteContent");
         await popupElement(content)
-    };
+    }
 
 </script>

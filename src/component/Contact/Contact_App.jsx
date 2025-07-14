@@ -1,4 +1,4 @@
-import React, {forwardRef, useRef} from "react";
+import React, {forwardRef} from "react";
 
 import {FiX} from "react-icons/fi";
 import {FaWindowMinimize} from "react-icons/fa6";
@@ -28,7 +28,7 @@ export const Contact_Executable = forwardRef(({onClick_Open}, iconRef) => {
 
 export const Contact_App = forwardRef(
     ({onClick_Close, onClick_Minimize, onClick_Maximize}, appRef) => {
-    const Contact_Icon_Image = "./Assets/Image/Icons/Toast.png"
+        const Contact_Icon_Image = "./Assets/Image/Icons/toast.png"
     const SVG_EMAIL = "./Assets/SVG/email.svg"
 
     return (

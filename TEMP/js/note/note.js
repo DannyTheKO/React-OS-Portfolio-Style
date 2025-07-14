@@ -1,5 +1,5 @@
-import { windowElement, dragElement, btnOpenAndClose } from "../desktop.js";
-import { NoteManager } from "./note_class.js";
+import {btnOpenAndClose, dragElement, windowElement} from "../desktop.js";
+import {NoteManager} from "./note_class.js";
 
 // Create noteManager instance at module level
 const noteManager = new NoteManager();

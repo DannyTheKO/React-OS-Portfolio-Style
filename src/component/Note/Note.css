@@ -31,4 +31,20 @@
 }
 
 .Note_Display {
+    display: grid !important;
+    grid-column: 3 !important;
+    grid-row: 2 !important;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--color-white-10);
+
+    .sidebar {
+        background: var(--color-yellow-1)
+    }
+
+    .content {
+        background-color: var(--color-green-1);
+    }
 }

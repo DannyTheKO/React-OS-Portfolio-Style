@@ -28,7 +28,7 @@ export const Introduction_Executable = forwardRef(({onClick_Open}, iconRef) => {
 
 export const Introduction_App = forwardRef(
     ({onClick_Close, onClick_Minimize, onClick_Maximize}, appRef) => {
-    const ProfilePicture = "./Assets/Image/Icons/Toast.png"
+        const ProfilePicture = "./Assets/Image/Icons/toast.png"
 
     return (
         // Introduction Container

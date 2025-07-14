@@ -1,4 +1,4 @@
-import { windowElement, dragElement, btnOpenAndClose } from "../desktop.js";
+import {btnOpenAndClose, dragElement, windowElement} from "../desktop.js";
 
 export async function initializeIntroduction() {
     fetch("../../app/introduction.html")

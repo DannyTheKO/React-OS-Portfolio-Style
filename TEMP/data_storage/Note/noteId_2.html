@@ -14,7 +14,7 @@
 </div>
 
 <script async type="module">
-    import { windowElement, dragElement, popupElement } from "../../js/desktop.js";
+    import {popupElement} from "../../js/desktop.js";
     // console.log("noteId: 2 script execute");
     // console.log("=================================");
     scriptsLoadOrder();
@@ -22,6 +22,6 @@
     async function scriptsLoadOrder() {
         let content = document.querySelector(".noteContent");
         await popupElement(content)
-    };
+    }
 
 </script>

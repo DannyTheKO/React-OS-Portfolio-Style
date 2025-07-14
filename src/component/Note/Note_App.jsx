@@ -48,8 +48,9 @@ export const Note_App = forwardRef(
                 </div>
 
                 {/* Display */}
-                <div className="Introduction_Display">
-
+                <div className="Note_Display">
+                    <div className="sidebar"></div>
+                    <div className="content"></div>
                 </div>
             </div>
         )
