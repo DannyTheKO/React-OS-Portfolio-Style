@@ -4,7 +4,7 @@
     --icon-accent-color: var(--color-blue-5);
 }
 
-#Global_Executable_Setting {
+.Global_Executable_Setting {
     /* Border */
     --icon-outline-size: 1px solid;
 
@@ -44,7 +44,7 @@
 
     /* Image Icon */
 
-    [class$="_ImageIcon"] {
+    [id$="_ImageIcon"] {
         display: flex;
 
         width: 48px;

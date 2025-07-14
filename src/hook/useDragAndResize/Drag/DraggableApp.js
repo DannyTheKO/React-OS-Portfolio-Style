@@ -3,6 +3,10 @@ import {useSaveRect} from "../../useSaveRect/useSaveRect.js";
 import {useControl} from "../../useControl/useControl.js";
 import {MaximizeFunction} from "../../useControl/appDimension/MaximizeFunction.js";
 
+const SELECTOR_APP_TITLE = `[class$="_Title"]`;
+const SELECTOR_APP_ACTION = `[class$="_Action"]`;
+const SELECTOR_TASKBAR_CONTAINER = `.Taskbar_Container`;
+
 const CONTROL_DIMENSION_DATA = "app-control-dimension";
 const CONTROL_DIMENSION_ANIMATION = "STATE_TRANSITION";
 const CONTROL_DIMENSION_ORIGINAL = "ORIGINAL";
@@ -17,18 +21,19 @@ export function draggableApp(componentRef) {
     const initializeDimension = (componentRef) => {
         // Get Component App
         const componentApp = componentRef.current;
-        const componentApp_Title = componentApp.querySelector(`[class$="_Title"]`)
+        const componentApp_Title = componentApp.querySelector(SELECTOR_APP_TITLE)
+
         const componentAppStyles = window.getComputedStyle(componentApp);
-        const componentAppStyles_borderWidth = parseFloat(componentAppStyles.border) * 2 || 0;
+        const componentAppStyles_border = parseFloat(componentAppStyles.borderWidth) || 0;
 
         // ComponentTaskbar Height
-        const componentTaskbar = document.querySelector(`.Taskbar_Container`)
+        const componentTaskbar = document.querySelector(SELECTOR_TASKBAR_CONTAINER)
         const componentTaskbar_Height = parseFloat(window.getComputedStyle(componentTaskbar).height) || 0
 
         return {
             componentApp,
             componentApp_Title,
-            componentAppStyles_borderWidth,
+            componentAppStyles_border,
             componentTaskbar_Height,
         }
     }
@@ -40,7 +45,7 @@ export function draggableApp(componentRef) {
         const {
             componentApp,
             componentApp_Title,
-            componentAppStyles_borderWidth,
+            componentAppStyles_border,
             componentTaskbar_Height,
         } = initializeDimension(componentRef);
 
@@ -51,14 +56,14 @@ export function draggableApp(componentRef) {
         const handleMouseDown = (e) => {
             //Only start dragging from the title bar
             if (
-                !e.target.closest('[class$="_Title"]') ||
-                e.target.closest('[class$="_Action"]')
+                !e.target.closest(SELECTOR_APP_TITLE) ||
+                e.target.closest(SELECTOR_APP_ACTION)
             ) return;
 
             e.preventDefault();
             e.stopPropagation();
 
-            const targetElement = e.target.closest('[class$="_Title"]');
+            const targetElement = e.target.closest(SELECTOR_APP_TITLE);
             targetElement.style.cursor = "default";
             dragging = true;
             onClick_Focus()
@@ -71,25 +76,23 @@ export function draggableApp(componentRef) {
             viewportWidth = window.innerWidth;
             viewportHeight = window.innerHeight;
 
+            let rectComponent_Title = componentApp_Title.getBoundingClientRect();
+            let {rectDimension} = RectGetter(componentRef)
+
             // To set limit of the app position
             if (isMaximize(componentRef)) {
-                let rectComponent_Title = componentApp_Title.getBoundingClientRect();
-                let {rectDimension} = RectGetter(componentRef)
-
                 startLeft = e.clientX - (rectDimension.width / 2);
                 startTop = e.clientY - (rectComponent_Title.top + rectComponent_Title.height) / 2;
 
-                maxTop = viewportHeight - (rectDimension.height + componentAppStyles_borderWidth + componentTaskbar_Height);
-                maxLeft = viewportWidth - (rectDimension.width + componentAppStyles_borderWidth);
+                maxLeft = viewportWidth - (rectDimension.width + componentAppStyles_border * 2);
             } else {
-                let rectComponent = componentApp.getBoundingClientRect();
+                startLeft = rectComponent_Title.left;
+                startTop = rectComponent_Title.top;
 
-                startLeft = rectComponent.left;
-                startTop = rectComponent.top;
-
-                maxTop = viewportHeight - (rectComponent.height + componentAppStyles_borderWidth + componentTaskbar_Height);
-                maxLeft = viewportWidth - (rectComponent.width + componentAppStyles_borderWidth);
+                maxLeft = viewportWidth - (rectComponent_Title.width + componentAppStyles_border * 2);
             }
+
+            maxTop = viewportHeight - (rectComponent_Title.height + componentAppStyles_border + componentTaskbar_Height);
 
             // console.group("Mouse Down Action Log")
             // console.log(`Is Maximize?: ${isMaximize(componentRef)}`);

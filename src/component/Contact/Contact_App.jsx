@@ -13,12 +13,12 @@ export const Contact_Executable = forwardRef(({onClick_Open}, iconRef) => {
     return (
         // Contact Executable
         <div
-            id="Global_Executable_Setting"
-            className="Contact_Executable"
+            id="Contact_Executable"
+            className="Global_Executable_Setting"
             ref={iconRef}
             onDoubleClick={onClick_Open}
         >
-            <div className="Contact_ImageIcon">
+            <div id="Contact_ImageIcon">
                 <img src={Contact_Icon_Image} alt="ContactIcon"/>
             </div>
             <p>{APPLICATION_NAME}</p>
@@ -34,8 +34,8 @@ export const Contact_App = forwardRef(
     return (
         // Contact Container
         <div
-            id="Global_App_Setting"
-            className={`Contact_App`}
+            id="Contact_App"
+            className="Global_App_Setting"
             ref={appRef}
         >
 

@@ -1,8 +1,8 @@
 @import "../../Desktop.css";
 /* == Custom Override Setting ==*/
-#Global_Executable_Setting {
+.Global_Executable_Setting {
 
-    &.Introduction_Executable {
+    &#Introduction_Executable {
         /* Introduction Icon Position */
         position: absolute;
         top: 25px;
@@ -10,12 +10,12 @@
     }
 }
 
-#Global_App_Setting {
+.Global_App_Setting {
     /* Introduction App Font */
     color: white;
     font-family: var(--font-family-Consolas), sans-serif;
 
-    &.Introduction_App {
+    &#Introduction_App {
         /* == Introduction Setting == */
         /* Introduction App Display Position  */
         position: absolute;

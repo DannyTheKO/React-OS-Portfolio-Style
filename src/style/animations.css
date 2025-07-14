@@ -1,4 +1,4 @@
-#Global_App_Setting {
+.Global_App_Setting {
     /* == Transition From Open, Close, Minimize and Maximize Action == */
     --transition-delay-status: 150ms;
     --transition-delay-state: 200ms;

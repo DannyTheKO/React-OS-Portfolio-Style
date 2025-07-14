@@ -1,5 +1,8 @@
 import {useEffect, useState} from "react";
 
+const SELECTOR_ICON_EXECUTABLE = `[id$="_Executable"]`;
+const SELECTOR_TASKBAR_CONTAINER = `.Taskbar_Container`;
+
 export function draggableIcon(componentRef) {
     const [position, setPosition] = useState({x: 0, y: 0});
 
@@ -8,7 +11,7 @@ export function draggableIcon(componentRef) {
         const componentIcon = componentRef.current;
 
         // Taskbar Height
-        const Taskbar = document.querySelector(`.Taskbar_Container`)
+        const Taskbar = document.querySelector(SELECTOR_TASKBAR_CONTAINER)
         const Taskbar_height = parseFloat(window.getComputedStyle(Taskbar).height) || 0
 
         // Initialize
@@ -17,7 +20,7 @@ export function draggableIcon(componentRef) {
         let dragging = false;
 
         const handleMouseDown = (e) => {
-            if (!e.target.parentElement.closest(`[class$="_Executable"]`)) return;
+            if (!e.target.parentElement.closest(SELECTOR_ICON_EXECUTABLE)) return;
 
             e.preventDefault();
             dragging = true;

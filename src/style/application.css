@@ -6,7 +6,7 @@
     --application-accent-hover-color: var(--color-blue-1);
 }
 
-#Global_App_Setting {
+.Global_App_Setting {
     /* Border */
     --application-border-size: 4px solid;
     border: var(--application-border-size);

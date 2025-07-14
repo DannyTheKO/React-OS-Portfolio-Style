@@ -1,8 +1,8 @@
 @import "../../Desktop.css";
 /* == Custom Override Setting ==*/
-#Global_Executable_Setting {
+.Global_Executable_Setting {
 
-    &.Note_Executable {
+    &#Note_Executable {
         /* Note Icon Position */
         position: absolute;
         top: 275px;
@@ -10,12 +10,12 @@
     }
 }
 
-#Global_App_Setting {
+.Global_App_Setting {
     /* Note App Font */
     color: white;
     font-family: var(--font-family-Consolas), sans-serif;
 
-    &.Note_App {
+    &#Note_App {
         /* == Note Setting == */
         /* Note App Display Position  */
         position: absolute;

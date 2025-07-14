@@ -13,12 +13,12 @@ export const Introduction_Executable = forwardRef(({onClick_Open}, iconRef) => {
     return (
         // Introduction Executable
         <div
-            id="Global_Executable_Setting"
-            className="Introduction_Executable"
+            id="Introduction_Executable"
+            className="Global_Executable_Setting"
             ref={iconRef}
             onDoubleClick={onClick_Open}
         >
-            <div className="Introduction_ImageIcon">
+            <div id="Introduction_ImageIcon">
                 <img src={Introduction_Icon_Image} alt="Introduction Icon"/>
             </div>
             <p>{APPLICATION_NAME}</p>
@@ -33,8 +33,8 @@ export const Introduction_App = forwardRef(
     return (
         // Introduction Container
         <div
-            id="Global_App_Setting"
-            className={`Introduction_App`}
+            id="Introduction_App"
+            className="Global_App_Setting"
             ref={appRef}
         >
 

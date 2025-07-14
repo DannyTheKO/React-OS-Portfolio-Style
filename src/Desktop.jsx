@@ -12,7 +12,7 @@ export default function Desktop() {
     // })
 
     return (
-        <div className="Desktop-Container">
+        <div id="Desktop_Container">
             <Taskbar/>
 
             <Introduction_Wrapper />

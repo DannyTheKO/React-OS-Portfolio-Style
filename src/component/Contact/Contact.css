@@ -1,8 +1,8 @@
 @import "../../Desktop.css";
 /* == Custom Override Setting ==*/
-#Global_Executable_Setting {
+.Global_Executable_Setting {
 
-    &.Contact_Executable {
+    &#Contact_Executable {
         /* Contact Icon Position */
         position: absolute;
         top: 150px;
@@ -10,12 +10,12 @@
     }
 }
 
-#Global_App_Setting {
+.Global_App_Setting {
     /* Contact App Font */
     color: white;
     font-family: var(--font-family-Consolas), sans-serif;
 
-    &.Contact_App {
+    &#Contact_App {
         /* == Contact Setting == */
         /* Contact App Display Position  */
         position: absolute;

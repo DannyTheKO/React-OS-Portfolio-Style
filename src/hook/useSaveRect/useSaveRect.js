@@ -10,10 +10,7 @@ export function useSaveRect() {
         if (componentRef.current.getAttribute(CONTROL_DIMENSION_DATA) === CONTROL_DIMENSION_MAXIMIZE) return;
 
         const component = componentRef.current;
-        const appName = [...component.classList]
-            .filter(className => className.endsWith("_App"))
-            .toString()
-            .trim();
+        const appName = component.id.toString()
         const rectDimension = component.getBoundingClientRect();
 
         sessionStorage.setItem(appName, JSON.stringify(rectDimension))
@@ -22,10 +19,7 @@ export function useSaveRect() {
 
     const RectGetter = useCallback((componentRef) => {
         const component = componentRef.current;
-        const appName = [...component.classList]
-            .filter(className => className.endsWith("_App"))
-            .toString()
-            .trim();
+        const appName = component.id.toString()
         const rectDimension = JSON.parse(sessionStorage.getItem(appName))
 
         return {rectDimension, appName}

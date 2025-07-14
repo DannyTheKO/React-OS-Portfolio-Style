@@ -1,8 +1,7 @@
 // Create a new file: src/hook/useWrapper/useWrapper.js
-import { useRef, useCallback, useState } from 'react';
-import { useControl } from "../useControl/useControl.js";
-import { useDragAndResize } from "../useDragAndResize/useDragAndResize.js";
-import { draggableIcon } from "../useDragAndResize/Drag/DraggableIcon.js";
+import {useRef} from 'react';
+import {useControl} from "../useControl/useControl.js";
+import {useDragAndResize} from "../useDragAndResize/useDragAndResize.js";
 
 export function useWrapper() {
     const appRef = useRef(null);

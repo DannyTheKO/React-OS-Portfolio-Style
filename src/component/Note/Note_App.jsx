@@ -13,12 +13,12 @@ export const Note_Executable = forwardRef(({onClick_Open}, iconRef) => {
     return (
         // Note Executable
         <div
-            id="Global_Executable_Setting"
-            className="Note_Executable"
+            id="Note_Executable"
+            className="Global_Executable_Setting"
             ref={iconRef}
             onDoubleClick={onClick_Open}
         >
-            <div className="Note_ImageIcon">
+            <div id="Note_ImageIcon">
                 <img src={Note_Icon_Image} alt="Note Icon"/>
             </div>
             <p>{APPLICATION_NAME}</p>
@@ -31,8 +31,8 @@ export const Note_App = forwardRef(
 
         return (
             <div
-                id="Global_App_Setting"
-                className={`Note_App`}
+                id="Note_App"
+                className="Global_App_Setting"
                 ref={appRef}
             >
                 {/* Title */}
