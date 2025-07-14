@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="FIX: reformat to appropriate on id and classes to correct the selector on all apps, the limit application base on state, small tweak on border limit">
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="FIX: jumping value position when grab (again...)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/Drag/DraggableApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/Drag/DraggableApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Contact/Contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Contact/Contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Introduction/Introduction.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Introduction/Introduction.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Note/Note.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Note/Note.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,14 +226,6 @@
       <workItem from="1752135613063" duration="1889000" />
       <workItem from="1752148377201" duration="4469000" />
       <workItem from="1752220592789" duration="416000" />
-    </task>
-    <task id="LOCAL-00020" summary="FIX: Resize div are in wrong position when reopen the app, update README.md">
-      <option name="closed" value="true" />
-      <created>1751109917928</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1751109917928</updated>
     </task>
     <task id="LOCAL-00021" summary="update .gitignore">
       <option name="closed" value="true" />
@@ -617,7 +611,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752487200784</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="FIX: jumping value position when grab (again...)">
+      <option name="closed" value="true" />
+      <created>1752487479015</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1752487479015</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -648,7 +650,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="Chores: clean up variable" />
     <MESSAGE value="FIX: App can't drag and resize when user first open the application" />
     <MESSAGE value="Chores: clean up useResizableAppComponent.js" />
     <MESSAGE value="Double-click the title bar will maximize the app" />
@@ -673,7 +674,8 @@
     <MESSAGE value="FIX: fix the draggable jumpiness when the application not maximized, add some debug line in DraggableApp.js and reformat reset.css" />
     <MESSAGE value="move file and save work" />
     <MESSAGE value="FIX: reformat to appropriate on id and classes to correct the selector on all apps, the limit application base on state, small tweak on border limit" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIX: reformat to appropriate on id and classes to correct the selector on all apps, the limit application base on state, small tweak on border limit" />
+    <MESSAGE value="FIX: jumping value position when grab (again...)" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIX: jumping value position when grab (again...)" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
