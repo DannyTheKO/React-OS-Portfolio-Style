@@ -19,7 +19,7 @@ export const Introduction_Executable = forwardRef(({onClick_Open}, iconRef) => {
             onDoubleClick={onClick_Open}
         >
             <div className="Introduction_ImageIcon">
-                <img src={Introduction_Icon_Image} alt="introductionIcon"/>
+                <img src={Introduction_Icon_Image} alt="Introduction Icon"/>
             </div>
             <p>{APPLICATION_NAME}</p>
         </div>

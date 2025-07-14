@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="Rollback on `FIX: Application initialize position logic`&#10;&#10;FIX: Only Title bar can be drag not the _Action element">
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="FIX: Application initialize position logic">
+      <change afterPath="$PROJECT_DIR$/src/component/Note/Note.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Note/Note_App.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Note/Note_Wrapper.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useControl/appVisibility/OpenFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useControl/appVisibility/OpenFunction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Image/Icons/Hewwo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Image/Icons/hewwo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Image/Icons/Mexicano.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Image/Icons/mexicano.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Assets/Image/Icons/Toast.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Image/Icons/toast.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Desktop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Desktop.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Introduction/Introduction_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Introduction/Introduction_App.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +23,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JSX File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="JSX File" />
       </list>
     </option>
   </component>
@@ -27,7 +33,7 @@
     <branch-grouping />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="10-change-application-usecontrol-data-type" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -91,35 +97,35 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Danny/Desktop/Personal Project/HTML_CSS_JS/Landing_Page/react_os_portfolio_style/public/Assets/Image/Icons&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.npm dev.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.inline.completion&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "16-note-application",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Danny/Desktop/Personal Project/HTML_CSS_JS/Landing_Page/react_os_portfolio_style/public/Assets/Image/Icons",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "npm.npm dev.executor": "Run",
+    "settings.editor.selected.configurable": "editor.preferences.inline.completion",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;,
-      &quot;repository&quot;
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory",
+      "repository"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Danny\Desktop\Personal Project\HTML_CSS_JS\Landing_Page\react_os_portfolio_style\public\Assets\Image\Icons" />
@@ -155,6 +161,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.preview" />
         <item itemvalue="npm.preview" />
         <item itemvalue="npm.preview" />
         <item itemvalue="npm.preview" />
@@ -216,15 +223,8 @@
       <workItem from="1752001279790" duration="111000" />
       <workItem from="1752135613063" duration="1889000" />
       <workItem from="1752148377201" duration="4469000" />
-      <workItem from="1752220592789" duration="416000" />
-    </task>
-    <task id="LOCAL-00017" summary="implement useFocus.js but still buggy, will fix it later">
-      <option name="closed" value="true" />
-      <created>1750850436034</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1750850436034</updated>
+      <workItem from="1752220592789" duration="8018000" />
+      <workItem from="1752475409619" duration="2326000" />
     </task>
     <task id="LOCAL-00018" summary="format/rename folder file, save work">
       <option name="closed" value="true" />
@@ -610,7 +610,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752165073467</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="FIX: Application initialize position logic">
+      <option name="closed" value="true" />
+      <created>1752221015992</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1752221015993</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,10 +671,10 @@
     <MESSAGE value="Merge pull request #14 Maximize Function&#10;&#10;* Add RectGetter function to get the dimension and position of the comp…&#10;&#10;* update .gitignore&#10;&#10;* Rename from useVisibility.js to useControl.js&#10;&#10;* Maximize function now complete&#10;&#10;* Merge pull request #12 change application userControl data type&#10;&#10;* update README.md&#10;&#10;* - Double-click the title bar will maximize the app&#10;&#10;* FIX: Dragging application make cursor sometime stuck at grab icon&#10;&#10;* Chores: reformat variable&#10;&#10;* FIX: Double-click event is not trigger after the application reopen&#10;&#10;* Chores: variable clarity and modify animation speed&#10;&#10;* Chores: reformat useControl.js function to separate JS file base on f…&#10;&#10;* Chores: reformat useDragAndResize.js function to separate JS file bas…&#10;&#10;* Chores: move js files to respective location base on functionality&#10;&#10;* Reformat: move DraggableIcon.js custom hook into useDragAndResize.js&#10;&#10;* Chores: reformat useControl.js function to separate JS files base on …&#10;&#10;* When maximized, dragging will return original width and height but st…&#10;&#10;* Fix on position but still got bug on dragging when maximized mouse po…&#10;&#10;* When `maximize`, dragging will bring back the width and height of the…" />
     <MESSAGE value="update README.md" />
     <MESSAGE value="FIX: RectLoader logic and small fix on MinimizeFunction.js" />
-    <MESSAGE value="FIX: Application initialize position logic" />
     <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/hook/useSaveRect/useSaveRect.js" />
     <MESSAGE value="Rollback on `FIX: Application initialize position logic`&#10;&#10;FIX: Only Title bar can be drag not the _Action element" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rollback on `FIX: Application initialize position logic`&#10;&#10;FIX: Only Title bar can be drag not the _Action element" />
+    <MESSAGE value="FIX: Application initialize position logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIX: Application initialize position logic" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
