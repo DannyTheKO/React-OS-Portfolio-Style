@@ -73,25 +73,29 @@ export function draggableApp(componentRef) {
 
             // To set limit of the app position
             if (isMaximize(componentRef)) {
-                let rectComponentTitle = componentApp_Title.getBoundingClientRect();
+                let rectComponent_Title = componentApp_Title.getBoundingClientRect();
                 let {rectDimension} = RectGetter(componentRef)
 
-                // Get current componentApp position
                 startLeft = e.clientX - (rectDimension.width / 2);
-                startTop = e.clientY - (rectComponentTitle.top + rectComponentTitle.height) / 2;
+                startTop = e.clientY - (rectComponent_Title.top + rectComponent_Title.height) / 2;
 
                 maxTop = viewportHeight - (rectDimension.height + componentAppStyles_borderWidth + componentTaskbar_Height);
                 maxLeft = viewportWidth - (rectDimension.width + componentAppStyles_borderWidth);
             } else {
-                let rectComponentTitle = componentApp_Title.getBoundingClientRect();
+                let rectComponent = componentApp.getBoundingClientRect();
 
-                // Get current componentApp position
-                startLeft = rectComponentTitle.left;
-                startTop = rectComponentTitle.top;
+                startLeft = rectComponent.left;
+                startTop = rectComponent.top;
 
-                maxTop = viewportHeight - (rectComponentTitle.height + componentAppStyles_borderWidth + componentTaskbar_Height);
-                maxLeft = viewportWidth - (rectComponentTitle.width + componentAppStyles_borderWidth);
+                maxTop = viewportHeight - (rectComponent.height + componentAppStyles_borderWidth + componentTaskbar_Height);
+                maxLeft = viewportWidth - (rectComponent.width + componentAppStyles_borderWidth);
             }
+
+            // console.group("Mouse Down Action Log")
+            // console.log(`Is Maximize?: ${isMaximize(componentRef)}`);
+            // console.log(`startLeft: ${startLeft}, startTop: ${startTop}`);
+            // console.log(`maxLeft: ${maxLeft}, maxTop: ${maxTop}`);
+            // console.groupEnd()
 
             document.addEventListener("mousemove", handleMouseMove);
             document.addEventListener("mouseup", handleMouseUp);
@@ -104,12 +108,12 @@ export function draggableApp(componentRef) {
             componentApp_Title.style.cursor = "grabbing";
 
             // Calculate new position
-            let newTop = startTop + (e.clientY - startY);
             let newLeft = startLeft + (e.clientX - startX);
+            let newTop = startTop + (e.clientY - startY);
 
             // Update componentApp position
-            newTop = Math.max(0, Math.min(newTop, maxTop));
             newLeft = Math.max(0, Math.min(newLeft, maxLeft));
+            newTop = Math.max(0, Math.min(newTop, maxTop));
 
             if (isMaximize(componentRef)) {
                 componentApp.classList.remove(CONTROL_DIMENSION_ANIMATION);
@@ -125,6 +129,11 @@ export function draggableApp(componentRef) {
                 componentApp.style.left = `${newLeft}px`;
                 componentApp.style.top = `${newTop}px`;
             }
+
+            // console.group("Mouse Move Action Log")
+            // console.log(`Is Maximize?: ${isMaximize(componentRef)}`);
+            // console.log(`newLeft: ${newLeft}, newTop: ${newTop}`);
+            // console.groupEnd()
         }
 
         const handleMouseUp = (e) => {
