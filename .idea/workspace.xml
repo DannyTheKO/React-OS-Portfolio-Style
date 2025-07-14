@@ -4,23 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="move file and save work">
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="FIX: reformat to appropriate on id and classes to correct the selector on all apps, the limit application base on state, small tweak on border limit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Desktop.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Desktop.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Desktop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Desktop.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Contact/Contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Contact/Contact.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Contact/Contact_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Contact/Contact_App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Introduction/Introduction.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Introduction/Introduction.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Introduction/Introduction_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Introduction/Introduction_App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Note/Note.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Note/Note.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Note/Note_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Note/Note_App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/Drag/DraggableApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/Drag/DraggableApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useDragAndResize/Drag/DraggableIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useDragAndResize/Drag/DraggableIcon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useSaveRect/useSaveRect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hook/useWrapper/useWrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useWrapper/useWrapper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/animations.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/animations.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/application.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/executable.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/executable.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,14 +224,6 @@
       <workItem from="1752135613063" duration="1889000" />
       <workItem from="1752148377201" duration="4469000" />
       <workItem from="1752220592789" duration="416000" />
-    </task>
-    <task id="LOCAL-00019" summary="FIX: logic calculation on z-index is wrong and group useFocus hook into useVisibility, rename ID and Class on Taskbar.jsx and Taskbar.css, update on README.md">
-      <option name="closed" value="true" />
-      <created>1751105644492</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1751105644492</updated>
     </task>
     <task id="LOCAL-00020" summary="FIX: Resize div are in wrong position when reopen the app, update README.md">
       <option name="closed" value="true" />
@@ -631,7 +609,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752483361823</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="FIX: reformat to appropriate on id and classes to correct the selector on all apps, the limit application base on state, small tweak on border limit">
+      <option name="closed" value="true" />
+      <created>1752487200784</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1752487200784</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -662,7 +648,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="Chores: reformat variable in _Wrapper.jsx and _App.jsx" />
     <MESSAGE value="Chores: clean up variable" />
     <MESSAGE value="FIX: App can't drag and resize when user first open the application" />
     <MESSAGE value="Chores: clean up useResizableAppComponent.js" />
@@ -687,7 +672,8 @@
     <MESSAGE value="Rollback on `FIX: Application initialize position logic`&#10;&#10;FIX: Only Title bar can be drag not the _Action element" />
     <MESSAGE value="FIX: fix the draggable jumpiness when the application not maximized, add some debug line in DraggableApp.js and reformat reset.css" />
     <MESSAGE value="move file and save work" />
-    <option name="LAST_COMMIT_MESSAGE" value="move file and save work" />
+    <MESSAGE value="FIX: reformat to appropriate on id and classes to correct the selector on all apps, the limit application base on state, small tweak on border limit" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIX: reformat to appropriate on id and classes to correct the selector on all apps, the limit application base on state, small tweak on border limit" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

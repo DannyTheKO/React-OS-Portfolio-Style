@@ -76,18 +76,18 @@ export function draggableApp(componentRef) {
             viewportWidth = window.innerWidth;
             viewportHeight = window.innerHeight;
 
+            let {rectDimension: rectComponent} = RectGetter(componentRef)
             let rectComponent_Title = componentApp_Title.getBoundingClientRect();
-            let {rectDimension} = RectGetter(componentRef)
 
             // To set limit of the app position
             if (isMaximize(componentRef)) {
-                startLeft = e.clientX - (rectDimension.width / 2);
+                startLeft = e.clientX - (rectComponent.width / 2);
                 startTop = e.clientY - (rectComponent_Title.top + rectComponent_Title.height) / 2;
 
-                maxLeft = viewportWidth - (rectDimension.width + componentAppStyles_border * 2);
+                maxLeft = viewportWidth - (rectComponent.width + componentAppStyles_border * 2);
             } else {
-                startLeft = rectComponent_Title.left;
-                startTop = rectComponent_Title.top;
+                startLeft = rectComponent.left;
+                startTop = rectComponent.top;
 
                 maxLeft = viewportWidth - (rectComponent_Title.width + componentAppStyles_border * 2);
             }
