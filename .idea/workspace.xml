@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="FIX: Application initialize position logic">
-      <change afterPath="$PROJECT_DIR$/src/component/Note/Note.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/Note/Note_App.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/Note/Note_Wrapper.jsx" afterDir="false" />
+    <list default="true" id="d422f079-c637-4b48-9683-1960030fb594" name="Changes" comment="created the frame display of the note">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Image/Icons/Hewwo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Image/Icons/hewwo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Image/Icons/Mexicano.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Image/Icons/mexicano.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Assets/Image/Icons/Toast.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/Assets/Image/Icons/toast.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Desktop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Desktop.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Introduction/Introduction_App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Introduction/Introduction_App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Introduction/Introduction.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Introduction/Introduction.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Note/Note.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Note/Note.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,15 +218,7 @@
       <workItem from="1752135613063" duration="1889000" />
       <workItem from="1752148377201" duration="4469000" />
       <workItem from="1752220592789" duration="8018000" />
-      <workItem from="1752475409619" duration="2326000" />
-    </task>
-    <task id="LOCAL-00018" summary="format/rename folder file, save work">
-      <option name="closed" value="true" />
-      <created>1751101759193</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1751101759193</updated>
+      <workItem from="1752475409619" duration="2462000" />
     </task>
     <task id="LOCAL-00019" summary="FIX: logic calculation on z-index is wrong and group useFocus hook into useVisibility, rename ID and Class on Taskbar.jsx and Taskbar.css, update on README.md">
       <option name="closed" value="true" />
@@ -618,7 +604,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752221015993</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="created the frame display of the note">
+      <option name="closed" value="true" />
+      <created>1752477909869</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1752477909869</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -649,7 +643,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="update useControl.js and useSaveRect.js, fix the Maximize function" />
     <MESSAGE value="Chores: clean up useSaveRect.js debug line" />
     <MESSAGE value="Chores: reformat variable in _Wrapper.jsx and _App.jsx" />
     <MESSAGE value="Chores: clean up variable" />
@@ -674,7 +667,8 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/hook/useSaveRect/useSaveRect.js" />
     <MESSAGE value="Rollback on `FIX: Application initialize position logic`&#10;&#10;FIX: Only Title bar can be drag not the _Action element" />
     <MESSAGE value="FIX: Application initialize position logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIX: Application initialize position logic" />
+    <MESSAGE value="created the frame display of the note" />
+    <option name="LAST_COMMIT_MESSAGE" value="created the frame display of the note" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

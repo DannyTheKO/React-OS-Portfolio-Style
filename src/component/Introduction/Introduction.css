@@ -31,6 +31,9 @@
 }
 
 /* == Introduction Context Style == */
+.Introduction_Display {
+}
+
 .wrapper_pfp {
     display: flex;
     flex-direction: column;
