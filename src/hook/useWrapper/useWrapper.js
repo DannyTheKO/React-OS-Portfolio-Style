@@ -5,7 +5,7 @@ import {useDragAndResize} from "../useDragAndResize/useDragAndResize.js";
 
 export function useWrapper() {
     const appRef = useRef(null);
-    const iconRef = useRef(null)
+    const iconRef = useRef(null);
 
     // Get all control functionality
     const {

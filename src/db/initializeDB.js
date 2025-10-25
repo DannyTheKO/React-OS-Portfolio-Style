@@ -19,6 +19,7 @@ export default function initializeDB() {
         const db = event.target.result;
         console.log(db)
 
-        const objectStore = db.createObjectStore("");
+        // Name of the database table
+        db.createObjectStore("Test");
     }
 }

@@ -30,12 +30,12 @@ export function useDragAndResize(appRef, iconRef) {
     // // DEBUG
     // useEffect(() => {
     //     if (componentState.componentName.length === 0) return;
-    //
+    
     //     // for more accurate log
     //     const timeout = setTimeout(() => {
     //         console.log("Component State Update:", componentState);
     //     }, 100);
-    //
+    
     //     // Cleanup the timeout if the componentState changes quickly
     //     return () => clearTimeout(timeout);
     // }, [componentState]);

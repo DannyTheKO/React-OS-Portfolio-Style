@@ -31,10 +31,11 @@ export function useSaveRect() {
         const {rectDimension} = RectGetter(componentRef);
 
         if (rectDimension === null) {
+            // If there are no value in sessionStorage
             RectSetter(componentRef);
             RectLoader(componentRef);
         } else if (componentRef.current.getAttribute(CONTROL_DIMENSION_DATA) === CONTROL_DIMENSION_MAXIMIZE) {
-            // If detect application state maximize
+            // If detect application state is "Maximize"
             component.style.top = "0px";
             component.style.left = "0px";
             component.style.width = window.innerWidth + "px";

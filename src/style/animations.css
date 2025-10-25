@@ -1,10 +1,9 @@
 .Global_App_Setting {
     /* == Transition From Open, Close, Minimize and Maximize Action == */
-    --transition-delay-status: 150ms;
-    --transition-delay-state: 200ms;
+    --transition-time-control-status: 150ms;
+    --transition-time-state: 150ms;
 
     opacity: 0;
-    transform-origin: bottom left;
 
     /* Control Status */
     &[app-control-status="OPEN"] {
@@ -13,10 +12,11 @@
         translate: 0 0;
         pointer-events: auto;
 
+        transform-origin: bottom left;
         transition:
-                opacity var(--transition-delay-status) ease,
-                scale var(--transition-delay-status) ease,
-                translate var(--transition-delay-status) ease;
+            opacity var(--transition-time-control-status) ease,
+            scale var(--transition-time-control-status) ease,
+            translate var(--transition-time-control-status) ease;
     }
 
     &[app-control-status="CLOSE"] {
@@ -25,31 +25,33 @@
         translate: 0 0;
         pointer-events: auto;
 
+        transform-origin: center center;
         transition:
-                opacity var(--transition-delay-status) ease,
-                scale var(--transition-delay-status) ease,
-                translate var(--transition-delay-status) ease;
+            opacity var(--transition-time-control-status) ease,
+            scale var(--transition-time-control-status) ease,
+            translate var(--transition-time-control-status) ease;
     }
 
     &[app-control-status="MINIMIZE"] {
         opacity: 0;
         scale: 0.2;
-        translate: 0 100%;
+        translate: 0 150%;
         pointer-events: none;
 
+        transform-origin: bottom left;
         transition:
-                opacity var(--transition-delay-status) ease,
-                scale var(--transition-delay-status) ease,
-                translate var(--transition-delay-status) ease ;
+            opacity var(--transition-time-control-status) ease,
+            scale var(--transition-time-control-status) ease,
+            translate var(--transition-time-control-status) ease;
     }
 
     /* App State */
     &.STATE_TRANSITION {
         transition:
-                width var(--transition-delay-state) ease,
-                height var(--transition-delay-state) ease,
-                top var(--transition-delay-state) ease,
-                left var(--transition-delay-state) ease;
+            width var(--transition-time-state) ease,
+            height var(--transition-time-state) ease,
+            top var(--transition-time-state) ease,
+            left var(--transition-time-state) ease;
     }
 
     &[app-control-state="MAXIMIZE"],

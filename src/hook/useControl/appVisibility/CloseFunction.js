@@ -1,11 +1,8 @@
 import {useCallback} from "react";
 import {useSaveRect} from "../../useSaveRect/useSaveRect.js";
-import {FocusFunction} from "../onFocus/FocusFunction.js";
 
 export function CloseFunction(componentRef, setIsMounted, CONTROL_STATUS_DATA, CONTROL_STATUS_CLOSE) {
-    const {RectSetter, RectGetter} = useSaveRect();
-    const {onClick_Focus} = FocusFunction(componentRef)
-
+    const {RectSetter} = useSaveRect();
 
     const onClick_Close = useCallback(() => {
         const component = componentRef.current;
@@ -15,7 +12,8 @@ export function CloseFunction(componentRef, setIsMounted, CONTROL_STATUS_DATA, C
         component.removeEventListener("mousedown", onClick_Focus)
         RectSetter(componentRef)
 
-        setTimeout(() => setIsMounted(false), 300); // Match CSS transition duration
+        // Limit delayed timing for all animation no longer than 300ms
+        setTimeout(() => setIsMounted(false), 300);
     }, [componentRef]);
 
     return {onClick_Close}

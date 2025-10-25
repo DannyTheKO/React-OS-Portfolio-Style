@@ -1,5 +1,4 @@
-import {useState, useCallback} from "react";
-import {useSaveRect} from "../useSaveRect/useSaveRect.js";
+import {useState} from "react";
 import {FocusFunction} from "./onFocus/FocusFunction.js";
 import {MaximizeFunction} from "./appDimension/MaximizeFunction.js";
 import {OpenFunction} from "./appVisibility/OpenFunction.js";

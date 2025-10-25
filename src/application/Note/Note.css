@@ -1,4 +1,5 @@
 @import "../../Desktop.css";
+
 /* == Custom Override Setting ==*/
 .Global_Executable_Setting {
 
@@ -23,29 +24,31 @@
         left: 20%;
 
         /* Note App Size */
-        width: 800px; min-width: 720px;
-        height: 700px; min-height: 500px;
+        width: 800px;
+        min-width: 720px;
+        height: 700px;
+        min-height: 500px;
     }
 }
 
-    .Note_Display {
-        display: grid !important;
-        grid-template-columns: 200px 3fr;
-        grid-template-rows: 1fr;
-        grid-column-gap: 1em;
+.Note_Display {
+    display: grid;
+    grid-template-columns: minmax(250px, 1fr) 4fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 1em;
 
     width: 100%;
     height: 100%;
 
-        overflow-x: hidden;
-        overflow-y: scroll;
-    }
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
 
 
-    .sidebar {
-        border: 2px solid var(--color-green-3);
-    }
+.sidebar {
+    border: 2px solid var(--color-green-3);
+}
 
-    .content {
-        border: 2px solid var(--color-yellow-3);
-    }
+.content {
+    border: 2px solid var(--color-yellow-3);
+}
