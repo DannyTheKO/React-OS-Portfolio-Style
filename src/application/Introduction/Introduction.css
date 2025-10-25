@@ -28,40 +28,61 @@
         height: 500px;
         min-height: 200px;
     }
+}
 
-    /* == Introduction Context Style == */
+/* == Introduction Context Style == */
+.Introduction_Display {
 
-    .Introduction_Display {
+    .wrapper_pfp {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-        .wrapper_pfp {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        gap: 1em;
 
-            gap: 1em;
-
-            img {
-                width: 150px;
-                border-radius: 4px;
-            }
-
-            h2 {
-                font-family: var(--font-family-Stretch_Pro), sans-serif;
-            }
+        img {
+            width: 150px;
+            border-radius: 4px;
         }
 
-        .wrapper_paragraph {
-            p {
-                line-height: 1.5;
-                margin-bottom: 1em;
-            }
+        h2 {
+            font-family: var(--font-family-Stretch_Pro), sans-serif;
+        }
+    }
+
+    .wrapper_paragraph {
+        p {
+            line-height: 1.5;
+            margin-bottom: 1em;
+        }
+    }
+
+    .wrapper_links {
+        display: flex;
+        justify-content: center;
+
+        overflow: hidden;
+
+        font-size: var(--font-size-small);
+
+        padding: 8px 0 8px 0;
+
+        a {
+            padding: 0.5em;
+            border: 2px solid var(--application-accent-color);
+
+            transition: background-color 0.2s ease 0s,
+            scale 0.2s ease 0s,
+            color 0.2s ease 0s;
         }
 
-        .wrapper_links {
-            display: flex;
-            justify-content: center;
+        a:hover {
+            color: black;
+            scale: 1.5;
+        }
 
+<<<<<<< HEAD:src/application/Introduction/Introduction.css
             overflow: hidden;
 
             font-size: var(--font-size-small);
@@ -84,6 +105,10 @@
             a:visited {
                 color: blue;
             }
+=======
+        a:visited {
+            color: blue;
+>>>>>>> parent of a8a054f (changed selector priority position):src/component/Introduction/Introduction.css
         }
     }
 }
