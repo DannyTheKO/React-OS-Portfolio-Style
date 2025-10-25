@@ -121,10 +121,10 @@
 
     /* == Default App Display == */
     [class$="_Display"] {
-        padding: 1em 0 1em 1em;
+        padding: 1em 0.2em 1em 1em;
         z-index: 0;
 
-        overflow: scroll;
+        overflow-y: scroll;
         overflow-x: hidden;
 
         &::-webkit-scrollbar {

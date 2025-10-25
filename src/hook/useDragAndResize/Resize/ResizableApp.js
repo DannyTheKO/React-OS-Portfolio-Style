@@ -217,58 +217,60 @@ export function resizableApp(componentRef) {
             const style = {
                 transform: 'translate(-50%, -50%)',  // Center the resizer
             };
+            const RESIZER_LENGTH_SIDE = `10px`
+            const RESIZER_LENGTH_CORNER = `15px`
 
             switch (dir) {
                 case 'N':
                     style.left = `calc(${rectComponent.width / 2}px - 4px)`;
                     style.top = `-2px`;
                     style.width = `calc(${rectComponent.width}px - 6px)`;
-                    style.height = `5px`;
+                    style.height = RESIZER_LENGTH_SIDE;
                     break;
                 case 'NE':
                     style.left = `calc(${rectComponent.width}px - 6px)`;
                     style.top = `0px`;
-                    style.width = `10px`;
-                    style.height = `10px`;
-                    style.zIndex = '11';
+                    style.width = RESIZER_LENGTH_CORNER;
+                    style.height = RESIZER_LENGTH_CORNER;
+                    style.zIndex = `11`;
                     break;
                 case 'E':
                     style.left = `calc(${rectComponent.width}px - 6px)`;
                     style.top = `calc(${rectComponent.height / 2}px - 4px)`;
                     style.height = `calc(${rectComponent.height}px - 6px)`;
-                    style.width = `5px`;
+                    style.width = RESIZER_LENGTH_SIDE;
                     break;
                 case 'SE':
                     style.left = `calc(${rectComponent.width}px - 8px)`;
                     style.top = `calc(${rectComponent.height}px - 8px)`;
-                    style.width = `10px`;
-                    style.height = `10px`;
+                    style.width = RESIZER_LENGTH_CORNER;
+                    style.height = RESIZER_LENGTH_CORNER;
                     style.zIndex = '11';
                     break;
                 case 'S':
                     style.left = `calc(${rectComponent.width / 2}px - 4px)`;
                     style.top = `calc(${rectComponent.height}px - 6px)`;
                     style.width = `calc(${rectComponent.width}px - 6px)`;
-                    style.height = `5px`
+                    style.height = RESIZER_LENGTH_SIDE
                     break;
                 case 'SW':
                     style.left = ``;
                     style.top = `calc(${rectComponent.height}px - 6px)`;
-                    style.width = `10px`;
-                    style.height = `10px`;
+                    style.width = RESIZER_LENGTH_CORNER;
+                    style.height = RESIZER_LENGTH_CORNER;
                     style.zIndex = '11';
                     break;
                 case 'W':
                     style.left = `-2px`;
                     style.top = `calc(${rectComponent.height / 2}px - 4px)`;
                     style.height = `calc(${rectComponent.height}px - 6px)`;
-                    style.width = `5px`;
+                    style.width = RESIZER_LENGTH_SIDE;
                     break;
                 case 'NW':
                     style.left = `0px`;
                     style.top = `0px`;
-                    style.width = `10px`;
-                    style.height = `10px`;
+                    style.width = RESIZER_LENGTH_CORNER;
+                    style.height = RESIZER_LENGTH_CORNER;
                     style.zIndex = '11';
                     break;
             }

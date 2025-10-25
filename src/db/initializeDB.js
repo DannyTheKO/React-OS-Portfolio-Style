@@ -1,15 +1,24 @@
 const DB_NAME = "DannyOS_DB"
 const DB_VERSION = 1
+let db;
 
-export function initializeDB() {
+export default function initializeDB() {
     const request = indexedDB.open(DB_NAME, DB_VERSION);
 
     request.onerror = (event) => {
-        console.log(event);
+        db = event.target.result;
+        console.error(db.onerror());
     }
 
     request.onsuccess = (event) => {
-        console.log("hi")
-        console.log(event);
+        db = event.target.result;
+        console.log(db)
+    }
+
+    request.onupgradeneeded = (event) => {
+        const db = event.target.result;
+        console.log(db)
+
+        const objectStore = db.createObjectStore("");
     }
 }

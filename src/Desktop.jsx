@@ -1,11 +1,15 @@
 import React from 'react'
 import './Desktop.css'
-import Taskbar from './component/Taskbar/Taskbar.jsx';
-import Introduction_Wrapper from "./component/Introduction/Introduction_Wrapper.jsx";
-import Contact_Wrapper from "./component/Contact/Contact_Wrapper.jsx";
-import Note_Wrapper from "./component/Note/Note_Wrapper.jsx";
+import Taskbar from './application/Taskbar/Taskbar.jsx';
+import Introduction_Wrapper from "./application/Introduction/Introduction_Wrapper.jsx";
+import Contact_Wrapper from "./application/Contact/Contact_Wrapper.jsx";
+import Note_Wrapper from "./application/Note/Note_Wrapper.jsx";
+import initializeDB from "./db/initializeDB.js";
+
 
 export default function Desktop() {
+
+    initializeDB();
 
     // new Promise((resolve, reject) => {
     //
