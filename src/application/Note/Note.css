@@ -28,35 +28,17 @@
     }
 }
 
-<<<<<<< HEAD:src/application/Note/Note.css
     .Note_Display {
         display: grid !important;
         grid-template-columns: 200px 3fr;
         grid-template-rows: 1fr;
         grid-column-gap: 1em;
-=======
-.Note_Display {
-    display: grid !important;
-    grid-column: 3 !important;
-    grid-row: 2 !important;
->>>>>>> parent of a8a054f (changed selector priority position):src/component/Note/Note.css
 
     width: 100%;
     height: 100%;
 
-<<<<<<< HEAD:src/application/Note/Note.css
         overflow-x: hidden;
         overflow-y: scroll;
-=======
-    background-color: var(--color-white-10);
-
-    .sidebar {
-        background: var(--color-yellow-1)
-    }
-
-    .content {
-        background-color: var(--color-green-1);
->>>>>>> parent of a8a054f (changed selector priority position):src/component/Note/Note.css
     }
 
 
@@ -67,5 +49,3 @@
     .content {
         border: 2px solid var(--color-yellow-3);
     }
-
-}

@@ -82,7 +82,6 @@
             scale: 1.5;
         }
 
-<<<<<<< HEAD:src/application/Introduction/Introduction.css
             overflow: hidden;
 
             font-size: var(--font-size-small);
@@ -105,10 +104,5 @@
             a:visited {
                 color: blue;
             }
-=======
-        a:visited {
-            color: blue;
->>>>>>> parent of a8a054f (changed selector priority position):src/component/Introduction/Introduction.css
         }
     }
-}
