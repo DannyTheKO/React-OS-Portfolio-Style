@@ -49,9 +49,18 @@ export const Note_App = forwardRef(
 
                 {/* Display */}
                 <div className="Note_Display">
-                    <div className="sidebar"></div>
-                    <div className="content"></div>
+                    <div className="sidebar">
+
+                    </div>
+
+                    <div className="content">
+
+                    </div>
                 </div>
             </div>
         )
     })
+
+const Note_DB = () => {
+    
+}

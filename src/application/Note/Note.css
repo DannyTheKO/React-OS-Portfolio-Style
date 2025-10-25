@@ -23,28 +23,30 @@
         left: 20%;
 
         /* Note App Size */
-        width: 720px;
-        min-width: 420px;
-        height: 500px;
-        min-height: 200px;
+        width: 800px; min-width: 720px;
+        height: 700px; min-height: 500px;
     }
 
     .Note_Display {
-        display: grid;
-        grid-column: 3;
-        grid-row: 2;
+        display: grid !important;
+        grid-template-columns: 200px 3fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 1em;
 
         width: 100%;
         height: 100%;
 
-        background-color: var(--color-white-10);
-
-        .sidebar {
-            background: var(--color-yellow-1)
-        }
-
-        .content {
-            background-color: var(--color-green-1);
-        }
+        overflow-x: hidden;
+        overflow-y: scroll;
     }
+
+
+    .sidebar {
+        border: 2px solid var(--color-green-3);
+    }
+
+    .content {
+        border: 2px solid var(--color-yellow-3);
+    }
+
 }

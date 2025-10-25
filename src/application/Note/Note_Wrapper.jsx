@@ -1,8 +1,8 @@
 import React from 'react'
-import {Introduction_App, Introduction_Executable} from './Introduction_App.jsx'
+import {Note_App, Note_Executable} from './Note_App.jsx'
 import {useWrapper} from "../../hook/useWrapper/useWrapper.js";
 
-export default function Introduction_Wrapper() {
+export default function Note_Wrapper() {
     const {
         appRef,
         iconRef,
@@ -15,14 +15,14 @@ export default function Introduction_Wrapper() {
 
     return (
         <>
-            <Introduction_Executable
-                onClick_Open={onClick_Open}
+            <Note_Executable
                 ref={iconRef}
+                onClick_Open={onClick_Open}
             />
 
-            {/* If "isMounted" is true, it will render Introduction */}
+            {/* If "isMounted" is true, it will render Note */}
             {isMounted &&
-                <Introduction_App
+                <Note_App
                     ref={appRef}
                     onClick_Close={onClick_Close}
                     onClick_Minimize={onClick_Minimize}
