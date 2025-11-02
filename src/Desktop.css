@@ -14,6 +14,7 @@
     height: 100vh;
     z-index: 0;
 
+    /* Desktop Background */
     background-color: black;
     background-image: url(/Assets/Image/Backgrounds/ARC_1080P.png);
     background-size: cover;

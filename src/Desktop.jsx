@@ -4,16 +4,12 @@ import Taskbar from './application/Taskbar/Taskbar.jsx';
 import Introduction_Wrapper from "./application/Introduction/Introduction_Wrapper.jsx";
 import Contact_Wrapper from "./application/Contact/Contact_Wrapper.jsx";
 import Note_Wrapper from "./application/Note/Note_Wrapper.jsx";
-import initializeDB from "./db/initializeDB.js";
+import DB_Initialize from "./db/DB_Initialize.js";
 
 
 export default function Desktop() {
 
-    initializeDB();
-
-    // new Promise((resolve, reject) => {
-    //
-    // })
+    DB_Initialize();
 
     return (
         <div id="Desktop_Container">
